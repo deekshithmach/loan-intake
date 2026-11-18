@@ -1,0 +1,26 @@
+[project]
+name = "loan-intake"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=2.10.0",
+    "faker>=40.54.0",
+    "fastapi>=0.163.2",
+    "google-genai>=3.5.0",
+    "httpx>=0.28.1",
+    "langgraph>=1.2.22",
+    "pillow>=13.0.0",
+    "pydantic>=2.14.3",
+    "pydantic-settings>=2.16.3",
+    "pymupdf>=2.1",
+    "pypdf>=7.1.0",
+    "python-dotenv>=1.2.4",
+    "reportlab>=5.1.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
