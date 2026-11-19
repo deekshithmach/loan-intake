@@ -18,11 +18,11 @@ Model key (Claude Code, switch via `/model`): **S** = Sonnet, **O** = Opus. App 
 ## Validation gates
 **0** [ ] `uv sync` clean [ ] repo live, default branch correct [ ] `.env` not tracked
 **1** [x] user eyeballs 1 applicant's 3 PDFs [x] cross-doc numbers consistent [x] anomalies present [x] 100 applicants < 2 min, scans image-only [x] pytest on truth.json math
-**2** [ ] 1 clean + 1 scanned per type extracted correctly [ ] field accuracy on 10 applicants [ ] bad output → retry → fail gracefully [ ] tokens/cost logged
+**2** [x] 1 clean + 1 scanned per type extracted correctly [x] field accuracy on 10 applicants (100%, 2,894 fields, gemini-3.5-flash-lite, $0.013/applicant) [x] bad output → retry → fail gracefully [x] tokens/cost logged
 **3** [ ] pytest pass+fail per rule [ ] API run pauses at review, resumes, persists [ ] planted anomalies flagged w/ correct evidence [ ] restart mid-review loses nothing [ ] PII masked in logs
 **4** [ ] browser flow upload→review→approve [ ] edits persist + audited [ ] loading/error states [ ] non-technical demo test
 **5** [ ] report w/ real numbers ≥30 applicants [ ] targets (clean ≥95%, noisy ≥85%, flag recall ≥90%) or misses explained [ ] CI green + fails on regression [ ] spend < $10
 **6** [ ] live URL works on phone [ ] fresh clone + README → `docker compose up` works [ ] user explains architecture/tradeoffs/failure < 3 min
 
 ## Progress
-- [x] Stage 0 · [x] 1 · [ ] 2 · [ ] 3 · [ ] 4 · [ ] 5 · [ ] 6 · [ ] 7
+- [x] Stage 0 · [x] 1 · [x] 2 · [ ] 3 · [ ] 4 · [ ] 5 · [ ] 6 · [ ] 7

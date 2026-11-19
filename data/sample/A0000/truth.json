@@ -1,0 +1,484 @@
+{
+  "applicant_id": "A0000",
+  "seed": 42,
+  "identity": {
+    "name": "SANDRA DAVIS",
+    "ssn": "950-49-2539",
+    "address": "174 Smith Tunnel Apt. 234, Princefort, NV 61435"
+  },
+  "documents": {
+    "paystub": {
+      "file": "paystub.pdf",
+      "scanned": true,
+      "fields": {
+        "employer": "BARAJAS, DECKER AND COX",
+        "employee": "SANDRA DAVIS",
+        "pay_period_start": "2025-12-13",
+        "pay_period_end": "2025-12-26",
+        "pay_date": "2025-12-26",
+        "gross": 411538,
+        "net": 306709,
+        "ytd_gross": 10699988,
+        "deductions": {
+          "federal_tax": 49385,
+          "social_security": 25515,
+          "medicare": 5967,
+          "state_tax": 16462,
+          "health_insurance": 7500
+        }
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "scanned": false,
+      "fields": {
+        "employer": "PETERS PLC",
+        "ein": "57-4647485",
+        "employee": "SANDRA DAVIS",
+        "ssn": "950-49-2539",
+        "year": 2025,
+        "wages_box1": 10699988,
+        "federal_tax_box2": 1284010,
+        "ss_wages_box3": 10699988,
+        "ss_tax_box4": 663390,
+        "medicare_wages_box5": 10699988,
+        "medicare_tax_box6": 155142
+      }
+    },
+    "statement": {
+      "file": "statement.pdf",
+      "scanned": true,
+      "fields": {
+        "bank": "First Meridian Bank",
+        "account_holder": "SANDRA DAVIS",
+        "account_last4": "8251",
+        "period_start": "2025-10-01",
+        "period_end": "2025-12-31",
+        "opening_balance": 410000,
+        "transactions": [
+          {
+            "date": "2025-10-01",
+            "description": "RENT PAYMENT",
+            "amount": -186070,
+            "balance": 223930
+          },
+          {
+            "date": "2025-10-02",
+            "description": "COMCAST",
+            "amount": -17039,
+            "balance": 206891
+          },
+          {
+            "date": "2025-10-03",
+            "description": "PAYROLL BARAJAS, DECKER AND COX",
+            "amount": 306709,
+            "balance": 513600
+          },
+          {
+            "date": "2025-10-04",
+            "description": "SHELL OIL",
+            "amount": -15083,
+            "balance": 498517
+          },
+          {
+            "date": "2025-10-04",
+            "description": "STARBUCKS",
+            "amount": -10123,
+            "balance": 488394
+          },
+          {
+            "date": "2025-10-10",
+            "description": "KROGER",
+            "amount": -13805,
+            "balance": 474589
+          },
+          {
+            "date": "2025-10-12",
+            "description": "CHEVRON",
+            "amount": -14014,
+            "balance": 460575
+          },
+          {
+            "date": "2025-10-13",
+            "description": "WHOLE FOODS",
+            "amount": -19174,
+            "balance": 441401
+          },
+          {
+            "date": "2025-10-15",
+            "description": "NETFLIX",
+            "amount": -7892,
+            "balance": 433509
+          },
+          {
+            "date": "2025-10-16",
+            "description": "CHIPOTLE",
+            "amount": -10226,
+            "balance": 423283
+          },
+          {
+            "date": "2025-10-16",
+            "description": "PANERA",
+            "amount": -8648,
+            "balance": 414635
+          },
+          {
+            "date": "2025-10-17",
+            "description": "PAYROLL BARAJAS, DECKER AND COX",
+            "amount": 306709,
+            "balance": 721344
+          },
+          {
+            "date": "2025-10-17",
+            "description": "CHEVRON",
+            "amount": -14595,
+            "balance": 706749
+          },
+          {
+            "date": "2025-10-17",
+            "description": "CITY UTILITIES",
+            "amount": -17238,
+            "balance": 689511
+          },
+          {
+            "date": "2025-10-18",
+            "description": "SPOTIFY",
+            "amount": -6836,
+            "balance": 682675
+          },
+          {
+            "date": "2025-10-18",
+            "description": "STARBUCKS",
+            "amount": -9808,
+            "balance": 672867
+          },
+          {
+            "date": "2025-10-21",
+            "description": "SAFEWAY",
+            "amount": -19431,
+            "balance": 653436
+          },
+          {
+            "date": "2025-10-22",
+            "description": "TRADER JOES",
+            "amount": -18602,
+            "balance": 634834
+          },
+          {
+            "date": "2025-10-22",
+            "description": "STARBUCKS",
+            "amount": -5107,
+            "balance": 629727
+          },
+          {
+            "date": "2025-10-26",
+            "description": "WHOLE FOODS",
+            "amount": -11431,
+            "balance": 618296
+          },
+          {
+            "date": "2025-10-27",
+            "description": "DOORDASH",
+            "amount": -7526,
+            "balance": 610770
+          },
+          {
+            "date": "2025-10-31",
+            "description": "PAYROLL BARAJAS, DECKER AND COX",
+            "amount": 306709,
+            "balance": 917479
+          },
+          {
+            "date": "2025-11-01",
+            "description": "RENT PAYMENT",
+            "amount": -186070,
+            "balance": 731409
+          },
+          {
+            "date": "2025-11-05",
+            "description": "EXXON",
+            "amount": -6737,
+            "balance": 724672
+          },
+          {
+            "date": "2025-11-07",
+            "description": "DOORDASH",
+            "amount": -7550,
+            "balance": 717122
+          },
+          {
+            "date": "2025-11-08",
+            "description": "WHOLE FOODS",
+            "amount": -19610,
+            "balance": 697512
+          },
+          {
+            "date": "2025-11-08",
+            "description": "PANERA",
+            "amount": -6087,
+            "balance": 691425
+          },
+          {
+            "date": "2025-11-09",
+            "description": "KROGER",
+            "amount": -18336,
+            "balance": 673089
+          },
+          {
+            "date": "2025-11-09",
+            "description": "KROGER",
+            "amount": -17499,
+            "balance": 655590
+          },
+          {
+            "date": "2025-11-09",
+            "description": "EXXON",
+            "amount": -11262,
+            "balance": 644328
+          },
+          {
+            "date": "2025-11-11",
+            "description": "AMAZON PRIME",
+            "amount": -8574,
+            "balance": 635754
+          },
+          {
+            "date": "2025-11-12",
+            "description": "VERIZON",
+            "amount": -18448,
+            "balance": 617306
+          },
+          {
+            "date": "2025-11-13",
+            "description": "SHELL OIL",
+            "amount": -10148,
+            "balance": 607158
+          },
+          {
+            "date": "2025-11-14",
+            "description": "PAYROLL BARAJAS, DECKER AND COX",
+            "amount": 306709,
+            "balance": 913867
+          },
+          {
+            "date": "2025-11-14",
+            "description": "WHOLE FOODS",
+            "amount": -13146,
+            "balance": 900721
+          },
+          {
+            "date": "2025-11-16",
+            "description": "PANERA",
+            "amount": -10789,
+            "balance": 889932
+          },
+          {
+            "date": "2025-11-17",
+            "description": "TRADER JOES",
+            "amount": -23409,
+            "balance": 866523
+          },
+          {
+            "date": "2025-11-18",
+            "description": "SPOTIFY",
+            "amount": -9247,
+            "balance": 857276
+          },
+          {
+            "date": "2025-11-27",
+            "description": "DOORDASH",
+            "amount": -4787,
+            "balance": 852489
+          },
+          {
+            "date": "2025-11-28",
+            "description": "PAYROLL BARAJAS, DECKER AND COX",
+            "amount": 306709,
+            "balance": 1159198
+          },
+          {
+            "date": "2025-11-28",
+            "description": "ONLINE TRANSFER OUT",
+            "amount": -1159420,
+            "balance": -222
+          },
+          {
+            "date": "2025-11-28",
+            "description": "OVERDRAFT FEE",
+            "amount": -3500,
+            "balance": -3722
+          },
+          {
+            "date": "2025-11-28",
+            "description": "STARBUCKS",
+            "amount": -5033,
+            "balance": -8755
+          },
+          {
+            "date": "2025-11-28",
+            "description": "STARBUCKS",
+            "amount": -9009,
+            "balance": -17764
+          },
+          {
+            "date": "2025-11-28",
+            "description": "CITY UTILITIES",
+            "amount": -22503,
+            "balance": -40267
+          },
+          {
+            "date": "2025-12-01",
+            "description": "RENT PAYMENT",
+            "amount": -186070,
+            "balance": -226337
+          },
+          {
+            "date": "2025-12-02",
+            "description": "EXXON",
+            "amount": -9843,
+            "balance": -236180
+          },
+          {
+            "date": "2025-12-04",
+            "description": "CITY UTILITIES",
+            "amount": -25344,
+            "balance": -261524
+          },
+          {
+            "date": "2025-12-05",
+            "description": "PANERA",
+            "amount": -7070,
+            "balance": -268594
+          },
+          {
+            "date": "2025-12-06",
+            "description": "WHOLE FOODS",
+            "amount": -20743,
+            "balance": -289337
+          },
+          {
+            "date": "2025-12-06",
+            "description": "PANERA",
+            "amount": -8619,
+            "balance": -297956
+          },
+          {
+            "date": "2025-12-09",
+            "description": "PANERA",
+            "amount": -8751,
+            "balance": -306707
+          },
+          {
+            "date": "2025-12-11",
+            "description": "TRADER JOES",
+            "amount": -20739,
+            "balance": -327446
+          },
+          {
+            "date": "2025-12-12",
+            "description": "PAYROLL BARAJAS, DECKER AND COX",
+            "amount": 306709,
+            "balance": -20737
+          },
+          {
+            "date": "2025-12-12",
+            "description": "WHOLE FOODS",
+            "amount": -14588,
+            "balance": -35325
+          },
+          {
+            "date": "2025-12-15",
+            "description": "AMAZON PRIME",
+            "amount": -6081,
+            "balance": -41406
+          },
+          {
+            "date": "2025-12-17",
+            "description": "SPOTIFY",
+            "amount": -8057,
+            "balance": -49463
+          },
+          {
+            "date": "2025-12-18",
+            "description": "CHIPOTLE",
+            "amount": -5530,
+            "balance": -54993
+          },
+          {
+            "date": "2025-12-19",
+            "description": "CHIPOTLE",
+            "amount": -7754,
+            "balance": -62747
+          },
+          {
+            "date": "2025-12-20",
+            "description": "EXXON",
+            "amount": -10002,
+            "balance": -72749
+          },
+          {
+            "date": "2025-12-21",
+            "description": "SAFEWAY",
+            "amount": -16276,
+            "balance": -89025
+          },
+          {
+            "date": "2025-12-21",
+            "description": "COMCAST",
+            "amount": -16306,
+            "balance": -105331
+          },
+          {
+            "date": "2025-12-23",
+            "description": "SHELL OIL",
+            "amount": -13581,
+            "balance": -118912
+          },
+          {
+            "date": "2025-12-24",
+            "description": "CHIPOTLE",
+            "amount": -7344,
+            "balance": -126256
+          },
+          {
+            "date": "2025-12-26",
+            "description": "PAYROLL BARAJAS, DECKER AND COX",
+            "amount": 306709,
+            "balance": 180453
+          },
+          {
+            "date": "2025-12-26",
+            "description": "SAFEWAY",
+            "amount": -17823,
+            "balance": 162630
+          }
+        ],
+        "closing_balance": 162630
+      }
+    }
+  },
+  "anomalies": [
+    {
+      "code": "overdrafts",
+      "doc": "statement",
+      "field": "transactions",
+      "detail": {
+        "date": "2025-11-28",
+        "fee_cents": 3500
+      }
+    },
+    {
+      "code": "fake_employer",
+      "doc": "w2",
+      "field": "employer",
+      "detail": {
+        "paystub_employer": "BARAJAS, DECKER AND COX",
+        "w2_employer": "PETERS PLC"
+      }
+    }
+  ],
+  "expected_flags": [
+    "fake_employer",
+    "overdrafts"
+  ]
+}

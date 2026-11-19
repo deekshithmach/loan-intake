@@ -1,0 +1,462 @@
+{
+  "applicant_id": "A0001",
+  "seed": 42,
+  "identity": {
+    "name": "MICHAEL LARSON",
+    "ssn": "924-51-3346",
+    "address": "48851 Flowers Station Apt. 576, Sanchezside, TX 38291"
+  },
+  "documents": {
+    "paystub": {
+      "file": "paystub.pdf",
+      "scanned": true,
+      "fields": {
+        "employer": "WATSON LTD",
+        "employee": "MICHAEL LARSON",
+        "pay_period_start": "2025-12-13",
+        "pay_period_end": "2025-12-26",
+        "pay_date": "2025-12-26",
+        "gross": 248076,
+        "net": 181906,
+        "ytd_gross": 6449976,
+        "deductions": {
+          "federal_tax": 29769,
+          "social_security": 15381,
+          "medicare": 3597,
+          "state_tax": 9923,
+          "health_insurance": 7500
+        }
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "scanned": false,
+      "fields": {
+        "employer": "WATSON LTD",
+        "ein": "57-3712259",
+        "employee": "MICHAEL LARSON",
+        "ssn": "924-51-3346",
+        "year": 2025,
+        "wages_box1": 7827240,
+        "federal_tax_box2": 773994,
+        "ss_wages_box3": 6449976,
+        "ss_tax_box4": 399906,
+        "medicare_wages_box5": 6449976,
+        "medicare_tax_box6": 93522
+      }
+    },
+    "statement": {
+      "file": "statement.pdf",
+      "scanned": false,
+      "fields": {
+        "bank": "Evergreen Credit Union",
+        "account_holder": "MICHAEL LARSON",
+        "account_last4": "2397",
+        "period_start": "2025-10-01",
+        "period_end": "2025-12-31",
+        "opening_balance": 370000,
+        "transactions": [
+          {
+            "date": "2025-10-01",
+            "description": "RENT PAYMENT",
+            "amount": -110356,
+            "balance": 259644
+          },
+          {
+            "date": "2025-10-03",
+            "description": "PAYROLL WATSON LTD",
+            "amount": 181906,
+            "balance": 441550
+          },
+          {
+            "date": "2025-10-03",
+            "description": "SPOTIFY",
+            "amount": -4230,
+            "balance": 437320
+          },
+          {
+            "date": "2025-10-06",
+            "description": "PANERA",
+            "amount": -6224,
+            "balance": 431096
+          },
+          {
+            "date": "2025-10-07",
+            "description": "SHELL OIL",
+            "amount": -5350,
+            "balance": 425746
+          },
+          {
+            "date": "2025-10-11",
+            "description": "DOORDASH",
+            "amount": -3617,
+            "balance": 422129
+          },
+          {
+            "date": "2025-10-11",
+            "description": "CHIPOTLE",
+            "amount": -3845,
+            "balance": 418284
+          },
+          {
+            "date": "2025-10-12",
+            "description": "STARBUCKS",
+            "amount": -5625,
+            "balance": 412659
+          },
+          {
+            "date": "2025-10-14",
+            "description": "SAFEWAY",
+            "amount": -14091,
+            "balance": 398568
+          },
+          {
+            "date": "2025-10-14",
+            "description": "EXXON",
+            "amount": -5965,
+            "balance": 392603
+          },
+          {
+            "date": "2025-10-16",
+            "description": "CITY UTILITIES",
+            "amount": -14467,
+            "balance": 378136
+          },
+          {
+            "date": "2025-10-17",
+            "description": "PAYROLL WATSON LTD",
+            "amount": 181906,
+            "balance": 560042
+          },
+          {
+            "date": "2025-10-18",
+            "description": "TRADER JOES",
+            "amount": -8676,
+            "balance": 551366
+          },
+          {
+            "date": "2025-10-19",
+            "description": "SPOTIFY",
+            "amount": -3720,
+            "balance": 547646
+          },
+          {
+            "date": "2025-10-19",
+            "description": "PANERA",
+            "amount": -5970,
+            "balance": 541676
+          },
+          {
+            "date": "2025-10-22",
+            "description": "PANERA",
+            "amount": -5142,
+            "balance": 536534
+          },
+          {
+            "date": "2025-10-24",
+            "description": "WHOLE FOODS",
+            "amount": -12893,
+            "balance": 523641
+          },
+          {
+            "date": "2025-10-24",
+            "description": "VERIZON",
+            "amount": -17509,
+            "balance": 506132
+          },
+          {
+            "date": "2025-10-26",
+            "description": "KROGER",
+            "amount": -12524,
+            "balance": 493608
+          },
+          {
+            "date": "2025-10-27",
+            "description": "KROGER",
+            "amount": -9854,
+            "balance": 483754
+          },
+          {
+            "date": "2025-10-27",
+            "description": "CHEVRON",
+            "amount": -7496,
+            "balance": 476258
+          },
+          {
+            "date": "2025-10-31",
+            "description": "PAYROLL WATSON LTD",
+            "amount": 181906,
+            "balance": 658164
+          },
+          {
+            "date": "2025-11-01",
+            "description": "RENT PAYMENT",
+            "amount": -110356,
+            "balance": 547808
+          },
+          {
+            "date": "2025-11-02",
+            "description": "SAFEWAY",
+            "amount": -8326,
+            "balance": 539482
+          },
+          {
+            "date": "2025-11-02",
+            "description": "CHEVRON",
+            "amount": -6504,
+            "balance": 532978
+          },
+          {
+            "date": "2025-11-02",
+            "description": "DOORDASH",
+            "amount": -4023,
+            "balance": 528955
+          },
+          {
+            "date": "2025-11-03",
+            "description": "CHIPOTLE",
+            "amount": -4800,
+            "balance": 524155
+          },
+          {
+            "date": "2025-11-05",
+            "description": "STARBUCKS",
+            "amount": -2968,
+            "balance": 521187
+          },
+          {
+            "date": "2025-11-07",
+            "description": "TRADER JOES",
+            "amount": -11854,
+            "balance": 509333
+          },
+          {
+            "date": "2025-11-07",
+            "description": "SAFEWAY",
+            "amount": -12559,
+            "balance": 496774
+          },
+          {
+            "date": "2025-11-07",
+            "description": "CHIPOTLE",
+            "amount": -5081,
+            "balance": 491693
+          },
+          {
+            "date": "2025-11-07",
+            "description": "COMCAST",
+            "amount": -17481,
+            "balance": 474212
+          },
+          {
+            "date": "2025-11-09",
+            "description": "SHELL OIL",
+            "amount": -6034,
+            "balance": 468178
+          },
+          {
+            "date": "2025-11-09",
+            "description": "VERIZON",
+            "amount": -8735,
+            "balance": 459443
+          },
+          {
+            "date": "2025-11-14",
+            "description": "PAYROLL WATSON LTD",
+            "amount": 181906,
+            "balance": 641349
+          },
+          {
+            "date": "2025-11-14",
+            "description": "SPOTIFY",
+            "amount": -3689,
+            "balance": 637660
+          },
+          {
+            "date": "2025-11-16",
+            "description": "CHEVRON",
+            "amount": -8007,
+            "balance": 629653
+          },
+          {
+            "date": "2025-11-19",
+            "description": "TRADER JOES",
+            "amount": -11554,
+            "balance": 618099
+          },
+          {
+            "date": "2025-11-21",
+            "description": "AMAZON PRIME",
+            "amount": -4866,
+            "balance": 613233
+          },
+          {
+            "date": "2025-11-22",
+            "description": "CHIPOTLE",
+            "amount": -3012,
+            "balance": 610221
+          },
+          {
+            "date": "2025-11-25",
+            "description": "WHOLE FOODS",
+            "amount": -7418,
+            "balance": 602803
+          },
+          {
+            "date": "2025-11-25",
+            "description": "PANERA",
+            "amount": -5392,
+            "balance": 597411
+          },
+          {
+            "date": "2025-11-28",
+            "description": "PAYROLL WATSON LTD",
+            "amount": 181906,
+            "balance": 779317
+          },
+          {
+            "date": "2025-12-01",
+            "description": "RENT PAYMENT",
+            "amount": -110356,
+            "balance": 668961
+          },
+          {
+            "date": "2025-12-02",
+            "description": "NETFLIX",
+            "amount": -3472,
+            "balance": 665489
+          },
+          {
+            "date": "2025-12-02",
+            "description": "PANERA",
+            "amount": -2801,
+            "balance": 662688
+          },
+          {
+            "date": "2025-12-03",
+            "description": "DOORDASH",
+            "amount": -2850,
+            "balance": 659838
+          },
+          {
+            "date": "2025-12-07",
+            "description": "DOORDASH",
+            "amount": -3947,
+            "balance": 655891
+          },
+          {
+            "date": "2025-12-08",
+            "description": "CHEVRON",
+            "amount": -8117,
+            "balance": 647774
+          },
+          {
+            "date": "2025-12-12",
+            "description": "PAYROLL WATSON LTD",
+            "amount": 181906,
+            "balance": 829680
+          },
+          {
+            "date": "2025-12-13",
+            "description": "VERIZON",
+            "amount": -8638,
+            "balance": 821042
+          },
+          {
+            "date": "2025-12-16",
+            "description": "KROGER",
+            "amount": -12518,
+            "balance": 808524
+          },
+          {
+            "date": "2025-12-16",
+            "description": "EXXON",
+            "amount": -4401,
+            "balance": 804123
+          },
+          {
+            "date": "2025-12-16",
+            "description": "CHEVRON",
+            "amount": -8475,
+            "balance": 795648
+          },
+          {
+            "date": "2025-12-18",
+            "description": "KROGER",
+            "amount": -7134,
+            "balance": 788514
+          },
+          {
+            "date": "2025-12-18",
+            "description": "CITY UTILITIES",
+            "amount": -14387,
+            "balance": 774127
+          },
+          {
+            "date": "2025-12-22",
+            "description": "STARBUCKS",
+            "amount": -5107,
+            "balance": 769020
+          },
+          {
+            "date": "2025-12-23",
+            "description": "NETFLIX",
+            "amount": -5459,
+            "balance": 763561
+          },
+          {
+            "date": "2025-12-23",
+            "description": "CHIPOTLE",
+            "amount": -3921,
+            "balance": 759640
+          },
+          {
+            "date": "2025-12-23",
+            "description": "CHIPOTLE",
+            "amount": -5457,
+            "balance": 754183
+          },
+          {
+            "date": "2025-12-24",
+            "description": "SAFEWAY",
+            "amount": -15336,
+            "balance": 738847
+          },
+          {
+            "date": "2025-12-25",
+            "description": "TRADER JOES",
+            "amount": -13836,
+            "balance": 725011
+          },
+          {
+            "date": "2025-12-26",
+            "description": "PAYROLL WATSON LTD",
+            "amount": 181906,
+            "balance": 906917
+          },
+          {
+            "date": "2025-12-26",
+            "description": "WHOLE FOODS",
+            "amount": -12704,
+            "balance": 894213
+          }
+        ],
+        "closing_balance": 894213
+      }
+    }
+  },
+  "anomalies": [
+    {
+      "code": "income_mismatch",
+      "doc": "w2",
+      "field": "wages_box1",
+      "detail": {
+        "paystub_ytd_gross": 6449976,
+        "w2_wages": 7827240
+      }
+    }
+  ],
+  "expected_flags": [
+    "income_mismatch"
+  ]
+}
