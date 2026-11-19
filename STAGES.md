@@ -10,14 +10,14 @@ Model key (Claude Code, switch via `/model`): **S** = Sonnet, **O** = Opus. App 
 | 1 | `feature-dev/datagen` | S | Faker profiles, ReportLab pay stub/W-2/statement, truth.json, anomalies, scan noise |
 | 2 | `feature-dev/extraction` | O design → S build | Pydantic schemas, provider interface (Gemini), classifier (rules→LLM), extractor (text / vision), CLI |
 | 3 | `feature-dev/workflow` | O | Rules, cross-checks, flags, LangGraph + interrupt, FastAPI, Postgres (Docker), audit log |
-| 4 | `feature-dev/review-ui` | S | Next.js upload, list, review screen (fields vs PDF, flags, edit/approve) |
+| 4 | `feature-dev/review-ui` | S | Next.js upload, list, review screen (fields vs PDF, flags, edit/approve); stretch: model picker in UI + per-run tokens/cost/latency (accuracy only on synthetic set w/ truth.json) |
 | 5 | `feature-dev/evals` | S (+O for failure analysis) | `make eval`, accuracy/flags/cost/latency, Gemini vs Haiku vs Sonnet, report.md, CI gate |
 | 6 | `improvement/deploy-docs` | S | Render/Fly + Vercel, README, diagram, demo video |
 | 7 | buffer | S | Fixes, `v1.0.0` release, LinkedIn post |
 
 ## Validation gates
 **0** [ ] `uv sync` clean [ ] repo live, default branch correct [ ] `.env` not tracked
-**1** [ ] user eyeballs 1 applicant's 3 PDFs [ ] cross-doc numbers consistent [ ] anomalies present [ ] 100 applicants < 2 min, scans image-only [ ] pytest on truth.json math
+**1** [x] user eyeballs 1 applicant's 3 PDFs [x] cross-doc numbers consistent [x] anomalies present [x] 100 applicants < 2 min, scans image-only [x] pytest on truth.json math
 **2** [ ] 1 clean + 1 scanned per type extracted correctly [ ] field accuracy on 10 applicants [ ] bad output → retry → fail gracefully [ ] tokens/cost logged
 **3** [ ] pytest pass+fail per rule [ ] API run pauses at review, resumes, persists [ ] planted anomalies flagged w/ correct evidence [ ] restart mid-review loses nothing [ ] PII masked in logs
 **4** [ ] browser flow upload→review→approve [ ] edits persist + audited [ ] loading/error states [ ] non-technical demo test
@@ -25,4 +25,4 @@ Model key (Claude Code, switch via `/model`): **S** = Sonnet, **O** = Opus. App 
 **6** [ ] live URL works on phone [ ] fresh clone + README → `docker compose up` works [ ] user explains architecture/tradeoffs/failure < 3 min
 
 ## Progress
-- [ ] Stage 0 · [ ] 1 · [ ] 2 · [ ] 3 · [ ] 4 · [ ] 5 · [ ] 6 · [ ] 7
+- [x] Stage 0 · [x] 1 · [ ] 2 · [ ] 3 · [ ] 4 · [ ] 5 · [ ] 6 · [ ] 7
