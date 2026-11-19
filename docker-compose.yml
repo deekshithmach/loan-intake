@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-loan}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-loan_dev_pw}
+      POSTGRES_DB: ${POSTGRES_DB:-loan_intake}
+    ports: ["${POSTGRES_PORT:-5433}:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-loan}"]
+      interval: 2s
+      retries: 15
+
+volumes:
+  pgdata:

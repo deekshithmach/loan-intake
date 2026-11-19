@@ -8,3 +8,4 @@ node_modules/
 data/generated/
 data/runs/
 scratch*.py
+data/uploads/
