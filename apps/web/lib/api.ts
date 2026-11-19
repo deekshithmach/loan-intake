@@ -1,0 +1,114 @@
+// Typed client for the FastAPI backend (apps/api/main.py).
+// 127.0.0.1, not localhost: on Windows the browser tries IPv6 ::1 first and uvicorn (IPv4) costs ~2s per connection.
+export const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:8000";
+
+export type DocType = "paystub" | "w2" | "statement" | "unknown";
+export type Status = "processing" | "in_review" | "approved" | "rejected" | "failed";
+export type Severity = "low" | "medium" | "high";
+
+export interface Usage {
+  calls: number;
+  input_tokens: number;
+  output_tokens: number;
+  latency_ms: number;
+  cost_usd: number;
+}
+
+export interface Extraction {
+  file: string;
+  doc_type: DocType;
+  scanned: boolean;
+  classified_by: string;
+  ok: boolean;
+  data: Record<string, unknown> | null;
+  error: string | null;
+  attempts: number;
+  usage: Usage;
+}
+
+export interface Evidence {
+  doc: string;
+  field: string;
+  value: unknown;
+  note: string;
+}
+
+export interface Flag {
+  code: string;
+  severity: Severity;
+  message: string;
+  evidence: Evidence[];
+  decision?: "accept" | "dismiss";
+}
+
+export interface AppSummary {
+  id: string;
+  status: Status;
+  applicant_name: string | null;
+  flag_count: number;
+  created_at: string;
+  updated_at: string;
+  profile: Record<string, unknown> | null;
+}
+
+export interface AppDetail extends AppSummary {
+  awaiting_review: boolean;
+  extractions: Record<string, Extraction>;
+  flags: Flag[];
+}
+
+export interface AuditEvent {
+  id: number;
+  ts: string;
+  actor: string;
+  action: string;
+  detail: Record<string, unknown>;
+}
+
+export interface ReviewBody {
+  decision: "approve" | "reject";
+  reviewer: string;
+  edits: Record<string, Record<string, string | number>>;
+  flag_decisions: Record<string, "accept" | "dismiss">;
+  notes: string;
+}
+
+async function req<T>(path: string, init?: RequestInit): Promise<T> {
+  let res: Response;
+  try {
+    res = await fetch(API_URL + path, { cache: "no-store", ...init });
+  } catch {
+    throw new Error(`Can't reach the API at ${API_URL}. Is it running?`);
+  }
+  if (!res.ok) {
+    let msg = res.statusText;
+    try {
+      const body = await res.json();
+      msg = typeof body.detail === "string" ? body.detail : JSON.stringify(body.detail);
+    } catch {}
+    throw new Error(msg || `Request failed (${res.status})`);
+  }
+  return res.json();
+}
+
+export const api = {
+  list: () => req<AppSummary[]>("/applications"),
+  get: (id: string) => req<AppDetail>(`/applications/${id}`),
+  audit: (id: string) => req<AuditEvent[]>(`/applications/${id}/audit`),
+  upload: (files: File[]) => {
+    const form = new FormData();
+    files.forEach((f) => form.append("files", f));
+    return req<{ id: string; status: Status }>("/applications", { method: "POST", body: form });
+  },
+  review: (id: string, body: ReviewBody) =>
+    req<AppDetail>(`/applications/${id}/review`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(body),
+    }),
+  fileUrl: (id: string, file: string) => `${API_URL}/applications/${id}/files/${baseName(file)}`,
+};
+
+export function baseName(path: string): string {
+  return path.split(/[\\/]/).pop() ?? path;
+}
