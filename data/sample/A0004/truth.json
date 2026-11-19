@@ -1,0 +1,462 @@
+{
+  "applicant_id": "A0004",
+  "seed": 42,
+  "identity": {
+    "name": "ANNA NOLAN",
+    "ssn": "942-34-3728",
+    "address": "4748 Richardson Shoals Apt. 500, East Douglas, DE 73668"
+  },
+  "documents": {
+    "paystub": {
+      "file": "paystub.pdf",
+      "scanned": false,
+      "fields": {
+        "employer": "WONG-KING",
+        "employee": "ANNA NOLAN",
+        "pay_period_start": "2025-12-13",
+        "pay_period_end": "2025-12-26",
+        "pay_date": "2025-12-26",
+        "gross": 273076,
+        "net": 201442,
+        "ytd_gross": 7099976,
+        "deductions": {
+          "federal_tax": 32769,
+          "social_security": 16931,
+          "medicare": 3960,
+          "state_tax": 10923,
+          "health_insurance": 7500
+        }
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "scanned": true,
+      "fields": {
+        "employer": "WONG-KING",
+        "ein": "92-1000891",
+        "employee": "ANNA NOLAN",
+        "ssn": "942-34-3728",
+        "year": 2025,
+        "wages_box1": 7099976,
+        "federal_tax_box2": 851994,
+        "ss_wages_box3": 7099976,
+        "ss_tax_box4": 440206,
+        "medicare_wages_box5": 7099976,
+        "medicare_tax_box6": 102960
+      }
+    },
+    "statement": {
+      "file": "statement.pdf",
+      "scanned": false,
+      "fields": {
+        "bank": "First Meridian Bank",
+        "account_holder": "ANNA NOLAN",
+        "account_last4": "3032",
+        "period_start": "2025-10-01",
+        "period_end": "2025-12-31",
+        "opening_balance": 285000,
+        "transactions": [
+          {
+            "date": "2025-10-01",
+            "description": "RENT PAYMENT",
+            "amount": -121936,
+            "balance": 163064
+          },
+          {
+            "date": "2025-10-02",
+            "description": "WHOLE FOODS",
+            "amount": -16848,
+            "balance": 146216
+          },
+          {
+            "date": "2025-10-02",
+            "description": "PANERA",
+            "amount": -5461,
+            "balance": 140755
+          },
+          {
+            "date": "2025-10-02",
+            "description": "COMCAST",
+            "amount": -9547,
+            "balance": 131208
+          },
+          {
+            "date": "2025-10-03",
+            "description": "PAYROLL WONG-KING",
+            "amount": 200993,
+            "balance": 332201
+          },
+          {
+            "date": "2025-10-03",
+            "description": "SHELL OIL",
+            "amount": -5077,
+            "balance": 327124
+          },
+          {
+            "date": "2025-10-04",
+            "description": "STARBUCKS",
+            "amount": -6371,
+            "balance": 320753
+          },
+          {
+            "date": "2025-10-06",
+            "description": "EXXON",
+            "amount": -5776,
+            "balance": 314977
+          },
+          {
+            "date": "2025-10-08",
+            "description": "WHOLE FOODS",
+            "amount": -12213,
+            "balance": 302764
+          },
+          {
+            "date": "2025-10-10",
+            "description": "KROGER",
+            "amount": -14801,
+            "balance": 287963
+          },
+          {
+            "date": "2025-10-12",
+            "description": "SHELL OIL",
+            "amount": -8483,
+            "balance": 279480
+          },
+          {
+            "date": "2025-10-12",
+            "description": "STARBUCKS",
+            "amount": -4534,
+            "balance": 274946
+          },
+          {
+            "date": "2025-10-12",
+            "description": "CITY UTILITIES",
+            "amount": -19240,
+            "balance": 255706
+          },
+          {
+            "date": "2025-10-14",
+            "description": "PANERA",
+            "amount": -5105,
+            "balance": 250601
+          },
+          {
+            "date": "2025-10-17",
+            "description": "PAYROLL WONG-KING",
+            "amount": 200993,
+            "balance": 451594
+          },
+          {
+            "date": "2025-10-20",
+            "description": "STARBUCKS",
+            "amount": -6271,
+            "balance": 445323
+          },
+          {
+            "date": "2025-10-20",
+            "description": "CHIPOTLE",
+            "amount": -4181,
+            "balance": 441142
+          },
+          {
+            "date": "2025-10-22",
+            "description": "AMAZON PRIME",
+            "amount": -5149,
+            "balance": 435993
+          },
+          {
+            "date": "2025-10-23",
+            "description": "WHOLE FOODS",
+            "amount": -10910,
+            "balance": 425083
+          },
+          {
+            "date": "2025-10-26",
+            "description": "TRADER JOES",
+            "amount": -11726,
+            "balance": 413357
+          },
+          {
+            "date": "2025-10-28",
+            "description": "AMAZON PRIME",
+            "amount": -6042,
+            "balance": 407315
+          },
+          {
+            "date": "2025-10-31",
+            "description": "PAYROLL WONG-KING",
+            "amount": 200993,
+            "balance": 608308
+          },
+          {
+            "date": "2025-11-01",
+            "description": "RENT PAYMENT",
+            "amount": -121936,
+            "balance": 486372
+          },
+          {
+            "date": "2025-11-05",
+            "description": "STARBUCKS",
+            "amount": -5176,
+            "balance": 481196
+          },
+          {
+            "date": "2025-11-07",
+            "description": "SAFEWAY",
+            "amount": -10775,
+            "balance": 470421
+          },
+          {
+            "date": "2025-11-09",
+            "description": "KROGER",
+            "amount": -8149,
+            "balance": 462272
+          },
+          {
+            "date": "2025-11-10",
+            "description": "SHELL OIL",
+            "amount": -8672,
+            "balance": 453600
+          },
+          {
+            "date": "2025-11-10",
+            "description": "STARBUCKS",
+            "amount": -6764,
+            "balance": 446836
+          },
+          {
+            "date": "2025-11-11",
+            "description": "TRADER JOES",
+            "amount": -8815,
+            "balance": 438021
+          },
+          {
+            "date": "2025-11-11",
+            "description": "STARBUCKS",
+            "amount": -5771,
+            "balance": 432250
+          },
+          {
+            "date": "2025-11-11",
+            "description": "COMCAST",
+            "amount": -19119,
+            "balance": 413131
+          },
+          {
+            "date": "2025-11-13",
+            "description": "NETFLIX",
+            "amount": -3135,
+            "balance": 409996
+          },
+          {
+            "date": "2025-11-14",
+            "description": "PAYROLL WONG-KING",
+            "amount": 200993,
+            "balance": 610989
+          },
+          {
+            "date": "2025-11-16",
+            "description": "DOORDASH",
+            "amount": -4743,
+            "balance": 606246
+          },
+          {
+            "date": "2025-11-17",
+            "description": "DOORDASH",
+            "amount": -5858,
+            "balance": 600388
+          },
+          {
+            "date": "2025-11-18",
+            "description": "WHOLE FOODS",
+            "amount": -14531,
+            "balance": 585857
+          },
+          {
+            "date": "2025-11-19",
+            "description": "DOORDASH",
+            "amount": -6281,
+            "balance": 579576
+          },
+          {
+            "date": "2025-11-24",
+            "description": "SPOTIFY",
+            "amount": -2825,
+            "balance": 576751
+          },
+          {
+            "date": "2025-11-25",
+            "description": "SHELL OIL",
+            "amount": -4657,
+            "balance": 572094
+          },
+          {
+            "date": "2025-11-25",
+            "description": "EXXON",
+            "amount": -5188,
+            "balance": 566906
+          },
+          {
+            "date": "2025-11-28",
+            "description": "PAYROLL WONG-KING",
+            "amount": 200993,
+            "balance": 767899
+          },
+          {
+            "date": "2025-11-28",
+            "description": "KROGER",
+            "amount": -10954,
+            "balance": 756945
+          },
+          {
+            "date": "2025-11-28",
+            "description": "CITY UTILITIES",
+            "amount": -15903,
+            "balance": 741042
+          },
+          {
+            "date": "2025-12-01",
+            "description": "RENT PAYMENT",
+            "amount": -121936,
+            "balance": 619106
+          },
+          {
+            "date": "2025-12-02",
+            "description": "SAFEWAY",
+            "amount": -12673,
+            "balance": 606433
+          },
+          {
+            "date": "2025-12-02",
+            "description": "STARBUCKS",
+            "amount": -4475,
+            "balance": 601958
+          },
+          {
+            "date": "2025-12-03",
+            "description": "NETFLIX",
+            "amount": -4872,
+            "balance": 597086
+          },
+          {
+            "date": "2025-12-03",
+            "description": "CHIPOTLE",
+            "amount": -5177,
+            "balance": 591909
+          },
+          {
+            "date": "2025-12-05",
+            "description": "SHELL OIL",
+            "amount": -7891,
+            "balance": 584018
+          },
+          {
+            "date": "2025-12-07",
+            "description": "PANERA",
+            "amount": -6768,
+            "balance": 577250
+          },
+          {
+            "date": "2025-12-08",
+            "description": "CHEVRON",
+            "amount": -9419,
+            "balance": 567831
+          },
+          {
+            "date": "2025-12-12",
+            "description": "PAYROLL WONG-KING",
+            "amount": 200993,
+            "balance": 768824
+          },
+          {
+            "date": "2025-12-14",
+            "description": "KROGER",
+            "amount": -11547,
+            "balance": 757277
+          },
+          {
+            "date": "2025-12-14",
+            "description": "CITY UTILITIES",
+            "amount": -14434,
+            "balance": 742843
+          },
+          {
+            "date": "2025-12-19",
+            "description": "EXXON",
+            "amount": -8083,
+            "balance": 734760
+          },
+          {
+            "date": "2025-12-19",
+            "description": "DOORDASH",
+            "amount": -5453,
+            "balance": 729307
+          },
+          {
+            "date": "2025-12-22",
+            "description": "KROGER",
+            "amount": -11341,
+            "balance": 717966
+          },
+          {
+            "date": "2025-12-23",
+            "description": "SAFEWAY",
+            "amount": -15140,
+            "balance": 702826
+          },
+          {
+            "date": "2025-12-23",
+            "description": "SPOTIFY",
+            "amount": -4505,
+            "balance": 698321
+          },
+          {
+            "date": "2025-12-24",
+            "description": "CHIPOTLE",
+            "amount": -5542,
+            "balance": 692779
+          },
+          {
+            "date": "2025-12-25",
+            "description": "CITY UTILITIES",
+            "amount": -18123,
+            "balance": 674656
+          },
+          {
+            "date": "2025-12-26",
+            "description": "PAYROLL WONG-KING",
+            "amount": 200993,
+            "balance": 875649
+          },
+          {
+            "date": "2025-12-26",
+            "description": "CHIPOTLE",
+            "amount": -7015,
+            "balance": 868634
+          },
+          {
+            "date": "2025-12-28",
+            "description": "SAFEWAY",
+            "amount": -14231,
+            "balance": 854403
+          }
+        ],
+        "closing_balance": 854403
+      }
+    }
+  },
+  "anomalies": [
+    {
+      "code": "altered_totals",
+      "doc": "paystub",
+      "field": "net",
+      "detail": {
+        "computed_net": 200993,
+        "printed_net": 201442
+      }
+    }
+  ],
+  "expected_flags": [
+    "altered_totals"
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "applicant_id": "A0002",
+  "seed": 42,
+  "identity": {
+    "name": "GRANT POWELL",
+    "ssn": "942-18-6615",
+    "address": "3819 Shannon Alley, Melissafort, VA 45816"
+  },
+  "documents": {
+    "paystub": {
+      "file": "paystub.pdf",
+      "scanned": true,
+      "fields": {
+        "employer": "FLETCHER-BARBER",
+        "employee": "GRANT POWELL",
+        "pay_period_start": "2025-12-13",
+        "pay_period_end": "2025-12-26",
+        "pay_date": "2025-12-26",
+        "gross": 305769,
+        "net": 225954,
+        "ytd_gross": 7949994,
+        "deductions": {
+          "federal_tax": 36692,
+          "social_security": 18958,
+          "medicare": 4434,
+          "state_tax": 12231,
+          "health_insurance": 7500
+        }
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "scanned": false,
+      "fields": {
+        "employer": "FLETCHER-BARBER",
+        "ein": "53-9987200",
+        "employee": "GRANT POWELL",
+        "ssn": "942-18-6615",
+        "year": 2025,
+        "wages_box1": 10916498,
+        "federal_tax_box2": 953992,
+        "ss_wages_box3": 7949994,
+        "ss_tax_box4": 492908,
+        "medicare_wages_box5": 7949994,
+        "medicare_tax_box6": 115284
+      }
+    },
+    "statement": {
+      "file": "statement.pdf",
+      "scanned": false,
+      "fields": {
+        "bank": "Harborview Bank",
+        "account_holder": "GRANT POWELL",
+        "account_last4": "2741",
+        "period_start": "2025-10-01",
+        "period_end": "2025-12-31",
+        "opening_balance": 285000,
+        "transactions": [
+          {
+            "date": "2025-10-01",
+            "description": "RENT PAYMENT",
+            "amount": -137079,
+            "balance": 147921
+          },
+          {
+            "date": "2025-10-03",
+            "description": "PAYROLL FLETCHER-BARBER",
+            "amount": 225954,
+            "balance": 373875
+          },
+          {
+            "date": "2025-10-07",
+            "description": "CHIPOTLE",
+            "amount": -6556,
+            "balance": 367319
+          },
+          {
+            "date": "2025-10-08",
+            "description": "SAFEWAY",
+            "amount": -17678,
+            "balance": 349641
+          },
+          {
+            "date": "2025-10-11",
+            "description": "VERIZON",
+            "amount": -22453,
+            "balance": 327188
+          },
+          {
+            "date": "2025-10-13",
+            "description": "WHOLE FOODS",
+            "amount": -14970,
+            "balance": 312218
+          },
+          {
+            "date": "2025-10-14",
+            "description": "CITY UTILITIES",
+            "amount": -14453,
+            "balance": 297765
+          },
+          {
+            "date": "2025-10-15",
+            "description": "PANERA",
+            "amount": -6543,
+            "balance": 291222
+          },
+          {
+            "date": "2025-10-16",
+            "description": "EXXON",
+            "amount": -9544,
+            "balance": 281678
+          },
+          {
+            "date": "2025-10-17",
+            "description": "PAYROLL FLETCHER-BARBER",
+            "amount": 225954,
+            "balance": 507632
+          },
+          {
+            "date": "2025-10-17",
+            "description": "TRADER JOES",
+            "amount": -17582,
+            "balance": 490050
+          },
+          {
+            "date": "2025-10-17",
+            "description": "PANERA",
+            "amount": -7642,
+            "balance": 482408
+          },
+          {
+            "date": "2025-10-18",
+            "description": "EXXON",
+            "amount": -5765,
+            "balance": 476643
+          },
+          {
+            "date": "2025-10-19",
+            "description": "WHOLE FOODS",
+            "amount": -11487,
+            "balance": 465156
+          },
+          {
+            "date": "2025-10-19",
+            "description": "TRADER JOES",
+            "amount": -18429,
+            "balance": 446727
+          },
+          {
+            "date": "2025-10-23",
+            "description": "STARBUCKS",
+            "amount": -5298,
+            "balance": 441429
+          },
+          {
+            "date": "2025-10-23",
+            "description": "STARBUCKS",
+            "amount": -7763,
+            "balance": 433666
+          },
+          {
+            "date": "2025-10-24",
+            "description": "AMAZON PRIME",
+            "amount": -4729,
+            "balance": 428937
+          },
+          {
+            "date": "2025-10-24",
+            "description": "CHIPOTLE",
+            "amount": -3900,
+            "balance": 425037
+          },
+          {
+            "date": "2025-10-25",
+            "description": "SHELL OIL",
+            "amount": -9428,
+            "balance": 415609
+          },
+          {
+            "date": "2025-10-27",
+            "description": "NETFLIX",
+            "amount": -6385,
+            "balance": 409224
+          },
+          {
+            "date": "2025-10-31",
+            "description": "PAYROLL FLETCHER-BARBER",
+            "amount": 225954,
+            "balance": 635178
+          },
+          {
+            "date": "2025-11-01",
+            "description": "RENT PAYMENT",
+            "amount": -137079,
+            "balance": 498099
+          },
+          {
+            "date": "2025-11-04",
+            "description": "SAFEWAY",
+            "amount": -11251,
+            "balance": 486848
+          },
+          {
+            "date": "2025-11-04",
+            "description": "CITY UTILITIES",
+            "amount": -17537,
+            "balance": 469311
+          },
+          {
+            "date": "2025-11-05",
+            "description": "KROGER",
+            "amount": -19075,
+            "balance": 450236
+          },
+          {
+            "date": "2025-11-05",
+            "description": "PANERA",
+            "amount": -5070,
+            "balance": 445166
+          },
+          {
+            "date": "2025-11-06",
+            "description": "CITY UTILITIES",
+            "amount": -21009,
+            "balance": 424157
+          },
+          {
+            "date": "2025-11-09",
+            "description": "SAFEWAY",
+            "amount": -17636,
+            "balance": 406521
+          },
+          {
+            "date": "2025-11-10",
+            "description": "CHIPOTLE",
+            "amount": -4193,
+            "balance": 402328
+          },
+          {
+            "date": "2025-11-11",
+            "description": "STARBUCKS",
+            "amount": -6502,
+            "balance": 395826
+          },
+          {
+            "date": "2025-11-12",
+            "description": "CHEVRON",
+            "amount": -10375,
+            "balance": 385451
+          },
+          {
+            "date": "2025-11-14",
+            "description": "PAYROLL FLETCHER-BARBER",
+            "amount": 225954,
+            "balance": 611405
+          },
+          {
+            "date": "2025-11-14",
+            "description": "SHELL OIL",
+            "amount": -5759,
+            "balance": 605646
+          },
+          {
+            "date": "2025-11-14",
+            "description": "CHIPOTLE",
+            "amount": -7398,
+            "balance": 598248
+          },
+          {
+            "date": "2025-11-15",
+            "description": "KROGER",
+            "amount": -12795,
+            "balance": 585453
+          },
+          {
+            "date": "2025-11-15",
+            "description": "AMAZON PRIME",
+            "amount": -4376,
+            "balance": 581077
+          },
+          {
+            "date": "2025-11-16",
+            "description": "TRADER JOES",
+            "amount": -18951,
+            "balance": 562126
+          },
+          {
+            "date": "2025-11-17",
+            "description": "STARBUCKS",
+            "amount": -4848,
+            "balance": 557278
+          },
+          {
+            "date": "2025-11-23",
+            "description": "CHEVRON",
+            "amount": -10726,
+            "balance": 546552
+          },
+          {
+            "date": "2025-11-27",
+            "description": "NETFLIX",
+            "amount": -6275,
+            "balance": 540277
+          },
+          {
+            "date": "2025-11-27",
+            "description": "DOORDASH",
+            "amount": -6637,
+            "balance": 533640
+          },
+          {
+            "date": "2025-11-28",
+            "description": "PAYROLL FLETCHER-BARBER",
+            "amount": 225954,
+            "balance": 759594
+          },
+          {
+            "date": "2025-12-01",
+            "description": "RENT PAYMENT",
+            "amount": -137079,
+            "balance": 622515
+          },
+          {
+            "date": "2025-12-04",
+            "description": "SAFEWAY",
+            "amount": -12664,
+            "balance": 609851
+          },
+          {
+            "date": "2025-12-05",
+            "description": "SAFEWAY",
+            "amount": -14666,
+            "balance": 595185
+          },
+          {
+            "date": "2025-12-06",
+            "description": "VERIZON",
+            "amount": -14548,
+            "balance": 580637
+          },
+          {
+            "date": "2025-12-09",
+            "description": "SAFEWAY",
+            "amount": -12121,
+            "balance": 568516
+          },
+          {
+            "date": "2025-12-11",
+            "description": "PANERA",
+            "amount": -4591,
+            "balance": 563925
+          },
+          {
+            "date": "2025-12-12",
+            "description": "PAYROLL FLETCHER-BARBER",
+            "amount": 225954,
+            "balance": 789879
+          },
+          {
+            "date": "2025-12-12",
+            "description": "STARBUCKS",
+            "amount": -7645,
+            "balance": 782234
+          },
+          {
+            "date": "2025-12-16",
+            "description": "CHEVRON",
+            "amount": -9201,
+            "balance": 773033
+          },
+          {
+            "date": "2025-12-16",
+            "description": "NETFLIX",
+            "amount": -4814,
+            "balance": 768219
+          },
+          {
+            "date": "2025-12-18",
+            "description": "CHEVRON",
+            "amount": -5125,
+            "balance": 763094
+          },
+          {
+            "date": "2025-12-19",
+            "description": "DOORDASH",
+            "amount": -3428,
+            "balance": 759666
+          },
+          {
+            "date": "2025-12-19",
+            "description": "CHIPOTLE",
+            "amount": -5213,
+            "balance": 754453
+          },
+          {
+            "date": "2025-12-20",
+            "description": "CITY UTILITIES",
+            "amount": -16373,
+            "balance": 738080
+          },
+          {
+            "date": "2025-12-21",
+            "description": "SPOTIFY",
+            "amount": -3623,
+            "balance": 734457
+          },
+          {
+            "date": "2025-12-21",
+            "description": "DOORDASH",
+            "amount": -5788,
+            "balance": 728669
+          },
+          {
+            "date": "2025-12-22",
+            "description": "WHOLE FOODS",
+            "amount": -10578,
+            "balance": 718091
+          },
+          {
+            "date": "2025-12-24",
+            "description": "WHOLE FOODS",
+            "amount": -13395,
+            "balance": 704696
+          },
+          {
+            "date": "2025-12-25",
+            "description": "CHEVRON",
+            "amount": -9849,
+            "balance": 694847
+          },
+          {
+            "date": "2025-12-26",
+            "description": "PAYROLL FLETCHER-BARBER",
+            "amount": 225954,
+            "balance": 920801
+          },
+          {
+            "date": "2025-12-28",
+            "description": "PANERA",
+            "amount": -7539,
+            "balance": 913262
+          }
+        ],
+        "closing_balance": 913262
+      }
+    }
+  },
+  "anomalies": [
+    {
+      "code": "income_mismatch",
+      "doc": "w2",
+      "field": "wages_box1",
+      "detail": {
+        "paystub_ytd_gross": 7949994,
+        "w2_wages": 10916498
+      }
+    }
+  ],
+  "expected_flags": [
+    "income_mismatch"
+  ]
+}
