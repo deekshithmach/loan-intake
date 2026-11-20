@@ -1,0 +1,686 @@
+{
+ "prompts_sha": "aba8eb55fce9",
+ "model": "claude-sonnet-5-5",
+ "calls": {
+  "A0000/paystub.pdf": [
+   {
+    "text": "{\"doc_type\": \"paystub\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 15,
+     "latency_ms": 1765.2,
+     "cost_usd": 0.005862
+    }
+   },
+   {
+    "text": "{\"employer\":\"MITCHELL, BLACKWELL AND CANTRELL\",\"employee\":\"STEPHEN COLEMAN\",\"pay_period_start\":\"2025-12-13\",\"pay_period_end\":\"2025-12-26\",\"pay_date\":\"2025-12-26\",\"gross\":\"5,019.23\",\"net\":\"3,757.18\",\"ytd_gross\":\"130,499.98\",\"deductions\":{\"federal_tax\":\"602.31\",\"social_security\":\"311.19\",\"medicare\":\"72.78\",\"state_tax\":\"200.77\",\"health_insurance\":\"75.00\"}}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3874,
+     "output_tokens": 182,
+     "latency_ms": 2194.2,
+     "cost_usd": 0.009568
+    }
+   }
+  ],
+  "A0000/w2.pdf": [
+   {
+    "text": "{\"doc_type\": \"w2\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1365.9,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"employer\":\"MITCHELL, BLACKWELL AND CANTRELL\",\"ein\":\"46-6648207\",\"employee\":\"STEPHEN COLEMAN\",\"ssn\":\"934-37-6360\",\"year\":2025,\"wages_box1\":\"130,499.98\",\"federal_tax_box2\":\"15,660.06\",\"ss_wages_box3\":\"130,499.98\",\"ss_tax_box4\":\"8,090.94\",\"medicare_wages_box5\":\"130,499.98\",\"medicare_tax_box6\":\"1,892.28\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3771,
+     "output_tokens": 172,
+     "latency_ms": 2207.2,
+     "cost_usd": 0.009262
+    }
+   }
+  ],
+  "A0000/statement.pdf": [
+   {
+    "text": "{\"doc_type\": \"statement\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1442.5,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"bank\":\"Harborview Bank\",\"account_holder\":\"STEPHEN COLEMAN\",\"account_last4\":\"0432\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"2,650.00\",\"transactions\":[{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,279.35\",\"balance\":\"370.65\"},{\"date\":\"2025-10-02\",\"description\":\"WHOLE FOODS\",\"amount\":\"-250.55\",\"balance\":\"120.10\"},{\"date\":\"2025-10-02\",\"description\":\"AMAZON PRIME\",\"amount\":\"-86.44\",\"balance\":\"33.66\"},{\"date\":\"2025-10-03\",\"description\":\"PAYROLL MITCHELL, BLACKWELL AND CANTRELL\",\"amount\":\"3,757.18\",\"balance\":\"3,790.84\"},{\"date\":\"2025-10-04\",\"description\":\"PANERA\",\"amount\":\"-81.39\",\"balance\":\"3,709.45\"},{\"date\":\"2025-10-05\",\"description\":\"WHOLE FOODS\",\"amount\":\"-239.86\",\"balance\":\"3,469.59\"},{\"date\":\"2025-10-05\",\"description\":\"SHELL OIL\",\"amount\":\"-138.64\",\"balance\":\"3,330.95\"},{\"date\":\"2025-10-06\",\"description\":\"EXXON\",\"amount\":\"-178.22\",\"balance\":\"3,152.73\"},{\"date\":\"2025-10-10\",\"description\":\"DOORDASH\",\"amount\":\"-80.41\",\"balance\":\"3,072.32\"},{\"date\":\"2025-10-11\",\"description\":\"TRADER JOES\",\"amount\":\"-176.48\",\"balance\":\"2,895.84\"},{\"date\":\"2025-10-11\",\"description\":\"PANERA\",\"amount\":\"-112.64\",\"balance\":\"2,783.20\"},{\"date\":\"2025-10-12\",\"description\":\"DOORDASH\",\"amount\":\"-63.73\",\"balance\":\"2,719.47\"},{\"date\":\"2025-10-14\",\"description\":\"CITY UTILITIES\",\"amount\":\"-394.07\",\"balance\":\"2,325.40\"},{\"date\":\"2025-10-16\",\"description\":\"SPOTIFY\",\"amount\":\"-53.31\",\"balance\":\"2,272.09\"},{\"date\":\"2025-10-17\",\"description\":\"PAYROLL MITCHELL, BLACKWELL AND CANTRELL\",\"amount\":\"3,757.18\",\"balance\":\"6,029.27\"},{\"date\":\"2025-10-19\",\"description\":\"TRADER JOES\",\"amount\":\"-223.75\",\"balance\":\"5,805.52\"},{\"date\":\"2025-10-23\",\"description\":\"PANERA\",\"amount\":\"-72.30\",\"balance\":\"5,733.22\"},{\"date\":\"2025-10-24\",\"description\":\"CITY UTILITIES\",\"amount\":\"-240.86\",\"balance\":\"5,492.36\"},{\"date\":\"2025-10-26\",\"description\":\"CHIPOTLE\",\"amount\":\"-75.21\",\"balance\":\"5,417.15\"},{\"date\":\"2025-10-28\",\"description\":\"KROGER\",\"amount\":\"-214.89\",\"balance\":\"5,202.26\"},{\"date\":\"2025-10-28\",\"description\":\"SHELL OIL\",\"amount\":\"-141.05\",\"balance\":\"5,061.21\"},{\"date\":\"2025-10-31\",\"description\":\"PAYROLL MITCHELL, BLACKWELL AND CANTRELL\",\"amount\":\"3,757.18\",\"balance\":\"8,818.39\"},{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,279.35\",\"balance\":\"6,539.04\"},{\"date\":\"2025-11-02\",\"description\":\"KROGER\",\"amount\":\"-235.93\",\"balance\":\"6,303.11\"},{\"date\":\"2025-11-02\",\"description\":\"DOORDASH\",\"amount\":\"-71.54\",\"balance\":\"6,231.57\"},{\"date\":\"2025-11-03\",\"description\":\"TRADER JOES\",\"amount\":\"-195.64\",\"balance\":\"6,035.93\"},{\"date\":\"2025-11-07\",\"description\":\"TRADER JOES\",\"amount\":\"-201.22\",\"balance\":\"5,834.71\"},{\"date\":\"2025-11-09\",\"description\":\"DOORDASH\",\"amount\":\"-76.70\",\"balance\":\"5,758.01\"},{\"date\":\"2025-11-09\",\"description\":\"DOORDASH\",\"amount\":\"-127.19\",\"balance\":\"5,630.82\"},{\"date\":\"2025-11-13\",\"description\":\"CITY UTILITIES\",\"amount\":\"-264.67\",\"balance\":\"5,366.15\"},{\"date\":\"2025-11-14\",\"description\":\"PAYROLL MITCHELL, BLACKWELL AND CANTRELL\",\"amount\":\"3,757.18\",\"balance\":\"9,123.33\"},{\"date\":\"2025-11-14\",\"description\":\"EXXON\",\"amount\":\"-127.51\",\"balance\":\"8,995.82\"},{\"date\":\"2025-11-14\",\"description\":\"STARBUCKS\",\"amount\":\"-73.47\",\"balance\":\"8,922.35\"},{\"date\":\"2025-11-15\",\"description\":\"SAFEWAY\",\"amount\":\"-255.43\",\"balance\":\"8,666.92\"},{\"date\":\"2025-11-15\",\"description\":\"STARBUCKS\",\"amount\":\"-83.50\",\"balance\":\"8,583.42\"},{\"date\":\"2025-11-16\",\"description\":\"DOORDASH\",\"amount\":\"-93.44\",\"balance\":\"8,489.98\"},{\"date\":\"2025-11-18\",\"description\":\"NETFLIX\",\"amount\":\"-63.20\",\"balance\":\"8,426.78\"},{\"date\":\"2025-11-20\",\"description\":\"TRADER JOES\",\"amount\":\"-157.14\",\"balance\":\"8,269.64\"},{\"date\":\"2025-11-20\",\"description\":\"SPOTIFY\",\"amount\":\"-99.40\",\"balance\":\"8,170.24\"},{\"date\":\"2025-11-20\",\"description\":\"ONLINE TRANSFER OUT\",\"amount\":\"-8,171.34\",\"balance\":\"-1.10\"},{\"date\":\"2025-11-20\",\"description\":\"OVERDRAFT FEE\",\"amount\":\"-35.00\",\"balance\":\"-36.10\"},{\"date\":\"2025-11-21\",\"description\":\"SHELL OIL\",\"amount\":\"-103.18\",\"balance\":\"-139.28\"},{\"date\":\"2025-11-23\",\"description\":\"SHELL OIL\",\"amount\":\"-158.43\",\"balance\":\"-297.71\"},{\"date\":\"2025-11-26\",\"description\":\"COMCAST\",\"amount\":\"-394.97\",\"balance\":\"-692.68\"},{\"date\":\"2025-11-28\",\"description\":\"PAYROLL MITCHELL, BLACKWELL AND CANTRELL\",\"amount\":\"3,757.18\",\"balance\":\"3,064.50\"},{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,279.35\",\"balance\":\"785.15\"},{\"date\":\"2025-12-03\",\"description\":\"SAFEWAY\",\"amount\":\"-281.45\",\"balance\":\"503.70\"},{\"date\":\"2025-12-05\",\"description\":\"SHELL OIL\",\"amount\":\"-92.81\",\"balance\":\"410.89\"},{\"date\":\"2025-12-05\",\"description\":\"SHELL OIL\",\"amount\":\"-163.10\",\"balance\":\"247.79\"},{\"date\":\"2025-12-08\",\"description\":\"CITY UTILITIES\",\"amount\":\"-325.26\",\"balance\":\"-77.47\"},{\"date\":\"2025-12-09\",\"description\":\"SPOTIFY\",\"amount\":\"-90.31\",\"balance\":\"-167.78\"},{\"date\":\"2025-12-10\",\"description\":\"COMCAST\",\"amount\":\"-356.01\",\"balance\":\"-523.79\"},{\"date\":\"2025-12-12\",\"description\":\"PAYROLL MITCHELL, BLACKWELL AND CANTRELL\",\"amount\":\"3,757.18\",\"balance\":\"3,233.39\"},{\"date\":\"2025-12-13\",\"description\":\"STARBUCKS\",\"amount\":\"-110.65\",\"balance\":\"3,122.74\"},{\"date\":\"2025-12-14\",\"description\":\"CHIPOTLE\",\"amount\":\"-132.55\",\"balance\":\"2,990.19\"},{\"date\":\"2025-12-15\",\"description\":\"WHOLE FOODS\",\"amount\":\"-257.73\",\"balance\":\"2,732.46\"},{\"date\":\"2025-12-15\",\"description\":\"SPOTIFY\",\"amount\":\"-113.52\",\"balance\":\"2,618.94\"},{\"date\":\"2025-12-16\",\"description\":\"SAFEWAY\",\"amount\":\"-156.69\",\"balance\":\"2,462.25\"},{\"date\":\"2025-12-21\",\"description\":\"STARBUCKS\",\"amount\":\"-119.92\",\"balance\":\"2,342.33\"},{\"date\":\"2025-12-22\",\"description\":\"WHOLE FOODS\",\"amount\":\"-250.16\",\"balance\":\"2,092.17\"},{\"date\":\"2025-12-24\",\"description\":\"TRADER JOES\",\"amount\":\"-175.32\",\"balance\":\"1,916.85\"},{\"date\":\"2025-12-24\",\"description\":\"PANERA\",\"amount\":\"-64.90\",\"balance\":\"1,851.95\"},{\"date\":\"2025-12-26\",\"description\":\"PAYROLL MITCHELL, BLACKWELL AND CANTRELL\",\"amount\":\"3,757.18\",\"balance\":\"5,609.13\"},{\"date\":\"2025-12-26\",\"description\":\"SHELL OIL\",\"amount\":\"-99.27\",\"balance\":\"5,509.86\"},{\"date\":\"2025-12-27\",\"description\":\"PANERA\",\"amount\":\"-131.19\",\"balance\":\"5,378.67\"},{\"date\":\"2025-12-27\",\"description\":\"STARBUCKS\",\"amount\":\"-66.16\",\"balance\":\"5,312.51\"}],\"closing_balance\":\"5,312.51\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 6474,
+     "output_tokens": 3079,
+     "latency_ms": 14932.6,
+     "cost_usd": 0.043738
+    }
+   }
+  ],
+  "A0001/paystub.pdf": [
+   {
+    "text": "{\"doc_type\": \"paystub\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 15,
+     "latency_ms": 1512.6,
+     "cost_usd": 0.005862
+    }
+   },
+   {
+    "text": "{\"employer\":\"JONES-RICH\",\"employee\":\"JULIE PIERCE\",\"pay_period_start\":\"2025-12-13\",\"pay_period_end\":\"2025-12-26\",\"pay_date\":\"2025-12-26\",\"gross\":\"2,730.76\",\"net\":\"2,009.93\",\"ytd_gross\":\"70,999.76\",\"deductions\":{\"federal_tax\":\"327.69\",\"social_security\":\"169.31\",\"medicare\":\"39.60\",\"state_tax\":\"109.23\",\"health_insurance\":\"75.00\"}}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3874,
+     "output_tokens": 164,
+     "latency_ms": 1209.8,
+     "cost_usd": 0.009388
+    }
+   }
+  ],
+  "A0001/w2.pdf": [
+   {
+    "text": "{\"doc_type\": \"w2\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1337.6,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"employer\":\"JONES-RICH\",\"ein\":\"19-7003070\",\"employee\":\"JULIE PIERCE\",\"ssn\":\"920-53-8616\",\"year\":2025,\"wages_box1\":\"70,999.76\",\"federal_tax_box2\":\"8,519.94\",\"ss_wages_box3\":\"70,999.76\",\"ss_tax_box4\":\"4,402.06\",\"medicare_wages_box5\":\"70,999.76\",\"medicare_tax_box6\":\"1,029.60\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3771,
+     "output_tokens": 154,
+     "latency_ms": 2057.6,
+     "cost_usd": 0.009082
+    }
+   }
+  ],
+  "A0001/statement.pdf": [
+   {
+    "text": "{\"doc_type\": \"statement\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1363.8,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"bank\":\"Harborview Bank\",\"account_holder\":\"JULIE PIERCE\",\"account_last4\":\"2265\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"4,850.00\",\"transactions\":[\n{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,219.36\",\"balance\":\"3,630.64\"},\n{\"date\":\"2025-10-02\",\"description\":\"SHELL OIL\",\"amount\":\"-99.15\",\"balance\":\"3,531.49\"},\n{\"date\":\"2025-10-03\",\"description\":\"PAYROLL JONES-RICH\",\"amount\":\"2,009.93\",\"balance\":\"5,541.42\"},\n{\"date\":\"2025-10-05\",\"description\":\"KROGER\",\"amount\":\"-142.55\",\"balance\":\"5,398.87\"},\n{\"date\":\"2025-10-05\",\"description\":\"PANERA\",\"amount\":\"-56.23\",\"balance\":\"5,342.64\"},\n{\"date\":\"2025-10-06\",\"description\":\"CHEVRON\",\"amount\":\"-94.94\",\"balance\":\"5,247.70\"},\n{\"date\":\"2025-10-07\",\"description\":\"WHOLE FOODS\",\"amount\":\"-87.44\",\"balance\":\"5,160.26\"},\n{\"date\":\"2025-10-08\",\"description\":\"CHIPOTLE\",\"amount\":\"-39.95\",\"balance\":\"5,120.31\"},\n{\"date\":\"2025-10-08\",\"description\":\"VERIZON\",\"amount\":\"-106.40\",\"balance\":\"5,013.91\"},\n{\"date\":\"2025-10-09\",\"description\":\"DOORDASH\",\"amount\":\"-58.33\",\"balance\":\"4,955.58\"},\n{\"date\":\"2025-10-11\",\"description\":\"NETFLIX\",\"amount\":\"-52.96\",\"balance\":\"4,902.62\"},\n{\"date\":\"2025-10-12\",\"description\":\"KROGER\",\"amount\":\"-92.50\",\"balance\":\"4,810.12\"},\n{\"date\":\"2025-10-14\",\"description\":\"CHIPOTLE\",\"amount\":\"-34.36\",\"balance\":\"4,775.76\"},\n{\"date\":\"2025-10-16\",\"description\":\"PANERA\",\"amount\":\"-68.83\",\"balance\":\"4,706.93\"},\n{\"date\":\"2025-10-17\",\"description\":\"PAYROLL JONES-RICH\",\"amount\":\"2,009.93\",\"balance\":\"6,716.86\"},\n{\"date\":\"2025-10-20\",\"description\":\"CHIPOTLE\",\"amount\":\"-34.16\",\"balance\":\"6,682.70\"},\n{\"date\":\"2025-10-22\",\"description\":\"NETFLIX\",\"amount\":\"-28.89\",\"balance\":\"6,653.81\"},\n{\"date\":\"2025-10-23\",\"description\":\"KROGER\",\"amount\":\"-150.40\",\"balance\":\"6,503.41\"},\n{\"date\":\"2025-10-23\",\"description\":\"COMCAST\",\"amount\":\"-188.74\",\"balance\":\"6,314.67\"},\n{\"date\":\"2025-10-25\",\"description\":\"KROGER\",\"amount\":\"-120.63\",\"balance\":\"6,194.04\"},\n{\"date\":\"2025-10-28\",\"description\":\"EXXON\",\"amount\":\"-67.27\",\"balance\":\"6,126.77\"},\n{\"date\":\"2025-10-31\",\"description\":\"PAYROLL JONES-RICH\",\"amount\":\"2,009.93\",\"balance\":\"8,136.70\"},\n{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,219.36\",\"balance\":\"6,917.34\"},\n{\"date\":\"2025-11-04\",\"description\":\"DOORDASH\",\"amount\":\"-31.40\",\"balance\":\"6,885.94\"},\n{\"date\":\"2025-11-06\",\"description\":\"SAFEWAY\",\"amount\":\"-104.16\",\"balance\":\"6,781.78\"},\n{\"date\":\"2025-11-06\",\"description\":\"SAFEWAY\",\"amount\":\"-155.61\",\"balance\":\"6,626.17\"},\n{\"date\":\"2025-11-07\",\"description\":\"DOORDASH\",\"amount\":\"-41.17\",\"balance\":\"6,585.00\"},\n{\"date\":\"2025-11-13\",\"description\":\"PANERA\",\"amount\":\"-47.57\",\"balance\":\"6,537.43\"},\n{\"date\":\"2025-11-13\",\"description\":\"ONLINE TRANSFER OUT\",\"amount\":\"-6,538.13\",\"balance\":\"-0.70\"},\n{\"date\":\"2025-11-13\",\"description\":\"OVERDRAFT FEE\",\"amount\":\"-35.00\",\"balance\":\"-35.70\"},\n{\"date\":\"2025-11-14\",\"description\":\"PAYROLL JONES-RICH\",\"amount\":\"2,009.93\",\"balance\":\"1,974.23\"},\n{\"date\":\"2025-11-15\",\"description\":\"KROGER\",\"amount\":\"-131.94\",\"balance\":\"1,842.29\"},\n{\"date\":\"2025-11-15\",\"description\":\"CHEVRON\",\"amount\":\"-94.55\",\"balance\":\"1,747.74\"},\n{\"date\":\"2025-11-19\",\"description\":\"TRADER JOES\",\"amount\":\"-142.07\",\"balance\":\"1,605.67\"},\n{\"date\":\"2025-11-20\",\"description\":\"EXXON\",\"amount\":\"-77.41\",\"balance\":\"1,528.26\"},\n{\"date\":\"2025-11-21\",\"description\":\"COMCAST\",\"amount\":\"-151.42\",\"balance\":\"1,376.84\"},\n{\"date\":\"2025-11-22\",\"description\":\"SAFEWAY\",\"amount\":\"-157.31\",\"balance\":\"1,219.53\"},\n{\"date\":\"2025-11-23\",\"description\":\"SPOTIFY\",\"amount\":\"-50.08\",\"balance\":\"1,169.45\"},\n{\"date\":\"2025-11-24\",\"description\":\"CHIPOTLE\",\"amount\":\"-69.86\",\"balance\":\"1,099.59\"},\n{\"date\":\"2025-11-24\",\"description\":\"VERIZON\",\"amount\":\"-175.83\",\"balance\":\"923.76\"},\n{\"date\":\"2025-11-25\",\"description\":\"CHEVRON\",\"amount\":\"-93.31\",\"balance\":\"830.45\"},\n{\"date\":\"2025-11-25\",\"description\":\"PANERA\",\"amount\":\"-67.31\",\"balance\":\"763.14\"},\n{\"date\":\"2025-11-26\",\"description\":\"NETFLIX\",\"amount\":\"-31.06\",\"balance\":\"732.08\"},\n{\"date\":\"2025-11-27\",\"description\":\"DOORDASH\",\"amount\":\"-59.51\",\"balance\":\"672.57\"},\n{\"date\":\"2025-11-28\",\"description\":\"PAYROLL JONES-RICH\",\"amount\":\"2,009.93\",\"balance\":\"2,682.50\"},\n{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,219.36\",\"balance\":\"1,463.14\"},\n{\"date\":\"2025-12-02\",\"description\":\"CHIPOTLE\",\"amount\":\"-42.56\",\"balance\":\"1,420.58\"},\n{\"date\":\"2025-12-02\",\"description\":\"DOORDASH\",\"amount\":\"-35.40\",\"balance\":\"1,385.18\"},\n{\"date\":\"2025-12-04\",\"description\":\"EXXON\",\"amount\":\"-45.62\",\"balance\":\"1,339.56\"},\n{\"date\":\"2025-12-06\",\"description\":\"SAFEWAY\",\"amount\":\"-163.56\",\"balance\":\"1,176.00\"},\n{\"date\":\"2025-12-07\",\"description\":\"SAFEWAY\",\"amount\":\"-112.84\",\"balance\":\"1,063.16\"},\n{\"date\":\"2025-12-08\",\"description\":\"KROGER\",\"amount\":\"-116.36\",\"balance\":\"946.80\"},\n{\"date\":\"2025-12-08\",\"description\":\"PANERA\",\"amount\":\"-30.77\",\"balance\":\"916.03\"},\n{\"date\":\"2025-12-08\",\"description\":\"PANERA\",\"amount\":\"-41.96\",\"balance\":\"874.07\"},\n{\"date\":\"2025-12-08\",\"description\":\"CITY UTILITIES\",\"amount\":\"-198.62\",\"balance\":\"675.45\"},\n{\"date\":\"2025-12-10\",\"description\":\"EXXON\",\"amount\":\"-76.28\",\"balance\":\"599.17\"},\n{\"date\":\"2025-12-11\",\"description\":\"AMAZON PRIME\",\"amount\":\"-57.28\",\"balance\":\"541.89\"},\n{\"date\":\"2025-12-12\",\"description\":\"PAYROLL JONES-RICH\",\"amount\":\"2,009.93\",\"balance\":\"2,551.82\"},\n{\"date\":\"2025-12-12\",\"description\":\"WHOLE FOODS\",\"amount\":\"-141.33\",\"balance\":\"2,410.49\"},\n{\"date\":\"2025-12-13\",\"description\":\"STARBUCKS\",\"amount\":\"-59.92\",\"balance\":\"2,350.57\"},\n{\"date\":\"2025-12-14\",\"description\":\"NETFLIX\",\"amount\":\"-30.49\",\"balance\":\"2,320.08\"},\n{\"date\":\"2025-12-14\",\"description\":\"CHIPOTLE\",\"amount\":\"-30.70\",\"balance\":\"2,289.38\"},\n{\"date\":\"2025-12-22\",\"description\":\"CHEVRON\",\"amount\":\"-80.69\",\"balance\":\"2,208.69\"},\n{\"date\":\"2025-12-24\",\"description\":\"COMCAST\",\"amount\":\"-163.07\",\"balance\":\"2,045.62\"},\n{\"date\":\"2025-12-25\",\"description\":\"KROGER\",\"amount\":\"-114.03\",\"balance\":\"1,931.59\"},\n{\"date\":\"2025-12-26\",\"description\":\"PAYROLL JONES-RICH\",\"amount\":\"2,009.93\",\"balance\":\"3,941.52\"}\n],\"closing_balance\":\"3,941.52\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 6474,
+     "output_tokens": 2994,
+     "latency_ms": 13984.0,
+     "cost_usd": 0.042888
+    }
+   }
+  ],
+  "A0002/paystub.pdf": [
+   {
+    "text": "{\"doc_type\": \"paystub\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 15,
+     "latency_ms": 1574.1,
+     "cost_usd": 0.005862
+    }
+   },
+   {
+    "text": "{\"employer\":\"GONZALEZ-MALDONADO\",\"employee\":\"VANESSA TERRELL\",\"pay_period_start\":\"2025-12-13\",\"pay_period_end\":\"2025-12-26\",\"pay_date\":\"2025-12-26\",\"gross\":\"3,519.23\",\"net\":\"2,611.93\",\"ytd_gross\":\"91,499.98\",\"deductions\":{\"federal_tax\":\"422.31\",\"social_security\":\"218.19\",\"medicare\":\"51.03\",\"state_tax\":\"140.77\",\"health_insurance\":\"75.00\"}}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3874,
+     "output_tokens": 172,
+     "latency_ms": 2330.0,
+     "cost_usd": 0.009468
+    }
+   }
+  ],
+  "A0002/w2.pdf": [
+   {
+    "text": "{\"doc_type\": \"w2\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1337.1,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"employer\":\"GONZALEZ-MALDONADO\",\"ein\":\"35-9779384\",\"employee\":\"VANESSA TERRELL\",\"ssn\":\"997-88-7492\",\"year\":2025,\"wages_box1\":\"91,499.98\",\"federal_tax_box2\":\"10,980.06\",\"ss_wages_box3\":\"91,499.98\",\"ss_tax_box4\":\"5,672.94\",\"medicare_wages_box5\":\"91,499.98\",\"medicare_tax_box6\":\"1,326.78\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3771,
+     "output_tokens": 162,
+     "latency_ms": 1962.5,
+     "cost_usd": 0.009162
+    }
+   }
+  ],
+  "A0002/statement.pdf": [
+   {
+    "text": "{\"doc_type\": \"statement\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1509.8,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"bank\":\"Evergreen Credit Union\",\"account_holder\":\"VANESSA TERRELL\",\"account_last4\":\"2108\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"5,600.00\",\"transactions\":[\n{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,584.57\",\"balance\":\"4,015.43\"},\n{\"date\":\"2025-10-02\",\"description\":\"SAFEWAY\",\"amount\":\"-202.99\",\"balance\":\"3,812.44\"},\n{\"date\":\"2025-10-03\",\"description\":\"PAYROLL GONZALEZ-MALDONADO\",\"amount\":\"2,611.93\",\"balance\":\"6,424.37\"},\n{\"date\":\"2025-10-04\",\"description\":\"EXXON\",\"amount\":\"-121.04\",\"balance\":\"6,303.33\"},\n{\"date\":\"2025-10-05\",\"description\":\"AMAZON PRIME\",\"amount\":\"-36.48\",\"balance\":\"6,266.85\"},\n{\"date\":\"2025-10-07\",\"description\":\"VERIZON\",\"amount\":\"-209.17\",\"balance\":\"6,057.68\"},\n{\"date\":\"2025-10-08\",\"description\":\"STARBUCKS\",\"amount\":\"-56.30\",\"balance\":\"6,001.38\"},\n{\"date\":\"2025-10-09\",\"description\":\"CHIPOTLE\",\"amount\":\"-60.59\",\"balance\":\"5,940.79\"},\n{\"date\":\"2025-10-09\",\"description\":\"DOORDASH\",\"amount\":\"-45.78\",\"balance\":\"5,895.01\"},\n{\"date\":\"2025-10-11\",\"description\":\"CHEVRON\",\"amount\":\"-116.92\",\"balance\":\"5,778.09\"},\n{\"date\":\"2025-10-12\",\"description\":\"CHIPOTLE\",\"amount\":\"-43.80\",\"balance\":\"5,734.29\"},\n{\"date\":\"2025-10-12\",\"description\":\"VERIZON\",\"amount\":\"-268.27\",\"balance\":\"5,466.02\"},\n{\"date\":\"2025-10-13\",\"description\":\"KROGER\",\"amount\":\"-142.36\",\"balance\":\"5,323.66\"},\n{\"date\":\"2025-10-13\",\"description\":\"DOORDASH\",\"amount\":\"-73.61\",\"balance\":\"5,250.05\"},\n{\"date\":\"2025-10-15\",\"description\":\"WHOLE FOODS\",\"amount\":\"-105.39\",\"balance\":\"5,144.66\"},\n{\"date\":\"2025-10-16\",\"description\":\"WHOLE FOODS\",\"amount\":\"-146.84\",\"balance\":\"4,997.82\"},\n{\"date\":\"2025-10-17\",\"description\":\"PAYROLL GONZALEZ-MALDONADO\",\"amount\":\"2,611.93\",\"balance\":\"7,609.75\"},\n{\"date\":\"2025-10-17\",\"description\":\"STARBUCKS\",\"amount\":\"-57.78\",\"balance\":\"7,551.97\"},\n{\"date\":\"2025-10-25\",\"description\":\"EXXON\",\"amount\":\"-96.42\",\"balance\":\"7,455.55\"},\n{\"date\":\"2025-10-27\",\"description\":\"KROGER\",\"amount\":\"-168.29\",\"balance\":\"7,287.26\"},\n{\"date\":\"2025-10-27\",\"description\":\"NETFLIX\",\"amount\":\"-74.55\",\"balance\":\"7,212.71\"},\n{\"date\":\"2025-10-31\",\"description\":\"PAYROLL GONZALEZ-MALDONADO\",\"amount\":\"2,611.93\",\"balance\":\"9,824.64\"},\n{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,584.57\",\"balance\":\"8,240.07\"},\n{\"date\":\"2025-11-02\",\"description\":\"PANERA\",\"amount\":\"-67.71\",\"balance\":\"8,172.36\"},\n{\"date\":\"2025-11-03\",\"description\":\"COMCAST\",\"amount\":\"-202.69\",\"balance\":\"7,969.67\"},\n{\"date\":\"2025-11-05\",\"description\":\"SAFEWAY\",\"amount\":\"-112.38\",\"balance\":\"7,857.29\"},\n{\"date\":\"2025-11-08\",\"description\":\"AMAZON PRIME\",\"amount\":\"-70.14\",\"balance\":\"7,787.15\"},\n{\"date\":\"2025-11-08\",\"description\":\"STARBUCKS\",\"amount\":\"-51.50\",\"balance\":\"7,735.65\"},\n{\"date\":\"2025-11-08\",\"description\":\"DOORDASH\",\"amount\":\"-80.74\",\"balance\":\"7,654.91\"},\n{\"date\":\"2025-11-11\",\"description\":\"SAFEWAY\",\"amount\":\"-196.18\",\"balance\":\"7,458.73\"},\n{\"date\":\"2025-11-12\",\"description\":\"EXXON\",\"amount\":\"-131.90\",\"balance\":\"7,326.83\"},\n{\"date\":\"2025-11-13\",\"description\":\"EXXON\",\"amount\":\"-108.61\",\"balance\":\"7,218.22\"},\n{\"date\":\"2025-11-14\",\"description\":\"PAYROLL GONZALEZ-MALDONADO\",\"amount\":\"2,611.93\",\"balance\":\"9,830.15\"},\n{\"date\":\"2025-11-17\",\"description\":\"PANERA\",\"amount\":\"-60.01\",\"balance\":\"9,770.14\"},\n{\"date\":\"2025-11-19\",\"description\":\"TRADER JOES\",\"amount\":\"-120.46\",\"balance\":\"9,649.68\"},\n{\"date\":\"2025-11-20\",\"description\":\"KROGER\",\"amount\":\"-207.32\",\"balance\":\"9,442.36\"},\n{\"date\":\"2025-11-21\",\"description\":\"STARBUCKS\",\"amount\":\"-82.06\",\"balance\":\"9,360.30\"},\n{\"date\":\"2025-11-23\",\"description\":\"NETFLIX\",\"amount\":\"-49.73\",\"balance\":\"9,310.57\"},\n{\"date\":\"2025-11-24\",\"description\":\"CHEVRON\",\"amount\":\"-127.07\",\"balance\":\"9,183.50\"},\n{\"date\":\"2025-11-27\",\"description\":\"CHIPOTLE\",\"amount\":\"-85.94\",\"balance\":\"9,097.56\"},\n{\"date\":\"2025-11-28\",\"description\":\"PAYROLL GONZALEZ-MALDONADO\",\"amount\":\"2,611.93\",\"balance\":\"11,709.49\"},\n{\"date\":\"2025-11-28\",\"description\":\"SAFEWAY\",\"amount\":\"-148.77\",\"balance\":\"11,560.72\"},\n{\"date\":\"2025-11-28\",\"description\":\"CITY UTILITIES\",\"amount\":\"-224.54\",\"balance\":\"11,336.18\"},\n{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,584.57\",\"balance\":\"9,751.61\"},\n{\"date\":\"2025-12-02\",\"description\":\"COMCAST\",\"amount\":\"-206.90\",\"balance\":\"9,544.71\"},\n{\"date\":\"2025-12-03\",\"description\":\"CHEVRON\",\"amount\":\"-128.29\",\"balance\":\"9,416.42\"},\n{\"date\":\"2025-12-04\",\"description\":\"COMCAST\",\"amount\":\"-165.81\",\"balance\":\"9,250.61\"},\n{\"date\":\"2025-12-05\",\"description\":\"CHIPOTLE\",\"amount\":\"-78.61\",\"balance\":\"9,172.00\"},\n{\"date\":\"2025-12-06\",\"description\":\"SAFEWAY\",\"amount\":\"-153.92\",\"balance\":\"9,018.08\"},\n{\"date\":\"2025-12-06\",\"description\":\"SAFEWAY\",\"amount\":\"-198.13\",\"balance\":\"8,819.95\"},\n{\"date\":\"2025-12-10\",\"description\":\"CHIPOTLE\",\"amount\":\"-41.65\",\"balance\":\"8,778.30\"},\n{\"date\":\"2025-12-11\",\"description\":\"SPOTIFY\",\"amount\":\"-63.17\",\"balance\":\"8,715.13\"},\n{\"date\":\"2025-12-12\",\"description\":\"PAYROLL GONZALEZ-MALDONADO\",\"amount\":\"2,611.93\",\"balance\":\"11,327.06\"},\n{\"date\":\"2025-12-13\",\"description\":\"KROGER\",\"amount\":\"-175.79\",\"balance\":\"11,151.27\"},\n{\"date\":\"2025-12-13\",\"description\":\"TRADER JOES\",\"amount\":\"-146.25\",\"balance\":\"11,005.02\"},\n{\"date\":\"2025-12-13\",\"description\":\"PANERA\",\"amount\":\"-46.66\",\"balance\":\"10,958.36\"},\n{\"date\":\"2025-12-15\",\"description\":\"PANERA\",\"amount\":\"-40.91\",\"balance\":\"10,917.45\"},\n{\"date\":\"2025-12-22\",\"description\":\"SPOTIFY\",\"amount\":\"-71.09\",\"balance\":\"10,846.36\"},\n{\"date\":\"2025-12-22\",\"description\":\"STARBUCKS\",\"amount\":\"-77.32\",\"balance\":\"10,769.04\"},\n{\"date\":\"2025-12-24\",\"description\":\"SHELL OIL\",\"amount\":\"-71.85\",\"balance\":\"10,697.19\"},\n{\"date\":\"2025-12-25\",\"description\":\"TRADER JOES\",\"amount\":\"-221.36\",\"balance\":\"10,475.83\"},\n{\"date\":\"2025-12-25\",\"description\":\"SHELL OIL\",\"amount\":\"-126.35\",\"balance\":\"10,349.48\"},\n{\"date\":\"2025-12-26\",\"description\":\"PAYROLL GONZALEZ-MALDONADO\",\"amount\":\"2,611.93\",\"balance\":\"12,961.41\"},\n{\"date\":\"2025-12-28\",\"description\":\"PANERA\",\"amount\":\"-91.58\",\"balance\":\"12,869.83\"}],\n\"closing_balance\":\"12,869.83\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 6474,
+     "output_tokens": 2988,
+     "latency_ms": 13961.7,
+     "cost_usd": 0.042828
+    }
+   }
+  ],
+  "A0003/paystub.pdf": [
+   {
+    "text": "{\"doc_type\": \"paystub\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 15,
+     "latency_ms": 1333.2,
+     "cost_usd": 0.005862
+    }
+   },
+   {
+    "text": "{\"employer\":\"MURPHY, NELSON AND TUCKER\",\"employee\":\"DR. MICHELE BREWER\",\"pay_period_start\":\"2025-12-13\",\"pay_period_end\":\"2025-12-26\",\"pay_date\":\"2025-12-26\",\"gross\":\"4,326.92\",\"net\":\"3,228.60\",\"ytd_gross\":\"112,499.92\",\"deductions\":{\"federal_tax\":\"519.23\",\"social_security\":\"268.27\",\"medicare\":\"62.74\",\"state_tax\":\"173.08\",\"health_insurance\":\"75.00\"}}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3874,
+     "output_tokens": 177,
+     "latency_ms": 1862.7,
+     "cost_usd": 0.009518
+    }
+   }
+  ],
+  "A0003/w2.pdf": [
+   {
+    "text": "{\"doc_type\": \"w2\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1704.9,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"employer\":\"MURPHY, NELSON AND TUCKER\",\"ein\":\"52-5566791\",\"employee\":\"DR. MICHELE BREWER\",\"ssn\":\"951-72-7069\",\"year\":2025,\"wages_box1\":\"112,499.92\",\"federal_tax_box2\":\"13,499.98\",\"ss_wages_box3\":\"112,499.92\",\"ss_tax_box4\":\"6,975.02\",\"medicare_wages_box5\":\"112,499.92\",\"medicare_tax_box6\":\"1,631.24\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3771,
+     "output_tokens": 167,
+     "latency_ms": 2186.3,
+     "cost_usd": 0.009212
+    }
+   }
+  ],
+  "A0003/statement.pdf": [
+   {
+    "text": "{\"doc_type\": \"statement\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1544.4,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"bank\":\"Harborview Bank\",\"account_holder\":\"DR. MICHELE BREWER\",\"account_last4\":\"3400\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"3,900.00\",\"transactions\":[{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,958.68\",\"balance\":\"1,941.32\"},{\"date\":\"2025-10-02\",\"description\":\"CHEVRON\",\"amount\":\"-104.91\",\"balance\":\"1,836.41\"},{\"date\":\"2025-10-03\",\"description\":\"PAYROLL MURPHY, NELSON AND TUCKER\",\"amount\":\"3,228.60\",\"balance\":\"5,065.01\"},{\"date\":\"2025-10-03\",\"description\":\"PANERA\",\"amount\":\"-110.94\",\"balance\":\"4,954.07\"},{\"date\":\"2025-10-04\",\"description\":\"PANERA\",\"amount\":\"-99.14\",\"balance\":\"4,854.93\"},{\"date\":\"2025-10-04\",\"description\":\"COMCAST\",\"amount\":\"-312.90\",\"balance\":\"4,542.03\"},{\"date\":\"2025-10-05\",\"description\":\"DOORDASH\",\"amount\":\"-73.95\",\"balance\":\"4,468.08\"},{\"date\":\"2025-10-07\",\"description\":\"EXXON\",\"amount\":\"-128.68\",\"balance\":\"4,339.40\"},{\"date\":\"2025-10-07\",\"description\":\"CHIPOTLE\",\"amount\":\"-56.31\",\"balance\":\"4,283.09\"},{\"date\":\"2025-10-09\",\"description\":\"TRADER JOES\",\"amount\":\"-221.24\",\"balance\":\"4,061.85\"},{\"date\":\"2025-10-10\",\"description\":\"SHELL OIL\",\"amount\":\"-89.99\",\"balance\":\"3,971.86\"},{\"date\":\"2025-10-13\",\"description\":\"KROGER\",\"amount\":\"-213.42\",\"balance\":\"3,758.44\"},{\"date\":\"2025-10-13\",\"description\":\"DOORDASH\",\"amount\":\"-94.74\",\"balance\":\"3,663.70\"},{\"date\":\"2025-10-13\",\"description\":\"DOORDASH\",\"amount\":\"-70.93\",\"balance\":\"3,592.77\"},{\"date\":\"2025-10-17\",\"description\":\"PAYROLL MURPHY, NELSON AND TUCKER\",\"amount\":\"3,228.60\",\"balance\":\"6,821.37\"},{\"date\":\"2025-10-19\",\"description\":\"SPOTIFY\",\"amount\":\"-67.47\",\"balance\":\"6,753.90\"},{\"date\":\"2025-10-21\",\"description\":\"SAFEWAY\",\"amount\":\"-117.84\",\"balance\":\"6,636.06\"},{\"date\":\"2025-10-24\",\"description\":\"TRADER JOES\",\"amount\":\"-228.14\",\"balance\":\"6,407.92\"},{\"date\":\"2025-10-27\",\"description\":\"SPOTIFY\",\"amount\":\"-83.18\",\"balance\":\"6,324.74\"},{\"date\":\"2025-10-28\",\"description\":\"TRADER JOES\",\"amount\":\"-254.54\",\"balance\":\"6,070.20\"},{\"date\":\"2025-10-28\",\"description\":\"CITY UTILITIES\",\"amount\":\"-216.99\",\"balance\":\"5,853.21\"},{\"date\":\"2025-10-31\",\"description\":\"PAYROLL MURPHY, NELSON AND TUCKER\",\"amount\":\"3,228.60\",\"balance\":\"9,081.81\"},{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,958.68\",\"balance\":\"7,123.13\"},{\"date\":\"2025-11-03\",\"description\":\"CHIPOTLE\",\"amount\":\"-64.46\",\"balance\":\"7,058.67\"},{\"date\":\"2025-11-05\",\"description\":\"SPOTIFY\",\"amount\":\"-47.86\",\"balance\":\"7,010.81\"},{\"date\":\"2025-11-07\",\"description\":\"CHEVRON\",\"amount\":\"-121.43\",\"balance\":\"6,889.38\"},{\"date\":\"2025-11-09\",\"description\":\"TRADER JOES\",\"amount\":\"-184.26\",\"balance\":\"6,705.12\"},{\"date\":\"2025-11-09\",\"description\":\"CHEVRON\",\"amount\":\"-77.03\",\"balance\":\"6,628.09\"},{\"date\":\"2025-11-09\",\"description\":\"DOORDASH\",\"amount\":\"-82.95\",\"balance\":\"6,545.14\"},{\"date\":\"2025-11-10\",\"description\":\"AMAZON PRIME\",\"amount\":\"-89.30\",\"balance\":\"6,455.84\"},{\"date\":\"2025-11-11\",\"description\":\"CHIPOTLE\",\"amount\":\"-113.30\",\"balance\":\"6,342.54\"},{\"date\":\"2025-11-12\",\"description\":\"SAFEWAY\",\"amount\":\"-141.61\",\"balance\":\"6,200.93\"},{\"date\":\"2025-11-12\",\"description\":\"VERIZON\",\"amount\":\"-246.58\",\"balance\":\"5,954.35\"},{\"date\":\"2025-11-12\",\"description\":\"COMCAST\",\"amount\":\"-284.69\",\"balance\":\"5,669.66\"},{\"date\":\"2025-11-14\",\"description\":\"PAYROLL MURPHY, NELSON AND TUCKER\",\"amount\":\"3,228.60\",\"balance\":\"8,898.26\"},{\"date\":\"2025-11-16\",\"description\":\"TRADER JOES\",\"amount\":\"-142.66\",\"balance\":\"8,755.60\"},{\"date\":\"2025-11-16\",\"description\":\"CHEVRON\",\"amount\":\"-124.87\",\"balance\":\"8,630.73\"},{\"date\":\"2025-11-16\",\"description\":\"STARBUCKS\",\"amount\":\"-111.25\",\"balance\":\"8,519.48\"},{\"date\":\"2025-11-17\",\"description\":\"PANERA\",\"amount\":\"-71.16\",\"balance\":\"8,448.32\"},{\"date\":\"2025-11-20\",\"description\":\"SAFEWAY\",\"amount\":\"-194.39\",\"balance\":\"8,253.93\"},{\"date\":\"2025-11-23\",\"description\":\"STARBUCKS\",\"amount\":\"-82.54\",\"balance\":\"8,171.39\"},{\"date\":\"2025-11-26\",\"description\":\"WHOLE FOODS\",\"amount\":\"-251.81\",\"balance\":\"7,919.58\"},{\"date\":\"2025-11-28\",\"description\":\"PAYROLL MURPHY, NELSON AND TUCKER\",\"amount\":\"3,228.60\",\"balance\":\"11,148.18\"},{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,958.68\",\"balance\":\"9,189.50\"},{\"date\":\"2025-12-03\",\"description\":\"SHELL OIL\",\"amount\":\"-92.05\",\"balance\":\"9,097.45\"},{\"date\":\"2025-12-04\",\"description\":\"EXXON\",\"amount\":\"-155.03\",\"balance\":\"8,942.42\"},{\"date\":\"2025-12-05\",\"description\":\"WHOLE FOODS\",\"amount\":\"-245.16\",\"balance\":\"8,697.26\"},{\"date\":\"2025-12-05\",\"description\":\"STARBUCKS\",\"amount\":\"-51.87\",\"balance\":\"8,645.39\"},{\"date\":\"2025-12-05\",\"description\":\"VERIZON\",\"amount\":\"-225.17\",\"balance\":\"8,420.22\"},{\"date\":\"2025-12-12\",\"description\":\"PAYROLL MURPHY, NELSON AND TUCKER\",\"amount\":\"3,228.60\",\"balance\":\"11,648.82\"},{\"date\":\"2025-12-13\",\"description\":\"DOORDASH\",\"amount\":\"-50.24\",\"balance\":\"11,598.58\"},{\"date\":\"2025-12-15\",\"description\":\"CHIPOTLE\",\"amount\":\"-93.05\",\"balance\":\"11,505.53\"},{\"date\":\"2025-12-17\",\"description\":\"SHELL OIL\",\"amount\":\"-148.28\",\"balance\":\"11,357.25\"},{\"date\":\"2025-12-18\",\"description\":\"TRADER JOES\",\"amount\":\"-226.05\",\"balance\":\"11,131.20\"},{\"date\":\"2025-12-18\",\"description\":\"NETFLIX\",\"amount\":\"-95.15\",\"balance\":\"11,036.05\"},{\"date\":\"2025-12-19\",\"description\":\"PANERA\",\"amount\":\"-68.68\",\"balance\":\"10,967.37\"},{\"date\":\"2025-12-20\",\"description\":\"TRADER JOES\",\"amount\":\"-209.49\",\"balance\":\"10,757.88\"},{\"date\":\"2025-12-22\",\"description\":\"TRADER JOES\",\"amount\":\"-138.70\",\"balance\":\"10,619.18\"},{\"date\":\"2025-12-23\",\"description\":\"WHOLE FOODS\",\"amount\":\"-186.20\",\"balance\":\"10,432.98\"},{\"date\":\"2025-12-23\",\"description\":\"DOORDASH\",\"amount\":\"-65.85\",\"balance\":\"10,367.13\"},{\"date\":\"2025-12-23\",\"description\":\"PANERA\",\"amount\":\"-86.99\",\"balance\":\"10,280.14\"},{\"date\":\"2025-12-26\",\"description\":\"PAYROLL MURPHY, NELSON AND TUCKER\",\"amount\":\"3,228.60\",\"balance\":\"13,508.74\"},{\"date\":\"2025-12-27\",\"description\":\"SPOTIFY\",\"amount\":\"-90.40\",\"balance\":\"13,418.34\"},{\"date\":\"2025-12-28\",\"description\":\"VERIZON\",\"amount\":\"-318.94\",\"balance\":\"13,099.40\"}],\"closing_balance\":\"13,099.40\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 6474,
+     "output_tokens": 2954,
+     "latency_ms": 14431.7,
+     "cost_usd": 0.042488
+    }
+   }
+  ],
+  "A0004/paystub.pdf": [
+   {
+    "text": "{\"doc_type\": \"paystub\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 15,
+     "latency_ms": 1440.3,
+     "cost_usd": 0.005862
+    }
+   },
+   {
+    "text": "{\"employer\":\"BAKER, HARDING AND ORTIZ\",\"employee\":\"JENNIFER SAWYER\",\"pay_period_start\":\"2025-12-13\",\"pay_period_end\":\"2025-12-26\",\"pay_date\":\"2025-12-26\",\"gross\":\"4,923.07\",\"net\":\"3,683.77\",\"ytd_gross\":\"127,999.82\",\"deductions\":{\"federal_tax\":\"590.77\",\"social_security\":\"305.23\",\"medicare\":\"71.38\",\"state_tax\":\"196.92\",\"health_insurance\":\"75.00\"}}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3874,
+     "output_tokens": 176,
+     "latency_ms": 1880.7,
+     "cost_usd": 0.009508
+    }
+   }
+  ],
+  "A0004/w2.pdf": [
+   {
+    "text": "{\"doc_type\": \"w2\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1532.2,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"employer\":\"BAKER, HARDING AND ORTIZ\",\"ein\":\"43-3081794\",\"employee\":\"JENNIFER SAWYER\",\"ssn\":\"963-29-2648\",\"year\":2025,\"wages_box1\":\"166,613.32\",\"federal_tax_box2\":\"15,360.02\",\"ss_wages_box3\":\"127,999.82\",\"ss_tax_box4\":\"7,935.98\",\"medicare_wages_box5\":\"127,999.82\",\"medicare_tax_box6\":\"1,855.88\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3771,
+     "output_tokens": 166,
+     "latency_ms": 1716.0,
+     "cost_usd": 0.009202
+    }
+   }
+  ],
+  "A0004/statement.pdf": [
+   {
+    "text": "{\"doc_type\": \"statement\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1749.2,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"bank\":\"Harborview Bank\",\"account_holder\":\"JENNIFER SAWYER\",\"account_last4\":\"5331\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"2,550.00\",\"transactions\":[\n{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,234.82\",\"balance\":\"315.18\"},\n{\"date\":\"2025-10-03\",\"description\":\"PAYROLL BAKER, HARDING AND ORTIZ\",\"amount\":\"3,683.77\",\"balance\":\"3,998.95\"},\n{\"date\":\"2025-10-04\",\"description\":\"AMAZON PRIME\",\"amount\":\"-57.45\",\"balance\":\"3,941.50\"},\n{\"date\":\"2025-10-05\",\"description\":\"CHEVRON\",\"amount\":\"-159.78\",\"balance\":\"3,781.72\"},\n{\"date\":\"2025-10-07\",\"description\":\"VERIZON\",\"amount\":\"-343.72\",\"balance\":\"3,438.00\"},\n{\"date\":\"2025-10-10\",\"description\":\"STARBUCKS\",\"amount\":\"-104.06\",\"balance\":\"3,333.94\"},\n{\"date\":\"2025-10-13\",\"description\":\"VERIZON\",\"amount\":\"-192.23\",\"balance\":\"3,141.71\"},\n{\"date\":\"2025-10-14\",\"description\":\"SHELL OIL\",\"amount\":\"-101.94\",\"balance\":\"3,039.77\"},\n{\"date\":\"2025-10-16\",\"description\":\"PANERA\",\"amount\":\"-120.70\",\"balance\":\"2,919.07\"},\n{\"date\":\"2025-10-17\",\"description\":\"PAYROLL BAKER, HARDING AND ORTIZ\",\"amount\":\"3,683.77\",\"balance\":\"6,602.84\"},\n{\"date\":\"2025-10-17\",\"description\":\"TRADER JOES\",\"amount\":\"-277.52\",\"balance\":\"6,325.32\"},\n{\"date\":\"2025-10-19\",\"description\":\"DOORDASH\",\"amount\":\"-110.86\",\"balance\":\"6,214.46\"},\n{\"date\":\"2025-10-21\",\"description\":\"PANERA\",\"amount\":\"-86.75\",\"balance\":\"6,127.71\"},\n{\"date\":\"2025-10-22\",\"description\":\"TRADER JOES\",\"amount\":\"-220.28\",\"balance\":\"5,907.43\"},\n{\"date\":\"2025-10-22\",\"description\":\"KROGER\",\"amount\":\"-248.84\",\"balance\":\"5,658.59\"},\n{\"date\":\"2025-10-23\",\"description\":\"WHOLE FOODS\",\"amount\":\"-210.64\",\"balance\":\"5,447.95\"},\n{\"date\":\"2025-10-23\",\"description\":\"CHEVRON\",\"amount\":\"-184.52\",\"balance\":\"5,263.43\"},\n{\"date\":\"2025-10-26\",\"description\":\"SAFEWAY\",\"amount\":\"-143.69\",\"balance\":\"5,119.74\"},\n{\"date\":\"2025-10-27\",\"description\":\"NETFLIX\",\"amount\":\"-62.20\",\"balance\":\"5,057.54\"},\n{\"date\":\"2025-10-27\",\"description\":\"CHIPOTLE\",\"amount\":\"-118.27\",\"balance\":\"4,939.27\"},\n{\"date\":\"2025-10-28\",\"description\":\"PANERA\",\"amount\":\"-97.22\",\"balance\":\"4,842.05\"},\n{\"date\":\"2025-10-31\",\"description\":\"PAYROLL BAKER, HARDING AND ORTIZ\",\"amount\":\"3,683.77\",\"balance\":\"8,525.82\"},\n{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,234.82\",\"balance\":\"6,291.00\"},\n{\"date\":\"2025-11-05\",\"description\":\"WHOLE FOODS\",\"amount\":\"-134.42\",\"balance\":\"6,156.58\"},\n{\"date\":\"2025-11-05\",\"description\":\"AMAZON PRIME\",\"amount\":\"-61.98\",\"balance\":\"6,094.60\"},\n{\"date\":\"2025-11-08\",\"description\":\"PANERA\",\"amount\":\"-107.03\",\"balance\":\"5,987.57\"},\n{\"date\":\"2025-11-08\",\"description\":\"COMCAST\",\"amount\":\"-178.92\",\"balance\":\"5,808.65\"},\n{\"date\":\"2025-11-09\",\"description\":\"EXXON\",\"amount\":\"-115.42\",\"balance\":\"5,693.23\"},\n{\"date\":\"2025-11-12\",\"description\":\"NETFLIX\",\"amount\":\"-90.94\",\"balance\":\"5,602.29\"},\n{\"date\":\"2025-11-14\",\"description\":\"PAYROLL BAKER, HARDING AND ORTIZ\",\"amount\":\"3,683.77\",\"balance\":\"9,286.06\"},\n{\"date\":\"2025-11-14\",\"description\":\"SAFEWAY\",\"amount\":\"-227.93\",\"balance\":\"9,058.13\"},\n{\"date\":\"2025-11-14\",\"description\":\"PANERA\",\"amount\":\"-78.18\",\"balance\":\"8,979.95\"},\n{\"date\":\"2025-11-16\",\"description\":\"DOORDASH\",\"amount\":\"-126.64\",\"balance\":\"8,853.31\"},\n{\"date\":\"2025-11-17\",\"description\":\"SHELL OIL\",\"amount\":\"-160.72\",\"balance\":\"8,692.59\"},\n{\"date\":\"2025-11-19\",\"description\":\"TRADER JOES\",\"amount\":\"-145.20\",\"balance\":\"8,547.39\"},\n{\"date\":\"2025-11-19\",\"description\":\"PANERA\",\"amount\":\"-120.17\",\"balance\":\"8,427.22\"},\n{\"date\":\"2025-11-20\",\"description\":\"WHOLE FOODS\",\"amount\":\"-203.41\",\"balance\":\"8,223.81\"},\n{\"date\":\"2025-11-20\",\"description\":\"CHIPOTLE\",\"amount\":\"-84.56\",\"balance\":\"8,139.25\"},\n{\"date\":\"2025-11-23\",\"description\":\"SAFEWAY\",\"amount\":\"-189.48\",\"balance\":\"7,949.77\"},\n{\"date\":\"2025-11-27\",\"description\":\"PANERA\",\"amount\":\"-112.09\",\"balance\":\"7,837.68\"},\n{\"date\":\"2025-11-27\",\"description\":\"VERIZON\",\"amount\":\"-381.07\",\"balance\":\"7,456.61\"},\n{\"date\":\"2025-11-28\",\"description\":\"PAYROLL BAKER, HARDING AND ORTIZ\",\"amount\":\"3,683.77\",\"balance\":\"11,140.38\"},\n{\"date\":\"2025-11-28\",\"description\":\"EXXON\",\"amount\":\"-118.06\",\"balance\":\"11,022.32\"},\n{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,234.82\",\"balance\":\"8,787.50\"},\n{\"date\":\"2025-12-04\",\"description\":\"SPOTIFY\",\"amount\":\"-77.21\",\"balance\":\"8,710.29\"},\n{\"date\":\"2025-12-07\",\"description\":\"DOORDASH\",\"amount\":\"-121.76\",\"balance\":\"8,588.53\"},\n{\"date\":\"2025-12-08\",\"description\":\"WHOLE FOODS\",\"amount\":\"-244.47\",\"balance\":\"8,344.06\"},\n{\"date\":\"2025-12-08\",\"description\":\"CHEVRON\",\"amount\":\"-122.52\",\"balance\":\"8,221.54\"},\n{\"date\":\"2025-12-09\",\"description\":\"PANERA\",\"amount\":\"-101.22\",\"balance\":\"8,120.32\"},\n{\"date\":\"2025-12-10\",\"description\":\"SPOTIFY\",\"amount\":\"-96.61\",\"balance\":\"8,023.71\"},\n{\"date\":\"2025-12-11\",\"description\":\"VERIZON\",\"amount\":\"-340.23\",\"balance\":\"7,683.48\"},\n{\"date\":\"2025-12-12\",\"description\":\"PAYROLL BAKER, HARDING AND ORTIZ\",\"amount\":\"3,683.77\",\"balance\":\"11,367.25\"},\n{\"date\":\"2025-12-15\",\"description\":\"KROGER\",\"amount\":\"-263.25\",\"balance\":\"11,104.00\"},\n{\"date\":\"2025-12-16\",\"description\":\"PANERA\",\"amount\":\"-99.49\",\"balance\":\"11,004.51\"},\n{\"date\":\"2025-12-18\",\"description\":\"TRADER JOES\",\"amount\":\"-142.85\",\"balance\":\"10,861.66\"},\n{\"date\":\"2025-12-18\",\"description\":\"CHEVRON\",\"amount\":\"-96.82\",\"balance\":\"10,764.84\"},\n{\"date\":\"2025-12-18\",\"description\":\"CHIPOTLE\",\"amount\":\"-74.44\",\"balance\":\"10,690.40\"},\n{\"date\":\"2025-12-20\",\"description\":\"SHELL OIL\",\"amount\":\"-168.37\",\"balance\":\"10,522.03\"},\n{\"date\":\"2025-12-21\",\"description\":\"DOORDASH\",\"amount\":\"-73.72\",\"balance\":\"10,448.31\"},\n{\"date\":\"2025-12-23\",\"description\":\"STARBUCKS\",\"amount\":\"-103.70\",\"balance\":\"10,344.61\"},\n{\"date\":\"2025-12-24\",\"description\":\"COMCAST\",\"amount\":\"-191.49\",\"balance\":\"10,153.12\"},\n{\"date\":\"2025-12-25\",\"description\":\"TRADER JOES\",\"amount\":\"-309.03\",\"balance\":\"9,844.09\"},\n{\"date\":\"2025-12-25\",\"description\":\"SAFEWAY\",\"amount\":\"-206.04\",\"balance\":\"9,638.05\"},\n{\"date\":\"2025-12-26\",\"description\":\"PAYROLL BAKER, HARDING AND ORTIZ\",\"amount\":\"3,683.77\",\"balance\":\"13,321.82\"}\n],\"closing_balance\":\"13,321.82\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 6474,
+     "output_tokens": 3001,
+     "latency_ms": 15073.7,
+     "cost_usd": 0.042958
+    }
+   }
+  ],
+  "A0005/paystub.pdf": [
+   {
+    "text": "{\"doc_type\": \"paystub\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 15,
+     "latency_ms": 1270.6,
+     "cost_usd": 0.005862
+    }
+   },
+   {
+    "text": "{\"employer\":\"SMITH, BAILEY AND YORK\",\"employee\":\"SCOTT HERNANDEZ\",\"pay_period_start\":\"2025-12-13\",\"pay_period_end\":\"2025-12-26\",\"pay_date\":\"2025-12-26\",\"gross\":\"5,076.92\",\"net\":\"3,801.22\",\"ytd_gross\":\"131,999.92\",\"deductions\":{\"federal_tax\":\"609.23\",\"social_security\":\"314.77\",\"medicare\":\"73.62\",\"state_tax\":\"203.08\",\"health_insurance\":\"75.00\"}}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3874,
+     "output_tokens": 176,
+     "latency_ms": 2198.0,
+     "cost_usd": 0.009508
+    }
+   }
+  ],
+  "A0005/w2.pdf": [
+   {
+    "text": "{\"doc_type\": \"w2\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1659.7,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"employer\":\"SMITH, BAILEY AND YORK\",\"ein\":\"12-6854175\",\"employee\":\"SCOTT HERNANDEZ\",\"ssn\":\"990-64-6840\",\"year\":2025,\"wages_box1\":\"131,999.92\",\"federal_tax_box2\":\"15,839.98\",\"ss_wages_box3\":\"131,999.92\",\"ss_tax_box4\":\"8,184.02\",\"medicare_wages_box5\":\"131,999.92\",\"medicare_tax_box6\":\"1,914.12\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3771,
+     "output_tokens": 166,
+     "latency_ms": 1972.3,
+     "cost_usd": 0.009202
+    }
+   }
+  ],
+  "A0005/statement.pdf": [
+   {
+    "text": "{\"doc_type\": \"statement\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1319.0,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"bank\":\"Lakeshore Savings\",\"account_holder\":\"SCOTT HERNANDEZ\",\"account_last4\":\"8471\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"4,000.00\",\"transactions\":[{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,306.07\",\"balance\":\"1,693.93\"},{\"date\":\"2025-10-03\",\"description\":\"PAYROLL SMITH, BAILEY AND YORK\",\"amount\":\"3,801.22\",\"balance\":\"5,495.15\"},{\"date\":\"2025-10-03\",\"description\":\"STARBUCKS\",\"amount\":\"-76.57\",\"balance\":\"5,418.58\"},{\"date\":\"2025-10-04\",\"description\":\"KROGER\",\"amount\":\"-169.57\",\"balance\":\"5,249.01\"},{\"date\":\"2025-10-04\",\"description\":\"SPOTIFY\",\"amount\":\"-60.99\",\"balance\":\"5,188.02\"},{\"date\":\"2025-10-04\",\"description\":\"VERIZON\",\"amount\":\"-324.08\",\"balance\":\"4,863.94\"},{\"date\":\"2025-10-07\",\"description\":\"DOORDASH\",\"amount\":\"-114.75\",\"balance\":\"4,749.19\"},{\"date\":\"2025-10-08\",\"description\":\"DOORDASH\",\"amount\":\"-121.79\",\"balance\":\"4,627.40\"},{\"date\":\"2025-10-09\",\"description\":\"COMCAST\",\"amount\":\"-208.16\",\"balance\":\"4,419.24\"},{\"date\":\"2025-10-14\",\"description\":\"TRADER JOES\",\"amount\":\"-166.41\",\"balance\":\"4,252.83\"},{\"date\":\"2025-10-16\",\"description\":\"DOORDASH\",\"amount\":\"-109.73\",\"balance\":\"4,143.10\"},{\"date\":\"2025-10-16\",\"description\":\"STARBUCKS\",\"amount\":\"-94.65\",\"balance\":\"4,048.45\"},{\"date\":\"2025-10-17\",\"description\":\"PAYROLL SMITH, BAILEY AND YORK\",\"amount\":\"3,801.22\",\"balance\":\"7,849.67\"},{\"date\":\"2025-10-19\",\"description\":\"EXXON\",\"amount\":\"-86.60\",\"balance\":\"7,763.07\"},{\"date\":\"2025-10-19\",\"description\":\"SPOTIFY\",\"amount\":\"-80.77\",\"balance\":\"7,682.30\"},{\"date\":\"2025-10-22\",\"description\":\"SAFEWAY\",\"amount\":\"-216.32\",\"balance\":\"7,465.98\"},{\"date\":\"2025-10-23\",\"description\":\"EXXON\",\"amount\":\"-138.70\",\"balance\":\"7,327.28\"},{\"date\":\"2025-10-24\",\"description\":\"WHOLE FOODS\",\"amount\":\"-231.64\",\"balance\":\"7,095.64\"},{\"date\":\"2025-10-24\",\"description\":\"SAFEWAY\",\"amount\":\"-321.62\",\"balance\":\"6,774.02\"},{\"date\":\"2025-10-27\",\"description\":\"EXXON\",\"amount\":\"-124.59\",\"balance\":\"6,649.43\"},{\"date\":\"2025-10-28\",\"description\":\"DOORDASH\",\"amount\":\"-76.21\",\"balance\":\"6,573.22\"},{\"date\":\"2025-10-31\",\"description\":\"PAYROLL SMITH, BAILEY AND YORK\",\"amount\":\"3,801.22\",\"balance\":\"10,374.44\"},{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,306.07\",\"balance\":\"8,068.37\"},{\"date\":\"2025-11-02\",\"description\":\"DOORDASH\",\"amount\":\"-94.55\",\"balance\":\"7,973.82\"},{\"date\":\"2025-11-03\",\"description\":\"CITY UTILITIES\",\"amount\":\"-244.09\",\"balance\":\"7,729.73\"},{\"date\":\"2025-11-05\",\"description\":\"TRADER JOES\",\"amount\":\"-272.26\",\"balance\":\"7,457.47\"},{\"date\":\"2025-11-05\",\"description\":\"EXXON\",\"amount\":\"-187.59\",\"balance\":\"7,269.88\"},{\"date\":\"2025-11-05\",\"description\":\"STARBUCKS\",\"amount\":\"-97.95\",\"balance\":\"7,171.93\"},{\"date\":\"2025-11-08\",\"description\":\"SPOTIFY\",\"amount\":\"-102.28\",\"balance\":\"7,069.65\"},{\"date\":\"2025-11-08\",\"description\":\"COMCAST\",\"amount\":\"-378.93\",\"balance\":\"6,690.72\"},{\"date\":\"2025-11-10\",\"description\":\"PANERA\",\"amount\":\"-109.49\",\"balance\":\"6,581.23\"},{\"date\":\"2025-11-11\",\"description\":\"WHOLE FOODS\",\"amount\":\"-215.95\",\"balance\":\"6,365.28\"},{\"date\":\"2025-11-12\",\"description\":\"SHELL OIL\",\"amount\":\"-171.13\",\"balance\":\"6,194.15\"},{\"date\":\"2025-11-12\",\"description\":\"NETFLIX\",\"amount\":\"-67.27\",\"balance\":\"6,126.88\"},{\"date\":\"2025-11-14\",\"description\":\"PAYROLL SMITH, BAILEY AND YORK\",\"amount\":\"3,801.22\",\"balance\":\"9,928.10\"},{\"date\":\"2025-11-14\",\"description\":\"PANERA\",\"amount\":\"-125.01\",\"balance\":\"9,803.09\"},{\"date\":\"2025-11-16\",\"description\":\"EXXON\",\"amount\":\"-82.77\",\"balance\":\"9,720.32\"},{\"date\":\"2025-11-18\",\"description\":\"TRADER JOES\",\"amount\":\"-244.92\",\"balance\":\"9,475.40\"},{\"date\":\"2025-11-21\",\"description\":\"STARBUCKS\",\"amount\":\"-63.29\",\"balance\":\"9,412.11\"},{\"date\":\"2025-11-22\",\"description\":\"DOORDASH\",\"amount\":\"-97.21\",\"balance\":\"9,314.90\"},{\"date\":\"2025-11-27\",\"description\":\"TRADER JOES\",\"amount\":\"-183.92\",\"balance\":\"9,130.98\"},{\"date\":\"2025-11-28\",\"description\":\"PAYROLL SMITH, BAILEY AND YORK\",\"amount\":\"3,801.22\",\"balance\":\"12,932.20\"},{\"date\":\"2025-11-28\",\"description\":\"TRADER JOES\",\"amount\":\"-310.48\",\"balance\":\"12,621.72\"},{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,306.07\",\"balance\":\"10,315.65\"},{\"date\":\"2025-12-02\",\"description\":\"CHEVRON\",\"amount\":\"-162.09\",\"balance\":\"10,153.56\"},{\"date\":\"2025-12-03\",\"description\":\"CHIPOTLE\",\"amount\":\"-81.03\",\"balance\":\"10,072.53\"},{\"date\":\"2025-12-03\",\"description\":\"CHIPOTLE\",\"amount\":\"-132.26\",\"balance\":\"9,940.27\"},{\"date\":\"2025-12-04\",\"description\":\"SPOTIFY\",\"amount\":\"-69.20\",\"balance\":\"9,871.07\"},{\"date\":\"2025-12-05\",\"description\":\"SHELL OIL\",\"amount\":\"-112.18\",\"balance\":\"9,758.89\"},{\"date\":\"2025-12-06\",\"description\":\"EXXON\",\"amount\":\"-137.52\",\"balance\":\"9,621.37\"},{\"date\":\"2025-12-06\",\"description\":\"STARBUCKS\",\"amount\":\"-87.98\",\"balance\":\"9,533.39\"},{\"date\":\"2025-12-06\",\"description\":\"CHIPOTLE\",\"amount\":\"-129.69\",\"balance\":\"9,403.70\"},{\"date\":\"2025-12-07\",\"description\":\"VERIZON\",\"amount\":\"-179.49\",\"balance\":\"9,224.21\"},{\"date\":\"2025-12-12\",\"description\":\"PAYROLL SMITH, BAILEY AND YORK\",\"amount\":\"3,801.22\",\"balance\":\"13,025.43\"},{\"date\":\"2025-12-14\",\"description\":\"TRADER JOES\",\"amount\":\"-302.79\",\"balance\":\"12,722.64\"},{\"date\":\"2025-12-14\",\"description\":\"DOORDASH\",\"amount\":\"-131.60\",\"balance\":\"12,591.04\"},{\"date\":\"2025-12-15\",\"description\":\"NETFLIX\",\"amount\":\"-66.98\",\"balance\":\"12,524.06\"},{\"date\":\"2025-12-19\",\"description\":\"WHOLE FOODS\",\"amount\":\"-194.22\",\"balance\":\"12,329.84\"},{\"date\":\"2025-12-22\",\"description\":\"DOORDASH\",\"amount\":\"-105.47\",\"balance\":\"12,224.37\"},{\"date\":\"2025-12-24\",\"description\":\"SAFEWAY\",\"amount\":\"-239.21\",\"balance\":\"11,985.16\"},{\"date\":\"2025-12-25\",\"description\":\"WHOLE FOODS\",\"amount\":\"-188.33\",\"balance\":\"11,796.83\"},{\"date\":\"2025-12-26\",\"description\":\"PAYROLL SMITH, BAILEY AND YORK\",\"amount\":\"3,801.22\",\"balance\":\"15,598.05\"},{\"date\":\"2025-12-26\",\"description\":\"TRADER JOES\",\"amount\":\"-185.43\",\"balance\":\"15,412.62\"},{\"date\":\"2025-12-26\",\"description\":\"COMCAST\",\"amount\":\"-222.88\",\"balance\":\"15,189.74\"}],\"closing_balance\":\"15,189.74\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 6474,
+     "output_tokens": 2939,
+     "latency_ms": 13627.6,
+     "cost_usd": 0.042338
+    }
+   }
+  ],
+  "A0006/paystub.pdf": [
+   {
+    "text": "{\"doc_type\": \"paystub\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 15,
+     "latency_ms": 1459.4,
+     "cost_usd": 0.005862
+    }
+   },
+   {
+    "text": "{\"employer\":\"HART, HUFF AND DAVIS\",\"employee\":\"JEFFERY ALLEN\",\"pay_period_start\":\"2025-12-13\",\"pay_period_end\":\"2025-12-26\",\"pay_date\":\"2025-12-26\",\"gross\":\"4,730.76\",\"net\":\"3,545.92\",\"ytd_gross\":\"122,999.76\",\"deductions\":{\"federal_tax\":\"567.69\",\"social_security\":\"293.31\",\"medicare\":\"68.60\",\"state_tax\":\"189.23\",\"health_insurance\":\"75.00\"}}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3874,
+     "output_tokens": 173,
+     "latency_ms": 2039.4,
+     "cost_usd": 0.009478
+    }
+   }
+  ],
+  "A0006/w2.pdf": [
+   {
+    "text": "{\"doc_type\": \"w2\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1245.1,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"employer\":\"HART, HUFF AND DAVIS\",\"ein\":\"82-6895265\",\"employee\":\"JEFFERY ALLEN\",\"ssn\":\"922-33-5137\",\"year\":2025,\"wages_box1\":\"122,999.76\",\"federal_tax_box2\":\"14,759.94\",\"ss_wages_box3\":\"122,999.76\",\"ss_tax_box4\":\"7,626.06\",\"medicare_wages_box5\":\"122,999.76\",\"medicare_tax_box6\":\"1,783.60\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3771,
+     "output_tokens": 163,
+     "latency_ms": 1764.4,
+     "cost_usd": 0.009172
+    }
+   }
+  ],
+  "A0006/statement.pdf": [
+   {
+    "text": "{\"doc_type\": \"statement\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1681.0,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"bank\":\"Harborview Bank\",\"account_holder\":\"JEFFERY ALLEN\",\"account_last4\":\"7801\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"5,600.00\",\"transactions\":[\n{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,145.74\",\"balance\":\"3,454.26\"},\n{\"date\":\"2025-10-03\",\"description\":\"PAYROLL HART, HUFF AND DAVIS\",\"amount\":\"3,536.93\",\"balance\":\"6,991.19\"},\n{\"date\":\"2025-10-03\",\"description\":\"KROGER\",\"amount\":\"-239.63\",\"balance\":\"6,751.56\"},\n{\"date\":\"2025-10-03\",\"description\":\"SAFEWAY\",\"amount\":\"-241.21\",\"balance\":\"6,510.35\"},\n{\"date\":\"2025-10-06\",\"description\":\"WHOLE FOODS\",\"amount\":\"-226.68\",\"balance\":\"6,283.67\"},\n{\"date\":\"2025-10-08\",\"description\":\"CHEVRON\",\"amount\":\"-145.74\",\"balance\":\"6,137.93\"},\n{\"date\":\"2025-10-10\",\"description\":\"WHOLE FOODS\",\"amount\":\"-251.10\",\"balance\":\"5,886.83\"},\n{\"date\":\"2025-10-10\",\"description\":\"DOORDASH\",\"amount\":\"-92.00\",\"balance\":\"5,794.83\"},\n{\"date\":\"2025-10-11\",\"description\":\"SHELL OIL\",\"amount\":\"-159.95\",\"balance\":\"5,634.88\"},\n{\"date\":\"2025-10-14\",\"description\":\"AMAZON PRIME\",\"amount\":\"-46.01\",\"balance\":\"5,588.87\"},\n{\"date\":\"2025-10-17\",\"description\":\"PAYROLL HART, HUFF AND DAVIS\",\"amount\":\"3,536.93\",\"balance\":\"9,125.80\"},\n{\"date\":\"2025-10-22\",\"description\":\"CHIPOTLE\",\"amount\":\"-91.85\",\"balance\":\"9,033.95\"},\n{\"date\":\"2025-10-23\",\"description\":\"CHEVRON\",\"amount\":\"-86.94\",\"balance\":\"8,947.01\"},\n{\"date\":\"2025-10-24\",\"description\":\"COMCAST\",\"amount\":\"-240.75\",\"balance\":\"8,706.26\"},\n{\"date\":\"2025-10-25\",\"description\":\"CHIPOTLE\",\"amount\":\"-116.22\",\"balance\":\"8,590.04\"},\n{\"date\":\"2025-10-25\",\"description\":\"STARBUCKS\",\"amount\":\"-74.83\",\"balance\":\"8,515.21\"},\n{\"date\":\"2025-10-25\",\"description\":\"PANERA\",\"amount\":\"-105.89\",\"balance\":\"8,409.32\"},\n{\"date\":\"2025-10-25\",\"description\":\"VERIZON\",\"amount\":\"-237.96\",\"balance\":\"8,171.36\"},\n{\"date\":\"2025-10-26\",\"description\":\"AMAZON PRIME\",\"amount\":\"-100.28\",\"balance\":\"8,071.08\"},\n{\"date\":\"2025-10-27\",\"description\":\"TRADER JOES\",\"amount\":\"-218.55\",\"balance\":\"7,852.53\"},\n{\"date\":\"2025-10-28\",\"description\":\"PANERA\",\"amount\":\"-82.66\",\"balance\":\"7,769.87\"},\n{\"date\":\"2025-10-31\",\"description\":\"PAYROLL HART, HUFF AND DAVIS\",\"amount\":\"3,536.93\",\"balance\":\"11,306.80\"},\n{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,145.74\",\"balance\":\"9,161.06\"},\n{\"date\":\"2025-11-02\",\"description\":\"PANERA\",\"amount\":\"-94.98\",\"balance\":\"9,066.08\"},\n{\"date\":\"2025-11-05\",\"description\":\"AMAZON PRIME\",\"amount\":\"-72.34\",\"balance\":\"8,993.74\"},\n{\"date\":\"2025-11-06\",\"description\":\"DOORDASH\",\"amount\":\"-109.26\",\"balance\":\"8,884.48\"},\n{\"date\":\"2025-11-06\",\"description\":\"VERIZON\",\"amount\":\"-284.07\",\"balance\":\"8,600.41\"},\n{\"date\":\"2025-11-12\",\"description\":\"TRADER JOES\",\"amount\":\"-211.80\",\"balance\":\"8,388.61\"},\n{\"date\":\"2025-11-12\",\"description\":\"DOORDASH\",\"amount\":\"-56.08\",\"balance\":\"8,332.53\"},\n{\"date\":\"2025-11-13\",\"description\":\"COMCAST\",\"amount\":\"-194.19\",\"balance\":\"8,138.34\"},\n{\"date\":\"2025-11-14\",\"description\":\"PAYROLL HART, HUFF AND DAVIS\",\"amount\":\"3,536.93\",\"balance\":\"11,675.27\"},\n{\"date\":\"2025-11-15\",\"description\":\"EXXON\",\"amount\":\"-121.79\",\"balance\":\"11,553.48\"},\n{\"date\":\"2025-11-18\",\"description\":\"KROGER\",\"amount\":\"-223.61\",\"balance\":\"11,329.87\"},\n{\"date\":\"2025-11-18\",\"description\":\"NETFLIX\",\"amount\":\"-95.16\",\"balance\":\"11,234.71\"},\n{\"date\":\"2025-11-23\",\"description\":\"SAFEWAY\",\"amount\":\"-257.85\",\"balance\":\"10,976.86\"},\n{\"date\":\"2025-11-23\",\"description\":\"EXXON\",\"amount\":\"-79.73\",\"balance\":\"10,897.13\"},\n{\"date\":\"2025-11-24\",\"description\":\"EXXON\",\"amount\":\"-92.22\",\"balance\":\"10,804.91\"},\n{\"date\":\"2025-11-25\",\"description\":\"WHOLE FOODS\",\"amount\":\"-143.91\",\"balance\":\"10,661.00\"},\n{\"date\":\"2025-11-25\",\"description\":\"CHIPOTLE\",\"amount\":\"-60.27\",\"balance\":\"10,600.73\"},\n{\"date\":\"2025-11-26\",\"description\":\"SAFEWAY\",\"amount\":\"-191.36\",\"balance\":\"10,409.37\"},\n{\"date\":\"2025-11-27\",\"description\":\"PANERA\",\"amount\":\"-115.48\",\"balance\":\"10,293.89\"},\n{\"date\":\"2025-11-28\",\"description\":\"PAYROLL HART, HUFF AND DAVIS\",\"amount\":\"3,536.93\",\"balance\":\"13,830.82\"},\n{\"date\":\"2025-11-28\",\"description\":\"CHIPOTLE\",\"amount\":\"-113.09\",\"balance\":\"13,717.73\"},\n{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,145.74\",\"balance\":\"11,571.99\"},\n{\"date\":\"2025-12-02\",\"description\":\"CHIPOTLE\",\"amount\":\"-66.99\",\"balance\":\"11,505.00\"},\n{\"date\":\"2025-12-04\",\"description\":\"PANERA\",\"amount\":\"-116.83\",\"balance\":\"11,388.17\"},\n{\"date\":\"2025-12-05\",\"description\":\"COMCAST\",\"amount\":\"-161.37\",\"balance\":\"11,226.80\"},\n{\"date\":\"2025-12-06\",\"description\":\"TRADER JOES\",\"amount\":\"-202.76\",\"balance\":\"11,024.04\"},\n{\"date\":\"2025-12-08\",\"description\":\"EXXON\",\"amount\":\"-148.11\",\"balance\":\"10,875.93\"},\n{\"date\":\"2025-12-08\",\"description\":\"CITY UTILITIES\",\"amount\":\"-230.84\",\"balance\":\"10,645.09\"},\n{\"date\":\"2025-12-12\",\"description\":\"PAYROLL HART, HUFF AND DAVIS\",\"amount\":\"3,536.93\",\"balance\":\"14,182.02\"},\n{\"date\":\"2025-12-13\",\"description\":\"SAFEWAY\",\"amount\":\"-132.75\",\"balance\":\"14,049.27\"},\n{\"date\":\"2025-12-14\",\"description\":\"SPOTIFY\",\"amount\":\"-58.36\",\"balance\":\"13,990.91\"},\n{\"date\":\"2025-12-15\",\"description\":\"KROGER\",\"amount\":\"-295.22\",\"balance\":\"13,695.69\"},\n{\"date\":\"2025-12-16\",\"description\":\"PANERA\",\"amount\":\"-90.76\",\"balance\":\"13,604.93\"},\n{\"date\":\"2025-12-22\",\"description\":\"EXXON\",\"amount\":\"-77.15\",\"balance\":\"13,527.78\"},\n{\"date\":\"2025-12-24\",\"description\":\"CHEVRON\",\"amount\":\"-104.60\",\"balance\":\"13,423.18\"},\n{\"date\":\"2025-12-26\",\"description\":\"PAYROLL HART, HUFF AND DAVIS\",\"amount\":\"3,536.93\",\"balance\":\"16,960.11\"},\n{\"date\":\"2025-12-26\",\"description\":\"SAFEWAY\",\"amount\":\"-194.32\",\"balance\":\"16,765.79\"},\n{\"date\":\"2025-12-27\",\"description\":\"KROGER\",\"amount\":\"-193.45\",\"balance\":\"16,572.34\"},\n{\"date\":\"2025-12-27\",\"description\":\"STARBUCKS\",\"amount\":\"-62.99\",\"balance\":\"16,509.35\"},\n{\"date\":\"2025-12-27\",\"description\":\"CHIPOTLE\",\"amount\":\"-55.75\",\"balance\":\"16,453.60\"},\n{\"date\":\"2025-12-27\",\"description\":\"STARBUCKS\",\"amount\":\"-66.99\",\"balance\":\"16,386.61\"},\n{\"date\":\"2025-12-28\",\"description\":\"AMAZON PRIME\",\"amount\":\"-58.04\",\"balance\":\"16,328.57\"}\n],\"closing_balance\":\"16,328.57\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 6474,
+     "output_tokens": 2988,
+     "latency_ms": 14345.4,
+     "cost_usd": 0.042828
+    }
+   }
+  ],
+  "A0007/paystub.pdf": [
+   {
+    "text": "{\"doc_type\": \"paystub\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 15,
+     "latency_ms": 1465.3,
+     "cost_usd": 0.005862
+    }
+   },
+   {
+    "text": "{\"employer\":\"HAYDEN-CHERRY\",\"employee\":\"JESSICA GARCIA\",\"pay_period_start\":\"2025-12-13\",\"pay_period_end\":\"2025-12-26\",\"pay_date\":\"2025-12-26\",\"gross\":\"3,769.23\",\"net\":\"2,802.81\",\"ytd_gross\":\"97,999.98\",\"deductions\":{\"federal_tax\":\"452.31\",\"social_security\":\"233.69\",\"medicare\":\"54.65\",\"state_tax\":\"150.77\",\"health_insurance\":\"75.00\"}}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3874,
+     "output_tokens": 170,
+     "latency_ms": 1650.3,
+     "cost_usd": 0.009448
+    }
+   }
+  ],
+  "A0007/w2.pdf": [
+   {
+    "text": "{\"doc_type\": \"w2\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1494.7,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"employer\":\"HAYDEN-CHERRY\",\"ein\":\"39-2419871\",\"employee\":\"JESSICA GARCIA\",\"ssn\":\"965-22-7622\",\"year\":2025,\"wages_box1\":\"97,999.98\",\"federal_tax_box2\":\"11,760.06\",\"ss_wages_box3\":\"97,999.98\",\"ss_tax_box4\":\"6,075.94\",\"medicare_wages_box5\":\"97,999.98\",\"medicare_tax_box6\":\"1,420.90\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3771,
+     "output_tokens": 160,
+     "latency_ms": 1771.6,
+     "cost_usd": 0.009142
+    }
+   }
+  ],
+  "A0007/statement.pdf": [
+   {
+    "text": "{\"doc_type\": \"statement\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1736.6,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"bank\":\"Lakeshore Savings\",\"account_holder\":\"JESSICA GARCIA\",\"account_last4\":\"2204\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"4,800.00\",\"transactions\":[{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,700.37\",\"balance\":\"3,099.63\"},{\"date\":\"2025-10-02\",\"description\":\"VERIZON\",\"amount\":\"-181.85\",\"balance\":\"2,917.78\"},{\"date\":\"2025-10-03\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"5,720.59\"},{\"date\":\"2025-10-06\",\"description\":\"SAFEWAY\",\"amount\":\"-104.84\",\"balance\":\"5,615.75\"},{\"date\":\"2025-10-06\",\"description\":\"SAFEWAY\",\"amount\":\"-236.38\",\"balance\":\"5,379.37\"},{\"date\":\"2025-10-06\",\"description\":\"SPOTIFY\",\"amount\":\"-76.42\",\"balance\":\"5,302.95\"},{\"date\":\"2025-10-09\",\"description\":\"STARBUCKS\",\"amount\":\"-47.50\",\"balance\":\"5,255.45\"},{\"date\":\"2025-10-14\",\"description\":\"EXXON\",\"amount\":\"-133.07\",\"balance\":\"5,122.38\"},{\"date\":\"2025-10-15\",\"description\":\"STARBUCKS\",\"amount\":\"-54.21\",\"balance\":\"5,068.17\"},{\"date\":\"2025-10-15\",\"description\":\"PANERA\",\"amount\":\"-48.06\",\"balance\":\"5,020.11\"},{\"date\":\"2025-10-17\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"7,822.92\"},{\"date\":\"2025-10-19\",\"description\":\"SPOTIFY\",\"amount\":\"-60.35\",\"balance\":\"7,762.57\"},{\"date\":\"2025-10-19\",\"description\":\"PANERA\",\"amount\":\"-54.12\",\"balance\":\"7,708.45\"},{\"date\":\"2025-10-21\",\"description\":\"TRADER JOES\",\"amount\":\"-226.49\",\"balance\":\"7,481.96\"},{\"date\":\"2025-10-21\",\"description\":\"EXXON\",\"amount\":\"-90.83\",\"balance\":\"7,391.13\"},{\"date\":\"2025-10-22\",\"description\":\"DOORDASH\",\"amount\":\"-97.02\",\"balance\":\"7,294.11\"},{\"date\":\"2025-10-23\",\"description\":\"CITY UTILITIES\",\"amount\":\"-226.74\",\"balance\":\"7,067.37\"},{\"date\":\"2025-10-27\",\"description\":\"TRADER JOES\",\"amount\":\"-213.99\",\"balance\":\"6,853.38\"},{\"date\":\"2025-10-27\",\"description\":\"CHEVRON\",\"amount\":\"-61.38\",\"balance\":\"6,792.00\"},{\"date\":\"2025-10-27\",\"description\":\"STARBUCKS\",\"amount\":\"-75.61\",\"balance\":\"6,716.39\"},{\"date\":\"2025-10-28\",\"description\":\"KROGER\",\"amount\":\"-186.47\",\"balance\":\"6,529.92\"},{\"date\":\"2025-10-31\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"9,332.73\"},{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,700.37\",\"balance\":\"7,632.36\"},{\"date\":\"2025-11-06\",\"description\":\"CHEVRON\",\"amount\":\"-119.06\",\"balance\":\"7,513.30\"},{\"date\":\"2025-11-07\",\"description\":\"DOORDASH\",\"amount\":\"-61.23\",\"balance\":\"7,452.07\"},{\"date\":\"2025-11-07\",\"description\":\"DOORDASH\",\"amount\":\"-96.25\",\"balance\":\"7,355.82\"},{\"date\":\"2025-11-07\",\"description\":\"CITY UTILITIES\",\"amount\":\"-129.55\",\"balance\":\"7,226.27\"},{\"date\":\"2025-11-09\",\"description\":\"CHEVRON\",\"amount\":\"-95.27\",\"balance\":\"7,131.00\"},{\"date\":\"2025-11-11\",\"description\":\"NETFLIX\",\"amount\":\"-75.99\",\"balance\":\"7,055.01\"},{\"date\":\"2025-11-11\",\"description\":\"CHIPOTLE\",\"amount\":\"-58.99\",\"balance\":\"6,996.02\"},{\"date\":\"2025-11-14\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"9,798.83\"},{\"date\":\"2025-11-14\",\"description\":\"CHIPOTLE\",\"amount\":\"-80.91\",\"balance\":\"9,717.92\"},{\"date\":\"2025-11-15\",\"description\":\"STARBUCKS\",\"amount\":\"-53.94\",\"balance\":\"9,663.98\"},{\"date\":\"2025-11-16\",\"description\":\"DOORDASH\",\"amount\":\"-71.63\",\"balance\":\"9,592.35\"},{\"date\":\"2025-11-17\",\"description\":\"AMAZON PRIME\",\"amount\":\"-77.24\",\"balance\":\"9,515.11\"},{\"date\":\"2025-11-18\",\"description\":\"SAFEWAY\",\"amount\":\"-141.30\",\"balance\":\"9,373.81\"},{\"date\":\"2025-11-19\",\"description\":\"WHOLE FOODS\",\"amount\":\"-129.55\",\"balance\":\"9,244.26\"},{\"date\":\"2025-11-19\",\"description\":\"CITY UTILITIES\",\"amount\":\"-274.96\",\"balance\":\"8,969.30\"},{\"date\":\"2025-11-20\",\"description\":\"SHELL OIL\",\"amount\":\"-105.06\",\"balance\":\"8,864.24\"},{\"date\":\"2025-11-21\",\"description\":\"TRADER JOES\",\"amount\":\"-206.90\",\"balance\":\"8,657.34\"},{\"date\":\"2025-11-24\",\"description\":\"SAFEWAY\",\"amount\":\"-181.07\",\"balance\":\"8,476.27\"},{\"date\":\"2025-11-27\",\"description\":\"KROGER\",\"amount\":\"-216.50\",\"balance\":\"8,259.77\"},{\"date\":\"2025-11-28\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"11,062.58\"},{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,700.37\",\"balance\":\"9,362.21\"},{\"date\":\"2025-12-02\",\"description\":\"SPOTIFY\",\"amount\":\"-69.21\",\"balance\":\"9,293.00\"},{\"date\":\"2025-12-07\",\"description\":\"DOORDASH\",\"amount\":\"-54.73\",\"balance\":\"9,238.27\"},{\"date\":\"2025-12-07\",\"description\":\"VERIZON\",\"amount\":\"-240.85\",\"balance\":\"8,997.42\"},{\"date\":\"2025-12-08\",\"description\":\"CHEVRON\",\"amount\":\"-70.41\",\"balance\":\"8,927.01\"},{\"date\":\"2025-12-09\",\"description\":\"DOORDASH\",\"amount\":\"-57.10\",\"balance\":\"8,869.91\"},{\"date\":\"2025-12-09\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"11,672.72\"},{\"date\":\"2025-12-12\",\"description\":\"CHEVRON\",\"amount\":\"-137.89\",\"balance\":\"11,534.83\"},{\"date\":\"2025-12-12\",\"description\":\"DOORDASH\",\"amount\":\"-77.83\",\"balance\":\"11,457.00\"},{\"date\":\"2025-12-12\",\"description\":\"KROGER\",\"amount\":\"-122.87\",\"balance\":\"11,334.13\"},{\"date\":\"2025-12-13\",\"description\":\"PANERA\",\"amount\":\"-51.40\",\"balance\":\"11,282.73\"},{\"date\":\"2025-12-13\",\"description\":\"WHOLE FOODS\",\"amount\":\"-142.60\",\"balance\":\"11,140.13\"},{\"date\":\"2025-12-15\",\"description\":\"WHOLE FOODS\",\"amount\":\"-194.94\",\"balance\":\"10,945.19\"},{\"date\":\"2025-12-16\",\"description\":\"CHEVRON\",\"amount\":\"-95.95\",\"balance\":\"10,849.24\"},{\"date\":\"2025-12-17\",\"description\":\"NETFLIX\",\"amount\":\"-54.46\",\"balance\":\"10,794.78\"},{\"date\":\"2025-12-17\",\"description\":\"COMCAST\",\"amount\":\"-212.30\",\"balance\":\"10,582.48\"},{\"date\":\"2025-12-17\",\"description\":\"SAFEWAY\",\"amount\":\"-185.56\",\"balance\":\"10,396.92\"},{\"date\":\"2025-12-23\",\"description\":\"PANERA\",\"amount\":\"-74.62\",\"balance\":\"10,318.30\"},{\"date\":\"2025-12-24\",\"description\":\"KROGER\",\"amount\":\"-179.50\",\"balance\":\"10,138.80\"},{\"date\":\"2025-12-26\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"12,941.61\"},{\"date\":\"2025-12-28\",\"description\":\"STARBUCKS\",\"amount\":\"-97.32\",\"balance\":\"12,844.29\"}],\"closing_balance\":\"12,844.29\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 6474,
+     "output_tokens": 2915,
+     "latency_ms": 13601.6,
+     "cost_usd": 0.042098
+    }
+   },
+   {
+    "text": "{\"bank\":\"Lakeshore Savings\",\"account_holder\":\"JESSICA GARCIA\",\"account_last4\":\"2204\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"4,800.00\",\"transactions\":[{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,700.37\",\"balance\":\"3,099.63\"},{\"date\":\"2025-10-02\",\"description\":\"VERIZON\",\"amount\":\"-181.85\",\"balance\":\"2,917.78\"},{\"date\":\"2025-10-03\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"5,720.59\"},{\"date\":\"2025-10-06\",\"description\":\"SAFEWAY\",\"amount\":\"-104.84\",\"balance\":\"5,615.75\"},{\"date\":\"2025-10-06\",\"description\":\"SAFEWAY\",\"amount\":\"-236.38\",\"balance\":\"5,379.37\"},{\"date\":\"2025-10-06\",\"description\":\"SPOTIFY\",\"amount\":\"-76.42\",\"balance\":\"5,302.95\"},{\"date\":\"2025-10-09\",\"description\":\"STARBUCKS\",\"amount\":\"-47.50\",\"balance\":\"5,255.45\"},{\"date\":\"2025-10-14\",\"description\":\"EXXON\",\"amount\":\"-133.07\",\"balance\":\"5,122.38\"},{\"date\":\"2025-10-15\",\"description\":\"STARBUCKS\",\"amount\":\"-54.21\",\"balance\":\"5,068.17\"},{\"date\":\"2025-10-15\",\"description\":\"PANERA\",\"amount\":\"-48.06\",\"balance\":\"5,020.11\"},{\"date\":\"2025-10-17\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"7,822.92\"},{\"date\":\"2025-10-19\",\"description\":\"SPOTIFY\",\"amount\":\"-60.35\",\"balance\":\"7,762.57\"},{\"date\":\"2025-10-19\",\"description\":\"PANERA\",\"amount\":\"-54.12\",\"balance\":\"7,708.45\"},{\"date\":\"2025-10-21\",\"description\":\"TRADER JOES\",\"amount\":\"-226.49\",\"balance\":\"7,481.96\"},{\"date\":\"2025-10-21\",\"description\":\"EXXON\",\"amount\":\"-90.83\",\"balance\":\"7,391.13\"},{\"date\":\"2025-10-22\",\"description\":\"DOORDASH\",\"amount\":\"-97.02\",\"balance\":\"7,294.11\"},{\"date\":\"2025-10-23\",\"description\":\"CITY UTILITIES\",\"amount\":\"-226.74\",\"balance\":\"7,067.37\"},{\"date\":\"2025-10-27\",\"description\":\"TRADER JOES\",\"amount\":\"-213.99\",\"balance\":\"6,853.38\"},{\"date\":\"2025-10-27\",\"description\":\"CHEVRON\",\"amount\":\"-61.38\",\"balance\":\"6,792.00\"},{\"date\":\"2025-10-27\",\"description\":\"STARBUCKS\",\"amount\":\"-75.61\",\"balance\":\"6,716.39\"},{\"date\":\"2025-10-28\",\"description\":\"KROGER\",\"amount\":\"-186.47\",\"balance\":\"6,529.92\"},{\"date\":\"2025-10-31\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"9,332.73\"},{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,700.37\",\"balance\":\"7,632.36\"},{\"date\":\"2025-11-06\",\"description\":\"CHEVRON\",\"amount\":\"-119.06\",\"balance\":\"7,513.30\"},{\"date\":\"2025-11-07\",\"description\":\"DOORDASH\",\"amount\":\"-61.23\",\"balance\":\"7,452.07\"},{\"date\":\"2025-11-07\",\"description\":\"DOORDASH\",\"amount\":\"-96.25\",\"balance\":\"7,355.82\"},{\"date\":\"2025-11-07\",\"description\":\"CITY UTILITIES\",\"amount\":\"-129.55\",\"balance\":\"7,226.27\"},{\"date\":\"2025-11-09\",\"description\":\"CHEVRON\",\"amount\":\"-95.27\",\"balance\":\"7,131.00\"},{\"date\":\"2025-11-11\",\"description\":\"NETFLIX\",\"amount\":\"-75.99\",\"balance\":\"7,055.01\"},{\"date\":\"2025-11-11\",\"description\":\"CHIPOTLE\",\"amount\":\"-58.99\",\"balance\":\"6,996.02\"},{\"date\":\"2025-11-14\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"9,798.83\"},{\"date\":\"2025-11-14\",\"description\":\"CHIPOTLE\",\"amount\":\"-80.91\",\"balance\":\"9,717.92\"},{\"date\":\"2025-11-15\",\"description\":\"STARBUCKS\",\"amount\":\"-53.94\",\"balance\":\"9,663.98\"},{\"date\":\"2025-11-16\",\"description\":\"DOORDASH\",\"amount\":\"-71.63\",\"balance\":\"9,592.35\"},{\"date\":\"2025-11-17\",\"description\":\"AMAZON PRIME\",\"amount\":\"-77.24\",\"balance\":\"9,515.11\"},{\"date\":\"2025-11-18\",\"description\":\"SAFEWAY\",\"amount\":\"-141.30\",\"balance\":\"9,373.81\"},{\"date\":\"2025-11-19\",\"description\":\"WHOLE FOODS\",\"amount\":\"-129.55\",\"balance\":\"9,244.26\"},{\"date\":\"2025-11-19\",\"description\":\"CITY UTILITIES\",\"amount\":\"-274.96\",\"balance\":\"8,969.30\"},{\"date\":\"2025-11-20\",\"description\":\"SHELL OIL\",\"amount\":\"-105.06\",\"balance\":\"8,864.24\"},{\"date\":\"2025-11-21\",\"description\":\"TRADER JOES\",\"amount\":\"-206.90\",\"balance\":\"8,657.34\"},{\"date\":\"2025-11-24\",\"description\":\"SAFEWAY\",\"amount\":\"-181.07\",\"balance\":\"8,476.27\"},{\"date\":\"2025-11-27\",\"description\":\"KROGER\",\"amount\":\"-216.50\",\"balance\":\"8,259.77\"},{\"date\":\"2025-11-28\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"11,062.58\"},{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,700.37\",\"balance\":\"9,362.21\"},{\"date\":\"2025-12-02\",\"description\":\"SPOTIFY\",\"amount\":\"-69.21\",\"balance\":\"9,293.00\"},{\"date\":\"2025-12-07\",\"description\":\"DOORDASH\",\"amount\":\"-54.73\",\"balance\":\"9,238.27\"},{\"date\":\"2025-12-07\",\"description\":\"VERIZON\",\"amount\":\"-240.85\",\"balance\":\"8,997.42\"},{\"date\":\"2025-12-08\",\"description\":\"CHEVRON\",\"amount\":\"-70.41\",\"balance\":\"8,927.01\"},{\"date\":\"2025-12-09\",\"description\":\"DOORDASH\",\"amount\":\"-57.10\",\"balance\":\"8,869.91\"},{\"date\":\"2025-12-09\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"11,672.72\"},{\"date\":\"2025-12-12\",\"description\":\"CHEVRON\",\"amount\":\"-137.89\",\"balance\":\"11,534.83\"},{\"date\":\"2025-12-12\",\"description\":\"DOORDASH\",\"amount\":\"-77.83\",\"balance\":\"11,457.00\"},{\"date\":\"2025-12-12\",\"description\":\"KROGER\",\"amount\":\"-122.87\",\"balance\":\"11,334.13\"},{\"date\":\"2025-12-13\",\"description\":\"PANERA\",\"amount\":\"-51.40\",\"balance\":\"11,282.73\"},{\"date\":\"2025-12-13\",\"description\":\"WHOLE FOODS\",\"amount\":\"-142.60\",\"balance\":\"11,140.13\"},{\"date\":\"2025-12-15\",\"description\":\"WHOLE FOODS\",\"amount\":\"-194.94\",\"balance\":\"10,945.19\"},{\"date\":\"2025-12-16\",\"description\":\"CHEVRON\",\"amount\":\"-95.95\",\"balance\":\"10,849.24\"},{\"date\":\"2025-12-17\",\"description\":\"NETFLIX\",\"amount\":\"-54.46\",\"balance\":\"10,794.78\"},{\"date\":\"2025-12-17\",\"description\":\"COMCAST\",\"amount\":\"-212.30\",\"balance\":\"10,582.48\"},{\"date\":\"2025-12-17\",\"description\":\"SAFEWAY\",\"amount\":\"-189.56\",\"balance\":\"10,392.92\"},{\"date\":\"2025-12-23\",\"description\":\"PANERA\",\"amount\":\"-74.62\",\"balance\":\"10,318.30\"},{\"date\":\"2025-12-23\",\"description\":\"KROGER\",\"amount\":\"-179.50\",\"balance\":\"10,138.80\"},{\"date\":\"2025-12-24\",\"description\":\"PAYROLL HAYDEN-CHERRY\",\"amount\":\"2,802.81\",\"balance\":\"12,941.61\"},{\"date\":\"2025-12-26\",\"description\":\"STARBUCKS\",\"amount\":\"-97.32\",\"balance\":\"12,844.29\"}],\"closing_balance\":\"12,844.29\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 8641,
+     "output_tokens": 2915,
+     "latency_ms": 13598.1,
+     "cost_usd": 0.046432
+    }
+   }
+  ],
+  "A0008/paystub.pdf": [
+   {
+    "text": "{\"doc_type\": \"paystub\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 15,
+     "latency_ms": 1241.8,
+     "cost_usd": 0.005862
+    }
+   },
+   {
+    "text": "{\"employer\":\"LESTER-THORNTON\",\"employee\":\"STEVE JACKSON\",\"pay_period_start\":\"2025-12-13\",\"pay_period_end\":\"2025-12-26\",\"pay_date\":\"2025-12-26\",\"gross\":\"3,480.76\",\"net\":\"2,588.24\",\"ytd_gross\":\"90,499.76\",\"deductions\":{\"federal_tax\":\"417.69\",\"social_security\":\"215.81\",\"medicare\":\"50.47\",\"state_tax\":\"139.23\",\"health_insurance\":\"75.00\"}}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3874,
+     "output_tokens": 167,
+     "latency_ms": 2043.6,
+     "cost_usd": 0.009418
+    }
+   }
+  ],
+  "A0008/w2.pdf": [
+   {
+    "text": "{\"doc_type\": \"w2\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1585.1,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"employer\":\"LESTER-THORNTON\",\"ein\":\"63-3793612\",\"employee\":\"STEVE JACKSON\",\"ssn\":\"914-61-3793\",\"year\":2025,\"wages_box1\":\"90,499.76\",\"federal_tax_box2\":\"10,859.94\",\"ss_wages_box3\":\"90,499.76\",\"ss_tax_box4\":\"5,611.06\",\"medicare_wages_box5\":\"90,499.76\",\"medicare_tax_box6\":\"1,312.22\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3771,
+     "output_tokens": 157,
+     "latency_ms": 2132.3,
+     "cost_usd": 0.009112
+    }
+   }
+  ],
+  "A0008/statement.pdf": [
+   {
+    "text": "{\"doc_type\": \"statement\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1177.3,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"bank\":\"Harborview Bank\",\"account_holder\":\"STEVE JACKSON\",\"account_last4\":\"6292\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"4,100.00\",\"transactions\":[{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,566.75\",\"balance\":\"2,533.25\"},{\"date\":\"2025-10-02\",\"description\":\"CHIPOTLE\",\"amount\":\"-89.00\",\"balance\":\"2,444.25\"},{\"date\":\"2025-10-03\",\"description\":\"PAYROLL LESTER-THORNTON\",\"amount\":\"2,582.56\",\"balance\":\"5,026.81\"},{\"date\":\"2025-10-04\",\"description\":\"STARBUCKS\",\"amount\":\"-72.36\",\"balance\":\"4,954.45\"},{\"date\":\"2025-10-05\",\"description\":\"SAFEWAY\",\"amount\":\"-136.51\",\"balance\":\"4,817.94\"},{\"date\":\"2025-10-06\",\"description\":\"TRADER JOES\",\"amount\":\"-172.06\",\"balance\":\"4,645.88\"},{\"date\":\"2025-10-07\",\"description\":\"NETFLIX\",\"amount\":\"-42.74\",\"balance\":\"4,603.14\"},{\"date\":\"2025-10-07\",\"description\":\"CITY UTILITIES\",\"amount\":\"-149.91\",\"balance\":\"4,453.23\"},{\"date\":\"2025-10-10\",\"description\":\"VERIZON\",\"amount\":\"-157.38\",\"balance\":\"4,295.85\"},{\"date\":\"2025-10-11\",\"description\":\"STARBUCKS\",\"amount\":\"-45.04\",\"balance\":\"4,250.81\"},{\"date\":\"2025-10-12\",\"description\":\"SHELL OIL\",\"amount\":\"-98.47\",\"balance\":\"4,152.34\"},{\"date\":\"2025-10-13\",\"description\":\"TRADER JOES\",\"amount\":\"-103.81\",\"balance\":\"4,048.53\"},{\"date\":\"2025-10-14\",\"description\":\"STARBUCKS\",\"amount\":\"-65.70\",\"balance\":\"3,982.83\"},{\"date\":\"2025-10-15\",\"description\":\"DOORDASH\",\"amount\":\"-80.11\",\"balance\":\"3,902.72\"},{\"date\":\"2025-10-16\",\"description\":\"PANERA\",\"amount\":\"-59.24\",\"balance\":\"3,843.48\"},{\"date\":\"2025-10-17\",\"description\":\"PAYROLL LESTER-THORNTON\",\"amount\":\"2,582.56\",\"balance\":\"6,426.04\"},{\"date\":\"2025-10-18\",\"description\":\"EXXON\",\"amount\":\"-111.59\",\"balance\":\"6,314.45\"},{\"date\":\"2025-10-25\",\"description\":\"KROGER\",\"amount\":\"-115.74\",\"balance\":\"6,198.71\"},{\"date\":\"2025-10-25\",\"description\":\"SAFEWAY\",\"amount\":\"-210.80\",\"balance\":\"5,987.91\"},{\"date\":\"2025-10-25\",\"description\":\"AMAZON PRIME\",\"amount\":\"-64.95\",\"balance\":\"5,922.96\"},{\"date\":\"2025-10-26\",\"description\":\"EXXON\",\"amount\":\"-76.11\",\"balance\":\"5,846.85\"},{\"date\":\"2025-10-31\",\"description\":\"PAYROLL LESTER-THORNTON\",\"amount\":\"2,582.56\",\"balance\":\"8,429.41\"},{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,566.75\",\"balance\":\"6,862.66\"},{\"date\":\"2025-11-02\",\"description\":\"WHOLE FOODS\",\"amount\":\"-161.51\",\"balance\":\"6,701.15\"},{\"date\":\"2025-11-03\",\"description\":\"WHOLE FOODS\",\"amount\":\"-145.51\",\"balance\":\"6,555.64\"},{\"date\":\"2025-11-04\",\"description\":\"KROGER\",\"amount\":\"-186.93\",\"balance\":\"6,368.71\"},{\"date\":\"2025-11-05\",\"description\":\"PANERA\",\"amount\":\"-58.03\",\"balance\":\"6,310.68\"},{\"date\":\"2025-11-08\",\"description\":\"AMAZON PRIME\",\"amount\":\"-60.43\",\"balance\":\"6,250.25\"},{\"date\":\"2025-11-09\",\"description\":\"AMAZON PRIME\",\"amount\":\"-66.69\",\"balance\":\"6,183.56\"},{\"date\":\"2025-11-12\",\"description\":\"KROGER\",\"amount\":\"-95.65\",\"balance\":\"6,087.91\"},{\"date\":\"2025-11-12\",\"description\":\"STARBUCKS\",\"amount\":\"-74.76\",\"balance\":\"6,013.15\"},{\"date\":\"2025-11-14\",\"description\":\"PAYROLL LESTER-THORNTON\",\"amount\":\"2,582.56\",\"balance\":\"8,595.71\"},{\"date\":\"2025-11-15\",\"description\":\"EXXON\",\"amount\":\"-68.77\",\"balance\":\"8,526.94\"},{\"date\":\"2025-11-15\",\"description\":\"COMCAST\",\"amount\":\"-149.80\",\"balance\":\"8,377.14\"},{\"date\":\"2025-11-15\",\"description\":\"CITY UTILITIES\",\"amount\":\"-145.29\",\"balance\":\"8,231.85\"},{\"date\":\"2025-11-17\",\"description\":\"STARBUCKS\",\"amount\":\"-88.87\",\"balance\":\"8,142.98\"},{\"date\":\"2025-11-19\",\"description\":\"KROGER\",\"amount\":\"-96.79\",\"balance\":\"8,046.19\"},{\"date\":\"2025-11-19\",\"description\":\"PANERA\",\"amount\":\"-63.86\",\"balance\":\"7,982.33\"},{\"date\":\"2025-11-20\",\"description\":\"EXXON\",\"amount\":\"-60.46\",\"balance\":\"7,921.87\"},{\"date\":\"2025-11-22\",\"description\":\"EXXON\",\"amount\":\"-89.98\",\"balance\":\"7,831.89\"},{\"date\":\"2025-11-22\",\"description\":\"ONLINE TRANSFER OUT\",\"amount\":\"-7,833.10\",\"balance\":\"-1.21\"},{\"date\":\"2025-11-22\",\"description\":\"OVERDRAFT FEE\",\"amount\":\"-35.00\",\"balance\":\"-36.21\"},{\"date\":\"2025-11-22\",\"description\":\"DOORDASH\",\"amount\":\"-51.84\",\"balance\":\"-88.05\"},{\"date\":\"2025-11-27\",\"description\":\"PANERA\",\"amount\":\"-87.65\",\"balance\":\"-175.70\"},{\"date\":\"2025-11-28\",\"description\":\"PAYROLL LESTER-THORNTON\",\"amount\":\"2,582.56\",\"balance\":\"2,406.86\"},{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-1,566.75\",\"balance\":\"840.11\"},{\"date\":\"2025-12-02\",\"description\":\"SHELL OIL\",\"amount\":\"-94.62\",\"balance\":\"745.49\"},{\"date\":\"2025-12-02\",\"description\":\"DOORDASH\",\"amount\":\"-81.58\",\"balance\":\"663.91\"},{\"date\":\"2025-12-02\",\"description\":\"CHIPOTLE\",\"amount\":\"-77.37\",\"balance\":\"586.54\"},{\"date\":\"2025-12-04\",\"description\":\"SHELL OIL\",\"amount\":\"-98.46\",\"balance\":\"488.08\"},{\"date\":\"2025-12-05\",\"description\":\"PANERA\",\"amount\":\"-71.14\",\"balance\":\"416.94\"},{\"date\":\"2025-12-06\",\"description\":\"CITY UTILITIES\",\"amount\":\"-273.32\",\"balance\":\"143.62\"},{\"date\":\"2025-12-07\",\"description\":\"NETFLIX\",\"amount\":\"-65.17\",\"balance\":\"78.45\"},{\"date\":\"2025-12-07\",\"description\":\"VERIZON\",\"amount\":\"-183.57\",\"balance\":\"-105.12\"},{\"date\":\"2025-12-09\",\"description\":\"KROGER\",\"amount\":\"-147.03\",\"balance\":\"-252.15\"},{\"date\":\"2025-12-11\",\"description\":\"TRADER JOES\",\"amount\":\"-183.32\",\"balance\":\"-435.47\"},{\"date\":\"2025-12-12\",\"description\":\"PAYROLL LESTER-THORNTON\",\"amount\":\"2,582.56\",\"balance\":\"2,147.09\"},{\"date\":\"2025-12-14\",\"description\":\"CHIPOTLE\",\"amount\":\"-84.23\",\"balance\":\"2,062.86\"},{\"date\":\"2025-12-15\",\"description\":\"SAFEWAY\",\"amount\":\"-147.23\",\"balance\":\"1,915.63\"},{\"date\":\"2025-12-17\",\"description\":\"AMAZON PRIME\",\"amount\":\"-67.54\",\"balance\":\"1,848.09\"},{\"date\":\"2025-12-24\",\"description\":\"STARBUCKS\",\"amount\":\"-88.64\",\"balance\":\"1,759.45\"},{\"date\":\"2025-12-25\",\"description\":\"CHIPOTLE\",\"amount\":\"-71.69\",\"balance\":\"1,687.76\"},{\"date\":\"2025-12-26\",\"description\":\"PAYROLL LESTER-THORNTON\",\"amount\":\"2,582.56\",\"balance\":\"4,270.32\"},{\"date\":\"2025-12-26\",\"description\":\"TRADER JOES\",\"amount\":\"-210.07\",\"balance\":\"4,060.25\"},{\"date\":\"2025-12-26\",\"description\":\"EXXON\",\"amount\":\"-73.89\",\"balance\":\"3,986.36\"},{\"date\":\"2025-12-27\",\"description\":\"TRADER JOES\",\"amount\":\"-101.68\",\"balance\":\"3,884.68\"}],\"closing_balance\":\"3,884.68\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 6474,
+     "output_tokens": 2972,
+     "latency_ms": 14487.2,
+     "cost_usd": 0.042668
+    }
+   }
+  ],
+  "A0009/paystub.pdf": [
+   {
+    "text": "{\"doc_type\": \"paystub\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 15,
+     "latency_ms": 1514.6,
+     "cost_usd": 0.005862
+    }
+   },
+   {
+    "text": "{\"employer\":\"RAMSEY, JONES AND BRANDT\",\"employee\":\"KYLE HARDY\",\"pay_period_start\":\"2025-12-13\",\"pay_period_end\":\"2025-12-26\",\"pay_date\":\"2025-12-26\",\"gross\":\"4,961.53\",\"net\":\"3,713.14\",\"ytd_gross\":\"128,999.78\",\"deductions\":{\"federal_tax\":\"595.38\",\"social_security\":\"307.61\",\"medicare\":\"71.94\",\"state_tax\":\"198.46\",\"health_insurance\":\"75.00\"}}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3874,
+     "output_tokens": 173,
+     "latency_ms": 2099.9,
+     "cost_usd": 0.009478
+    }
+   }
+  ],
+  "A0009/w2.pdf": [
+   {
+    "text": "{\"doc_type\": \"w2\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1542.1,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"employer\":\"SNOW-HOLMES\",\"ein\":\"61-1362542\",\"employee\":\"KYLE HARDY\",\"ssn\":\"933-17-4325\",\"year\":2025,\"wages_box1\":\"128,999.78\",\"federal_tax_box2\":\"15,479.88\",\"ss_wages_box3\":\"128,999.78\",\"ss_tax_box4\":\"7,997.86\",\"medicare_wages_box5\":\"128,999.78\",\"medicare_tax_box6\":\"1,870.44\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 3771,
+     "output_tokens": 156,
+     "latency_ms": 1133.1,
+     "cost_usd": 0.009102
+    }
+   }
+  ],
+  "A0009/statement.pdf": [
+   {
+    "text": "{\"doc_type\": \"statement\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 2856,
+     "output_tokens": 14,
+     "latency_ms": 1441.0,
+     "cost_usd": 0.005852
+    }
+   },
+   {
+    "text": "{\"bank\":\"Evergreen Credit Union\",\"account_holder\":\"KYLE HARDY\",\"account_last4\":\"6481\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"3,050.00\",\"transactions\":[{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,252.64\",\"balance\":\"797.36\"},{\"date\":\"2025-10-03\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"4,510.50\"},{\"date\":\"2025-10-04\",\"description\":\"DOORDASH\",\"amount\":\"-125.84\",\"balance\":\"4,384.66\"},{\"date\":\"2025-10-05\",\"description\":\"KROGER\",\"amount\":\"-162.16\",\"balance\":\"4,222.50\"},{\"date\":\"2025-10-05\",\"description\":\"AMAZON PRIME\",\"amount\":\"-63.98\",\"balance\":\"4,158.52\"},{\"date\":\"2025-10-06\",\"description\":\"CHEVRON\",\"amount\":\"-164.19\",\"balance\":\"3,994.33\"},{\"date\":\"2025-10-08\",\"description\":\"SHELL OIL\",\"amount\":\"-155.71\",\"balance\":\"3,838.62\"},{\"date\":\"2025-10-08\",\"description\":\"STARBUCKS\",\"amount\":\"-77.23\",\"balance\":\"3,761.39\"},{\"date\":\"2025-10-09\",\"description\":\"CHIPOTLE\",\"amount\":\"-94.13\",\"balance\":\"3,667.26\"},{\"date\":\"2025-10-09\",\"description\":\"DOORDASH\",\"amount\":\"-102.27\",\"balance\":\"3,564.99\"},{\"date\":\"2025-10-10\",\"description\":\"EXXON\",\"amount\":\"-157.81\",\"balance\":\"3,407.18\"},{\"date\":\"2025-10-10\",\"description\":\"PANERA\",\"amount\":\"-127.62\",\"balance\":\"3,279.56\"},{\"date\":\"2025-10-11\",\"description\":\"COMCAST\",\"amount\":\"-226.15\",\"balance\":\"3,053.41\"},{\"date\":\"2025-10-12\",\"description\":\"KROGER\",\"amount\":\"-226.41\",\"balance\":\"2,827.00\"},{\"date\":\"2025-10-16\",\"description\":\"KROGER\",\"amount\":\"-300.15\",\"balance\":\"2,526.85\"},{\"date\":\"2025-10-17\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"6,239.99\"},{\"date\":\"2025-10-18\",\"description\":\"WHOLE FOODS\",\"amount\":\"-295.82\",\"balance\":\"5,944.17\"},{\"date\":\"2025-10-18\",\"description\":\"PANERA\",\"amount\":\"-126.68\",\"balance\":\"5,817.49\"},{\"date\":\"2025-10-24\",\"description\":\"COMCAST\",\"amount\":\"-321.19\",\"balance\":\"5,496.30\"},{\"date\":\"2025-10-25\",\"description\":\"AMAZON PRIME\",\"amount\":\"-73.79\",\"balance\":\"5,422.51\"},{\"date\":\"2025-10-28\",\"description\":\"WHOLE FOODS\",\"amount\":\"-215.90\",\"balance\":\"5,206.61\"},{\"date\":\"2025-10-31\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"8,919.75\"},{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,252.64\",\"balance\":\"6,667.11\"},{\"date\":\"2025-11-02\",\"description\":\"CITY UTILITIES\",\"amount\":\"-389.45\",\"balance\":\"6,277.66\"},{\"date\":\"2025-11-04\",\"description\":\"AMAZON PRIME\",\"amount\":\"-72.51\",\"balance\":\"6,205.15\"},{\"date\":\"2025-11-06\",\"description\":\"DOORDASH\",\"amount\":\"-57.94\",\"balance\":\"6,147.21\"},{\"date\":\"2025-11-09\",\"description\":\"SAFEWAY\",\"amount\":\"-179.17\",\"balance\":\"5,968.04\"},{\"date\":\"2025-11-10\",\"description\":\"WHOLE FOODS\",\"amount\":\"-272.52\",\"balance\":\"5,695.52\"},{\"date\":\"2025-11-12\",\"description\":\"DOORDASH\",\"amount\":\"-64.48\",\"balance\":\"5,631.04\"},{\"date\":\"2025-11-14\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"9,344.18\"},{\"date\":\"2025-11-14\",\"description\":\"EXXON\",\"amount\":\"-97.90\",\"balance\":\"9,246.28\"},{\"date\":\"2025-11-18\",\"description\":\"AMAZON PRIME\",\"amount\":\"-86.17\",\"balance\":\"9,160.11\"},{\"date\":\"2025-11-18\",\"description\":\"PANERA\",\"amount\":\"-88.53\",\"balance\":\"9,071.58\"},{\"date\":\"2025-11-19\",\"description\":\"CHEVRON\",\"amount\":\"-186.54\",\"balance\":\"8,885.04\"},{\"date\":\"2025-11-19\",\"description\":\"CHIPOTLE\",\"amount\":\"-120.51\",\"balance\":\"8,764.53\"},{\"date\":\"2025-11-19\",\"description\":\"DOORDASH\",\"amount\":\"-103.88\",\"balance\":\"8,660.65\"},{\"date\":\"2025-11-21\",\"description\":\"WHOLE FOODS\",\"amount\":\"-253.48\",\"balance\":\"8,407.17\"},{\"date\":\"2025-11-21\",\"description\":\"SAFEWAY\",\"amount\":\"-135.45\",\"balance\":\"8,271.72\"},{\"date\":\"2025-11-21\",\"description\":\"SHELL OIL\",\"amount\":\"-93.71\",\"balance\":\"8,178.01\"},{\"date\":\"2025-11-24\",\"description\":\"DOORDASH\",\"amount\":\"-70.12\",\"balance\":\"8,107.89\"},{\"date\":\"2025-11-25\",\"description\":\"SAFEWAY\",\"amount\":\"-136.39\",\"balance\":\"7,971.50\"},{\"date\":\"2025-11-28\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"11,684.64\"},{\"date\":\"2025-11-28\",\"description\":\"VERIZON\",\"amount\":\"-239.98\",\"balance\":\"11,445.66\"},{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,252.64\",\"balance\":\"9,193.02\"},{\"date\":\"2025-12-04\",\"description\":\"DOORDASH\",\"amount\":\"-94.47\",\"balance\":\"9,098.55\"},{\"date\":\"2025-12-05\",\"description\":\"CHEVRON\",\"amount\":\"-123.96\",\"balance\":\"8,974.59\"},{\"date\":\"2025-12-06\",\"description\":\"TRADER JOES\",\"amount\":\"-263.49\",\"balance\":\"8,711.10\"},{\"date\":\"2025-12-06\",\"description\":\"WHOLE FOODS\",\"amount\":\"-294.40\",\"balance\":\"8,416.70\"},{\"date\":\"2025-12-10\",\"description\":\"STARBUCKS\",\"amount\":\"-83.97\",\"balance\":\"8,332.73\"},{\"date\":\"2025-12-10\",\"description\":\"PANERA\",\"amount\":\"-96.33\",\"balance\":\"8,236.40\"},{\"date\":\"2025-12-12\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"11,949.54\"},{\"date\":\"2025-12-12\",\"description\":\"KROGER\",\"amount\":\"-265.14\",\"balance\":\"11,684.40\"},{\"date\":\"2025-12-12\",\"description\":\"NETFLIX\",\"amount\":\"-94.93\",\"balance\":\"11,589.47\"},{\"date\":\"2025-12-14\",\"description\":\"SAFEWAY\",\"amount\":\"-256.88\",\"balance\":\"11,332.59\"},{\"date\":\"2025-12-14\",\"description\":\"SHELL OIL\",\"amount\":\"-105.03\",\"balance\":\"11,227.56\"},{\"date\":\"2025-12-16\",\"description\":\"WHOLE FOODS\",\"amount\":\"-238.16\",\"balance\":\"10,989.40\"},{\"date\":\"2025-12-16\",\"description\":\"STARBUCKS\",\"amount\":\"-92.22\",\"balance\":\"10,897.18\"},{\"date\":\"2025-12-19\",\"description\":\"SHELL OIL\",\"amount\":\"-103.88\",\"balance\":\"10,793.30\"},{\"date\":\"2025-12-19\",\"description\":\"CITY UTILITIES\",\"amount\":\"-271.14\",\"balance\":\"10,522.16\"},{\"date\":\"2025-12-20\",\"description\":\"CITY UTILITIES\",\"amount\":\"-228.23\",\"balance\":\"10,293.93\"},{\"date\":\"2025-12-24\",\"description\":\"AMAZON PRIME\",\"amount\":\"-100.75\",\"balance\":\"10,193.18\"},{\"date\":\"2025-12-26\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"13,906.32\"},{\"date\":\"2025-12-26\",\"description\":\"STARBUCKS\",\"amount\":\"-95.93\",\"balance\":\"13,810.39\"},{\"date\":\"2025-12-28\",\"description\":\"PANERA\",\"amount\":\"-83.42\",\"balance\":\"13,726.97\"}],\"closing_balance\":\"13,726.97\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 6474,
+     "output_tokens": 2962,
+     "latency_ms": 14226.8,
+     "cost_usd": 0.042568
+    }
+   },
+   {
+    "text": "{\"bank\":\"Evergreen Credit Union\",\"account_holder\":\"KYLE HARDY\",\"account_last4\":\"6481\",\"period_start\":\"2025-10-01\",\"period_end\":\"2025-12-31\",\"opening_balance\":\"3,050.00\",\"transactions\":[{\"date\":\"2025-10-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,252.64\",\"balance\":\"797.36\"},{\"date\":\"2025-10-03\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"4,510.50\"},{\"date\":\"2025-10-04\",\"description\":\"DOORDASH\",\"amount\":\"-125.84\",\"balance\":\"4,384.66\"},{\"date\":\"2025-10-05\",\"description\":\"KROGER\",\"amount\":\"-162.16\",\"balance\":\"4,222.50\"},{\"date\":\"2025-10-05\",\"description\":\"AMAZON PRIME\",\"amount\":\"-63.98\",\"balance\":\"4,158.52\"},{\"date\":\"2025-10-06\",\"description\":\"CHEVRON\",\"amount\":\"-164.19\",\"balance\":\"3,994.33\"},{\"date\":\"2025-10-08\",\"description\":\"SHELL OIL\",\"amount\":\"-155.71\",\"balance\":\"3,838.62\"},{\"date\":\"2025-10-08\",\"description\":\"STARBUCKS\",\"amount\":\"-77.23\",\"balance\":\"3,761.39\"},{\"date\":\"2025-10-09\",\"description\":\"CHIPOTLE\",\"amount\":\"-94.13\",\"balance\":\"3,667.26\"},{\"date\":\"2025-10-09\",\"description\":\"DOORDASH\",\"amount\":\"-102.27\",\"balance\":\"3,564.99\"},{\"date\":\"2025-10-10\",\"description\":\"EXXON\",\"amount\":\"-157.81\",\"balance\":\"3,407.18\"},{\"date\":\"2025-10-10\",\"description\":\"PANERA\",\"amount\":\"-127.62\",\"balance\":\"3,279.56\"},{\"date\":\"2025-10-11\",\"description\":\"COMCAST\",\"amount\":\"-226.15\",\"balance\":\"3,053.41\"},{\"date\":\"2025-10-12\",\"description\":\"KROGER\",\"amount\":\"-226.41\",\"balance\":\"2,827.00\"},{\"date\":\"2025-10-16\",\"description\":\"KROGER\",\"amount\":\"-300.15\",\"balance\":\"2,526.85\"},{\"date\":\"2025-10-17\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"6,239.99\"},{\"date\":\"2025-10-18\",\"description\":\"WHOLE FOODS\",\"amount\":\"-295.82\",\"balance\":\"5,944.17\"},{\"date\":\"2025-10-18\",\"description\":\"PANERA\",\"amount\":\"-126.68\",\"balance\":\"5,817.49\"},{\"date\":\"2025-10-24\",\"description\":\"COMCAST\",\"amount\":\"-321.19\",\"balance\":\"5,496.30\"},{\"date\":\"2025-10-25\",\"description\":\"AMAZON PRIME\",\"amount\":\"-73.79\",\"balance\":\"5,422.51\"},{\"date\":\"2025-10-28\",\"description\":\"WHOLE FOODS\",\"amount\":\"-215.90\",\"balance\":\"5,206.61\"},{\"date\":\"2025-10-31\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"8,919.75\"},{\"date\":\"2025-11-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,252.64\",\"balance\":\"6,667.11\"},{\"date\":\"2025-11-02\",\"description\":\"CITY UTILITIES\",\"amount\":\"-389.45\",\"balance\":\"6,277.66\"},{\"date\":\"2025-11-04\",\"description\":\"AMAZON PRIME\",\"amount\":\"-72.51\",\"balance\":\"6,205.15\"},{\"date\":\"2025-11-06\",\"description\":\"DOORDASH\",\"amount\":\"-57.94\",\"balance\":\"6,147.21\"},{\"date\":\"2025-11-09\",\"description\":\"SAFEWAY\",\"amount\":\"-179.17\",\"balance\":\"5,968.04\"},{\"date\":\"2025-11-10\",\"description\":\"WHOLE FOODS\",\"amount\":\"-272.52\",\"balance\":\"5,695.52\"},{\"date\":\"2025-11-12\",\"description\":\"DOORDASH\",\"amount\":\"-64.48\",\"balance\":\"5,631.04\"},{\"date\":\"2025-11-14\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"9,344.18\"},{\"date\":\"2025-11-14\",\"description\":\"EXXON\",\"amount\":\"-97.90\",\"balance\":\"9,246.28\"},{\"date\":\"2025-11-18\",\"description\":\"AMAZON PRIME\",\"amount\":\"-86.17\",\"balance\":\"9,160.11\"},{\"date\":\"2025-11-18\",\"description\":\"PANERA\",\"amount\":\"-88.53\",\"balance\":\"9,071.58\"},{\"date\":\"2025-11-19\",\"description\":\"CHEVRON\",\"amount\":\"-186.54\",\"balance\":\"8,885.04\"},{\"date\":\"2025-11-19\",\"description\":\"CHIPOTLE\",\"amount\":\"-120.51\",\"balance\":\"8,764.53\"},{\"date\":\"2025-11-19\",\"description\":\"DOORDASH\",\"amount\":\"-103.88\",\"balance\":\"8,660.65\"},{\"date\":\"2025-11-21\",\"description\":\"WHOLE FOODS\",\"amount\":\"-253.48\",\"balance\":\"8,407.17\"},{\"date\":\"2025-11-21\",\"description\":\"SAFEWAY\",\"amount\":\"-135.45\",\"balance\":\"8,271.72\"},{\"date\":\"2025-11-21\",\"description\":\"SHELL OIL\",\"amount\":\"-93.71\",\"balance\":\"8,178.01\"},{\"date\":\"2025-11-24\",\"description\":\"DOORDASH\",\"amount\":\"-70.12\",\"balance\":\"8,107.89\"},{\"date\":\"2025-11-25\",\"description\":\"SAFEWAY\",\"amount\":\"-136.39\",\"balance\":\"7,971.50\"},{\"date\":\"2025-11-28\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"11,684.64\"},{\"date\":\"2025-11-28\",\"description\":\"VERIZON\",\"amount\":\"-238.98\",\"balance\":\"11,445.66\"},{\"date\":\"2025-12-01\",\"description\":\"RENT PAYMENT\",\"amount\":\"-2,252.64\",\"balance\":\"9,193.02\"},{\"date\":\"2025-12-04\",\"description\":\"DOORDASH\",\"amount\":\"-94.47\",\"balance\":\"9,098.55\"},{\"date\":\"2025-12-05\",\"description\":\"CHEVRON\",\"amount\":\"-123.96\",\"balance\":\"8,974.59\"},{\"date\":\"2025-12-06\",\"description\":\"TRADER JOES\",\"amount\":\"-263.49\",\"balance\":\"8,711.10\"},{\"date\":\"2025-12-06\",\"description\":\"WHOLE FOODS\",\"amount\":\"-294.40\",\"balance\":\"8,416.70\"},{\"date\":\"2025-12-10\",\"description\":\"STARBUCKS\",\"amount\":\"-83.97\",\"balance\":\"8,332.73\"},{\"date\":\"2025-12-10\",\"description\":\"PANERA\",\"amount\":\"-96.33\",\"balance\":\"8,236.40\"},{\"date\":\"2025-12-12\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"11,949.54\"},{\"date\":\"2025-12-12\",\"description\":\"KROGER\",\"amount\":\"-265.14\",\"balance\":\"11,684.40\"},{\"date\":\"2025-12-12\",\"description\":\"NETFLIX\",\"amount\":\"-94.93\",\"balance\":\"11,589.47\"},{\"date\":\"2025-12-14\",\"description\":\"SAFEWAY\",\"amount\":\"-256.88\",\"balance\":\"11,332.59\"},{\"date\":\"2025-12-14\",\"description\":\"SHELL OIL\",\"amount\":\"-105.03\",\"balance\":\"11,227.56\"},{\"date\":\"2025-12-16\",\"description\":\"WHOLE FOODS\",\"amount\":\"-238.16\",\"balance\":\"10,989.40\"},{\"date\":\"2025-12-16\",\"description\":\"STARBUCKS\",\"amount\":\"-92.22\",\"balance\":\"10,897.18\"},{\"date\":\"2025-12-19\",\"description\":\"SHELL OIL\",\"amount\":\"-103.88\",\"balance\":\"10,793.30\"},{\"date\":\"2025-12-19\",\"description\":\"CITY UTILITIES\",\"amount\":\"-271.14\",\"balance\":\"10,522.16\"},{\"date\":\"2025-12-20\",\"description\":\"CITY UTILITIES\",\"amount\":\"-228.23\",\"balance\":\"10,293.93\"},{\"date\":\"2025-12-24\",\"description\":\"AMAZON PRIME\",\"amount\":\"-100.75\",\"balance\":\"10,193.18\"},{\"date\":\"2025-12-26\",\"description\":\"PAYROLL RAMSEY, JONES AND BRANDT\",\"amount\":\"3,713.14\",\"balance\":\"13,906.32\"},{\"date\":\"2025-12-26\",\"description\":\"STARBUCKS\",\"amount\":\"-95.93\",\"balance\":\"13,810.39\"},{\"date\":\"2025-12-28\",\"description\":\"PANERA\",\"amount\":\"-83.42\",\"balance\":\"13,726.97\"}],\"closing_balance\":\"13,726.97\"}",
+    "usage": {
+     "calls": 1,
+     "input_tokens": 8636,
+     "output_tokens": 2962,
+     "latency_ms": 13717.2,
+     "cost_usd": 0.046892
+    }
+   }
+  ]
+ }
+}

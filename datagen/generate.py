@@ -11,7 +11,8 @@ from .profiles import build_applicant
 SCAN_RATE = 0.3
 
 
-def generate(n: int, out: Path, seed: int = 42, start: int = 0) -> list[dict]:
+def generate(n: int, out: Path, seed: int = 42, start: int = 0, scan_rate: float = SCAN_RATE,
+             level: str = "normal") -> list[dict]:
     out.mkdir(parents=True, exist_ok=True)
     result = []
     for i in range(start, start + n):
@@ -22,8 +23,8 @@ def generate(n: int, out: Path, seed: int = 42, start: int = 0) -> list[dict]:
         for kind, doc in truth["documents"].items():
             p = d / doc["file"]
             DRAW[kind](doc["fields"], p)
-            if rng.random() < SCAN_RATE:
-                scanify(p, rng)
+            if rng.random() < scan_rate:
+                scanify(p, rng, level)
                 doc["scanned"] = True
         (d / "truth.json").write_text(json.dumps(truth, indent=2))
         result.append(truth)
@@ -36,6 +37,8 @@ if __name__ == "__main__":
     ap.add_argument("--out", type=Path, default=Path("data/generated"))
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--start", type=int, default=0, help="first applicant index (to add, not overwrite)")
+    ap.add_argument("--scan-rate", type=float, default=SCAN_RATE, help="share of documents turned into scans (0..1)")
+    ap.add_argument("--noise", choices=["normal", "heavy"], default="normal")
     a = ap.parse_args()
-    res = generate(a.n, a.out, a.seed, a.start)
+    res = generate(a.n, a.out, a.seed, a.start, a.scan_rate, a.noise)
     print(f"{len(res)} applicants -> {a.out} ({sum(bool(t['anomalies']) for t in res)} with anomalies)")

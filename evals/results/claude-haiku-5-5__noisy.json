@@ -1,0 +1,85 @@
+{
+  "model": "claude-haiku-5-5",
+  "variant": "noisy",
+  "n": 30,
+  "docs": 90,
+  "failed_docs": 0,
+  "misclassified": 0,
+  "avg_attempts": 1.2,
+  "fields": 8674,
+  "accuracy": 0.9822457920221351,
+  "accuracy_by_doc": {
+    "paystub": 0.9897435897435898,
+    "statement": 0.981644455619814,
+    "w2": 0.9878787878787879
+  },
+  "accuracy_by_group": {
+    "header": 0.9903225806451613,
+    "transactions": 0.981275826446281
+  },
+  "flags": {
+    "overall": {
+      "recall": 1.0,
+      "precision": 0.75,
+      "tp": 21,
+      "fp": 7,
+      "fn": 0
+    },
+    "per_code": {
+      "altered_totals": {
+        "recall": 1.0,
+        "precision": 0.8333333333333334,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0
+      },
+      "fake_employer": {
+        "recall": 1.0,
+        "precision": 0.8,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0
+      },
+      "income_mismatch": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "overdrafts": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 8,
+        "fp": 0,
+        "fn": 0
+      },
+      "statement_unreconciled": {
+        "recall": null,
+        "precision": 0.0,
+        "tp": 0,
+        "fp": 5,
+        "fn": 0
+      }
+    }
+  },
+  "cost_per_app": 0.007614929999999998,
+  "total_cost": 0.22844789999999995,
+  "latency_p50_s": 35.35379999999999,
+  "latency_p95_s": 48.7417,
+  "tokens_per_app": 37494.9,
+  "top_wrong_fields": {
+    "statement.transactions.*.description": 68,
+    "statement.transactions.*.date": 32,
+    "statement.transactions.*.balance": 23,
+    "statement.transactions.*.amount": 22,
+    "paystub.ytd_gross": 2,
+    "w2.ssn": 2,
+    "paystub.gross": 1,
+    "statement.closing_balance": 1,
+    "paystub.net": 1,
+    "w2.employer": 1,
+    "w2.employee": 1
+  },
+  "recorded": "2026-11-20"
+}

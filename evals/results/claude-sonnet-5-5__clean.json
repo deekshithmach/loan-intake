@@ -1,0 +1,66 @@
+{
+  "model": "claude-sonnet-5-5",
+  "variant": "clean",
+  "n": 10,
+  "docs": 30,
+  "failed_docs": 0,
+  "misclassified": 0,
+  "avg_attempts": 1.0,
+  "fields": 2894,
+  "accuracy": 1.0,
+  "accuracy_by_doc": {
+    "paystub": 1.0,
+    "statement": 1.0,
+    "w2": 1.0
+  },
+  "accuracy_by_group": {
+    "header": 1.0,
+    "transactions": 1.0
+  },
+  "flags": {
+    "overall": {
+      "recall": 1.0,
+      "precision": 1.0,
+      "tp": 7,
+      "fp": 0,
+      "fn": 0
+    },
+    "per_code": {
+      "altered_totals": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "fake_employer": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "income_mismatch": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "overdrafts": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  },
+  "cost_per_app": 0.0445306,
+  "total_cost": 0.445306,
+  "latency_p50_s": 16.2314,
+  "latency_p95_s": 18.566399999999998,
+  "tokens_per_app": 9006.5,
+  "top_wrong_fields": {},
+  "recorded": "2026-11-20"
+}

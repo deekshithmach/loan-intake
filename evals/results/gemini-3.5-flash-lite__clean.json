@@ -1,0 +1,66 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "variant": "clean",
+  "n": 30,
+  "docs": 90,
+  "failed_docs": 0,
+  "misclassified": 0,
+  "avg_attempts": 1.0,
+  "fields": 8674,
+  "accuracy": 1.0,
+  "accuracy_by_doc": {
+    "paystub": 1.0,
+    "statement": 1.0,
+    "w2": 1.0
+  },
+  "accuracy_by_group": {
+    "header": 1.0,
+    "transactions": 1.0
+  },
+  "flags": {
+    "overall": {
+      "recall": 1.0,
+      "precision": 1.0,
+      "tp": 21,
+      "fp": 0,
+      "fn": 0
+    },
+    "per_code": {
+      "altered_totals": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      },
+      "fake_employer": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "income_mismatch": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "overdrafts": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 8,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  },
+  "cost_per_app": 0.012807766666666666,
+  "total_cost": 0.384233,
+  "latency_p50_s": 8.937899999999999,
+  "latency_p95_s": 31.733700000000002,
+  "tokens_per_app": 9760.266666666666,
+  "top_wrong_fields": {},
+  "recorded": "2026-11-20"
+}

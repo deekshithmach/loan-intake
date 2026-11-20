@@ -21,7 +21,7 @@ Model key (Claude Code, switch via `/model`): **S** = Sonnet, **O** = Opus. App 
 **2** [x] 1 clean + 1 scanned per type extracted correctly [x] field accuracy on 10 applicants (100%, 2,894 fields, gemini-3.5-flash-lite, $0.013/applicant) [x] bad output → retry → fail gracefully [x] tokens/cost logged
 **3** [x] pytest pass+fail per rule [x] API run pauses at review, resumes, persists [x] planted anomalies flagged w/ correct evidence (102/102 truths exact) [x] restart mid-review loses nothing (pytest + live uvicorn restart) [x] PII masked in logs
 **4** [x] browser flow upload→review→approve (Playwright e2e, live) [x] edits persist + audited [x] loading/error states [ ] non-technical demo test (user) · stretch: [x] per-run tokens/cost/latency [ ] model picker
-**5** [ ] report w/ real numbers ≥30 applicants [ ] targets (clean ≥95%, noisy ≥85%, flag recall ≥90%) or misses explained [ ] CI green + fails on regression [ ] spend < $10
+**5** [x] report w/ real numbers ≥30 applicants (evals/report.md) [x] targets (clean ≥95%, noisy ≥85%, flag recall ≥90% met; noisy flag precision 68–75% < 85% — explained in report) [ ] CI green + fails on regression (gate proven locally; confirm on GitHub) [x] spend < $10 (~$1.9 Anthropic API)
 **6** [ ] live URL works on phone [ ] fresh clone + README → `docker compose up` works [ ] user explains architecture/tradeoffs/failure < 3 min
 
 ## Progress

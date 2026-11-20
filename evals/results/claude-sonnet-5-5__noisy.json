@@ -1,0 +1,70 @@
+{
+  "model": "claude-sonnet-5-5",
+  "variant": "noisy",
+  "n": 10,
+  "docs": 30,
+  "failed_docs": 0,
+  "misclassified": 0,
+  "avg_attempts": 1.0666666666666667,
+  "fields": 2894,
+  "accuracy": 0.995162404975812,
+  "accuracy_by_doc": {
+    "paystub": 1.0,
+    "statement": 0.9954785229841748,
+    "w2": 0.9818181818181818
+  },
+  "accuracy_by_group": {
+    "header": 0.9935483870967742,
+    "transactions": 0.9953560371517027
+  },
+  "flags": {
+    "overall": {
+      "recall": 1.0,
+      "precision": 1.0,
+      "tp": 7,
+      "fp": 0,
+      "fn": 0
+    },
+    "per_code": {
+      "altered_totals": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "fake_employer": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "income_mismatch": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "overdrafts": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  },
+  "cost_per_app": 0.08828140000000001,
+  "total_cost": 0.8828140000000001,
+  "latency_p50_s": 22.6752,
+  "latency_p95_s": 35.674699999999994,
+  "tokens_per_app": 28359.9,
+  "top_wrong_fields": {
+    "statement.transactions.*.date": 12,
+    "w2.ssn": 1,
+    "w2.ein": 1
+  },
+  "recorded": "2026-11-20"
+}
