@@ -9,3 +9,4 @@ data/generated/
 data/runs/
 scratch*.py
 data/uploads/
+data/eval/

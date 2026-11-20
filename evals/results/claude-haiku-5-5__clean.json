@@ -1,0 +1,66 @@
+{
+  "model": "claude-haiku-5-5",
+  "variant": "clean",
+  "n": 30,
+  "docs": 90,
+  "failed_docs": 0,
+  "misclassified": 0,
+  "avg_attempts": 1.0,
+  "fields": 8674,
+  "accuracy": 1.0,
+  "accuracy_by_doc": {
+    "paystub": 1.0,
+    "statement": 1.0,
+    "w2": 1.0
+  },
+  "accuracy_by_group": {
+    "header": 1.0,
+    "transactions": 1.0
+  },
+  "flags": {
+    "overall": {
+      "recall": 1.0,
+      "precision": 1.0,
+      "tp": 21,
+      "fp": 0,
+      "fn": 0
+    },
+    "per_code": {
+      "altered_totals": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      },
+      "fake_employer": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "income_mismatch": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "overdrafts": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "tp": 8,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  },
+  "cost_per_app": 0.002463403333333334,
+  "total_cost": 0.07390210000000001,
+  "latency_p50_s": 11.4091,
+  "latency_p95_s": 16.6181,
+  "tokens_per_app": 9468.566666666668,
+  "top_wrong_fields": {},
+  "recorded": "2026-11-20"
+}

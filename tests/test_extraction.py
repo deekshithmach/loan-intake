@@ -70,3 +70,41 @@ def test_score():
 def test_usage_pricing():
     u = Usage.priced("gemini-2.5-flash", 1_000_000, 1_000_000, 5)
     assert u.cost_usd == pytest.approx(2.80)
+
+
+# ---- arithmetic self-check (scanned statements only) ---------------------------------------
+STMT = next(((p, json.loads(t.read_text())["documents"]["statement"]["fields"]) for t in TRUTHS
+             for p, ty, sc in DOCS if ty is DocType.STATEMENT and sc and p.parent == t.parent), None)
+CLASSIFIED = json.dumps({"doc_type": "statement"})
+
+
+def _misread(fields: dict) -> dict:
+    bad = json.loads(json.dumps(fields))
+    bad["transactions"][1]["amount"] += 700  # one digit misread on a blurry scan -> balances stop adding up
+    return bad
+
+
+@pytest.mark.skipif(STMT is None, reason="no scanned statement in sample")
+def test_misread_digit_triggers_one_reread_that_fixes_it():
+    path, good = STMT
+    fake = FakeProvider(CLASSIFIED, json.dumps(_misread(good)), json.dumps(good))
+    r = Extractor(fake).run(path)
+    assert r.ok and r.attempts == 2 and r.data["transactions"][1]["amount"] == good["transactions"][1]["amount"]
+    assert "consistency check" in fake.prompts[2] and "row 2" in fake.prompts[2]
+
+
+@pytest.mark.skipif(STMT is None, reason="no scanned statement in sample")
+def test_reread_that_still_does_not_add_up_keeps_the_original():
+    """A genuinely altered document must stay flaggable: never 'fix' numbers to make them add up."""
+    path, good = STMT
+    first, second = _misread(good), _misread(good)
+    second["transactions"][1]["amount"] += 1
+    r = Extractor(FakeProvider(CLASSIFIED, json.dumps(first), json.dumps(second))).run(path)
+    assert r.ok and r.data["transactions"][1]["amount"] == first["transactions"][1]["amount"]
+
+
+@pytest.mark.skipif(STMT is None, reason="no scanned statement in sample")
+def test_consistent_document_costs_no_extra_call():
+    path, good = STMT
+    fake = FakeProvider(CLASSIFIED, json.dumps(good))
+    assert Extractor(fake).run(path).attempts == 1 and len(fake.prompts) == 2  # classify + extract

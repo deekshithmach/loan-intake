@@ -1,0 +1,12 @@
+{
+  "gemini-3.5-flash-lite/clean": {
+    "accuracy": 1.0,
+    "recall": 1.0,
+    "precision": 1.0
+  },
+  "gemini-3.5-flash-lite/noisy": {
+    "accuracy": 0.9744298548721493,
+    "recall": 1.0,
+    "precision": 0.7777777777777778
+  }
+}

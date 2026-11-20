@@ -1,0 +1,39 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [develop/loan-intake]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+      - run: uv run pytest -q
+      # Offline eval gate: replays committed recordings (no API keys, no spend), fails if accuracy,
+      # flag recall/precision miss targets or drop vs evals/baseline.json.
+      - name: Generate eval set (deterministic)
+        run: |
+          uv run python -m datagen.generate --n 10 --seed 777 --scan-rate 0 --out data/eval/clean
+          uv run python -m datagen.generate --n 10 --seed 777 --scan-rate 1 --noise heavy --out data/eval/noisy
+      - name: Eval gate
+        run: uv run python -m evals.run --model gemini-3.5-flash-lite --n 10 --offline --gate
+
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npx tsc --noEmit
+      - run: npm run build

@@ -14,6 +14,7 @@ from apps.api.schemas import SCHEMAS, DocType
 from .classify import classify
 from .pdf import PdfContent, load_pdf
 from .prompts import RETRY, extract_prompt
+from .verify import VERIFY, arithmetic_problem
 
 log = logging.getLogger(__name__)
 _FENCE = re.compile(r"^```(?:json)?\s*|\s*```$")
@@ -69,10 +70,26 @@ class Extractor:
                 result.error = _short(e)
                 prompt = base + RETRY.format(error=result.error, previous=resp.text[:4000])
                 continue
-            result.ok, result.error, result.data = True, None, model.model_dump(mode="json")
+            result.ok, result.error = True, None
+            result.data = self._verified(model, base, resp.text, content, result).model_dump(mode="json")
             return result
         log.warning("extract %s failed after %d attempts: %s", content.path.name, result.attempts, result.error)
         return result
+
+
+    def _verified(self, model, base: str, previous: str, content: PdfContent, result: ExtractionResult):
+        """If the extracted numbers contradict each other, re-read once; keep the re-read only if it fixes it."""
+        problem = arithmetic_problem(result.doc_type, model) if content.scanned else None
+        if not problem:
+            return model
+        resp = self.provider.generate(base + VERIFY.format(problem=problem, previous=previous[:4000]), images=content.images)
+        result.attempts, result.usage = result.attempts + 1, result.usage + resp.usage
+        try:
+            second = SCHEMAS[result.doc_type].model_validate(parse_json(resp.text))
+        except (json.JSONDecodeError, ValidationError):
+            return model
+        log.info("verify %s: %s -> %s", content.path.name, problem[:60], "fixed" if not arithmetic_problem(result.doc_type, second) else "unchanged")
+        return second if arithmetic_problem(result.doc_type, second) is None else model
 
 
 def _short(e: Exception) -> str:
