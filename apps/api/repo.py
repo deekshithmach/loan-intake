@@ -48,7 +48,7 @@ class Repo(ABC):
     def get(self, app_id: str) -> dict | None: ...
 
     @abstractmethod
-    def recent(self, limit: int = 100) -> list[dict]: ...
+    def recent(self, limit: int = 100, statuses: list[str] | None = None) -> list[dict]: ...
 
     @abstractmethod
     def _append_audit(self, app_id: str, actor: str, action: str, detail: dict) -> None: ...
@@ -78,8 +78,9 @@ class InMemoryRepo(Repo):
     def get(self, app_id):
         return self.apps.get(app_id)
 
-    def recent(self, limit=100):
-        return sorted(self.apps.values(), key=lambda a: a["created_at"], reverse=True)[:limit]
+    def recent(self, limit=100, statuses=None):
+        rows = [a for a in self.apps.values() if not statuses or a["status"] in statuses]
+        return sorted(rows, key=lambda a: a["created_at"], reverse=True)[:limit]
 
     def _append_audit(self, app_id, actor, action, detail):
         self.events.append({"id": len(self.events) + 1, "application_id": app_id, "ts": dt.datetime.now(dt.UTC),
@@ -113,7 +114,10 @@ class PostgresRepo(Repo):
     def get(self, app_id):
         return self._q("SELECT * FROM applications WHERE id = %s", (app_id,), "one")
 
-    def recent(self, limit=100):
+    def recent(self, limit=100, statuses=None):
+        if statuses:
+            return self._q("SELECT * FROM applications WHERE status = ANY(%s) ORDER BY created_at DESC LIMIT %s",
+                           (statuses, limit), "all")
         return self._q("SELECT * FROM applications ORDER BY created_at DESC LIMIT %s", (limit,), "all")
 
     def _append_audit(self, app_id, actor, action, detail):

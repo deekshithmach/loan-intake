@@ -50,7 +50,7 @@ function Header({ app }: { app: AppDetail }) {
   return (
     <div className="flex flex-wrap items-end justify-between gap-3">
       <div>
-        <Link href="/" className="text-xs text-zinc-500 hover:text-zinc-900">← All applications</Link>
+        <Link href="/in-review" className="text-xs text-zinc-500 hover:text-zinc-900">← Back to applications</Link>
         <h1 className="mt-1 flex items-center gap-3 text-xl font-semibold">
           {app.applicant_name ?? "New application"}
           <StatusBadge status={app.status} />
