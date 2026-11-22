@@ -92,7 +92,7 @@ async function req<T>(path: string, init?: RequestInit): Promise<T> {
 }
 
 export const api = {
-  list: () => req<AppSummary[]>("/applications"),
+  list: (status?: string) => req<AppSummary[]>(status ? `/applications?status=${status}` : "/applications"),
   get: (id: string) => req<AppDetail>(`/applications/${id}`),
   audit: (id: string) => req<AuditEvent[]>(`/applications/${id}/audit`),
   upload: (files: File[]) => {

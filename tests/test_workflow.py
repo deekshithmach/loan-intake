@@ -108,3 +108,12 @@ def test_api_rejects_non_pdf(client):
 def _cleanup():
     yield
     shutil.rmtree(SAMPLE.parent / "uploads", ignore_errors=True)
+
+
+def test_list_filters_by_status(client):
+    app_id = client.post("/applications", files=client.files).json()["id"]
+    ids = lambda q: [a["id"] for a in client.get(f"/applications{q}").json()]
+    assert ids("") == ids("?status=in_review") == [app_id]
+    assert ids("?status=approved") == [] and ids("?status=approved,in_review") == [app_id]
+    client.post(f"/applications/{app_id}/review", json=REVIEW)
+    assert ids("?status=in_review") == [] and ids("?status=approved") == [app_id]

@@ -111,8 +111,10 @@ def create_app(deps: Deps | None = None) -> FastAPI:
         return {"id": app_id, "status": "processing"}
 
     @app.get("/applications")
-    def list_apps(limit: int = 100):
-        return d().repo.recent(limit)
+    def list_apps(limit: int = 100, status: str | None = None):
+        """`status` is optional and comma-separated, e.g. `?status=in_review,processing`."""
+        wanted = [x.strip() for x in status.split(",") if x.strip()] if status else None
+        return d().repo.recent(limit, wanted)
 
     @app.get("/applications/{app_id}")
     def get_app(app_id: str):
