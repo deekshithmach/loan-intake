@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { Suspense } from "react";
 import { Tabs } from "@/components/tabs";
 import "./globals.css";
 
@@ -24,7 +25,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
             <span className="rounded bg-amber-50 px-2 py-0.5 text-xs text-amber-700">Synthetic data only</span>
           </div>
-          <Tabs />
+          <Suspense fallback={<div className="h-10" />}>
+            <Tabs />
+          </Suspense>
         </header>
         <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-6">{children}</main>
       </body>
