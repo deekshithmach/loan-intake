@@ -65,7 +65,8 @@ def create_app(deps: Deps | None = None) -> FastAPI:
 
     app = FastAPI(title="Loan Intake", lifespan=lifespan)
     origins = [o.strip().rstrip("/") for o in Settings().cors_origins.split(",") if o.strip()]
-    app.add_middleware(CORSMiddleware, allow_origins=origins, allow_methods=["*"], allow_headers=["*"])
+    app.add_middleware(CORSMiddleware, allow_origins=origins, allow_origin_regex=Settings().cors_origin_regex or None,
+                       allow_methods=["*"], allow_headers=["*"])
 
     def d() -> Deps:
         return app.state.deps

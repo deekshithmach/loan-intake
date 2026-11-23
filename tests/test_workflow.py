@@ -117,3 +117,11 @@ def test_list_filters_by_status(client):
     assert ids("?status=approved") == [] and ids("?status=approved,in_review") == [app_id]
     client.post(f"/applications/{app_id}/review", json=REVIEW)
     assert ids("?status=in_review") == [] and ids("?status=approved") == [app_id]
+
+
+def test_cors_regex_allows_vercel_aliases(client, monkeypatch):
+    monkeypatch.setenv("CORS_ORIGIN_REGEX", r"https://loan-intake-web[a-z0-9-]*\.vercel\.app")
+    with TestClient(create_app(client.app.state.deps)) as c:
+        hdr = lambda o: c.get("/applications", headers={"Origin": o}).headers.get("access-control-allow-origin")
+        assert hdr("https://loan-intake-web-rx1j.vercel.app") == "https://loan-intake-web-rx1j.vercel.app"
+        assert hdr("https://evil.vercel.app") is None and hdr("https://loan-intake-web.vercel.app.evil.com") is None

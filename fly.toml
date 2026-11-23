@@ -1,6 +1,6 @@
 # Fly.io config for the API (Dockerfile at the repo root). NOT launched yet; see README "Deploy".
 # Secrets (never in this file):  fly secrets set DATABASE_URL=... GEMINI_API_KEY=... CORS_ORIGINS=https://<your-vercel-url>
-app = "ledgerly-api"
+app = "ledgerly-intake-api-7k2"
 primary_region = "iad"
 
 [build]
@@ -9,6 +9,8 @@ primary_region = "iad"
 [env]
   LLM_PROVIDER = "gemini"
   UPLOADS_DIR = "/data/uploads"
+  # any Vercel alias/preview URL of the UI project (the exact production URL is also in the CORS_ORIGINS secret)
+  CORS_ORIGIN_REGEX = 'https://loan-intake-web[a-z0-9-]*\.vercel\.app'
 
 [http_service]
   internal_port = 8000
