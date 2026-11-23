@@ -1,0 +1,27 @@
+# Fly.io config for the API (Dockerfile at the repo root). NOT launched yet; see README "Deploy".
+# Secrets (never in this file):  fly secrets set DATABASE_URL=... GEMINI_API_KEY=... CORS_ORIGINS=https://<your-vercel-url>
+app = "ledgerly-api"
+primary_region = "iad"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  LLM_PROVIDER = "gemini"
+  UPLOADS_DIR = "/data/uploads"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = "stop"   # stops when idle, starts on the next request (first hit is slow)
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[mounts]]
+  source = "uploads"            # `fly volumes create uploads --size 1`; keeps PDFs across deploys
+  destination = "/data/uploads"
+
+[[vm]]
+  memory = "1gb"
+  cpu_kind = "shared"
+  cpus = 1
