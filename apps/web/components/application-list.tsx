@@ -23,6 +23,7 @@ export function ApplicationList({ title, status, empty }: { title: string; statu
               <tr className="border-b border-zinc-100">
                 <th className="px-4 py-2 font-medium">Application</th>
                 <th className="px-4 py-2 font-medium">Applicant</th>
+                <th className="px-4 py-2 font-medium">Model</th>
                 <th className="px-4 py-2 font-medium">Status</th>
                 <th className="px-4 py-2 text-right font-medium">Flags</th>
                 <th className="px-4 py-2 text-right font-medium">Received</th>
@@ -35,6 +36,7 @@ export function ApplicationList({ title, status, empty }: { title: string; statu
                     <Link href={`/applications/${a.id}`} className="font-medium text-blue-600 underline underline-offset-2 hover:text-blue-800" title="Open application">{a.id}</Link>
                   </td>
                   <td className="px-4 py-2">{a.applicant_name ?? <span className="text-zinc-400">—</span>}</td>
+                  <td className="px-4 py-2 font-mono text-xs text-zinc-600">{a.model ?? <span className="text-zinc-400">—</span>}</td>
                   <td className="px-4 py-2"><StatusBadge status={a.status} /></td>
                   <td className={`px-4 py-2 text-right tabular-nums ${a.flag_count ? "font-semibold text-rose-700" : "text-zinc-400"}`}>{a.flag_count}</td>
                   <td className="px-4 py-2 text-right text-zinc-500">{when(a.created_at)}</td>

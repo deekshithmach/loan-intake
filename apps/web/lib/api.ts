@@ -45,10 +45,36 @@ export interface AppSummary {
   id: string;
   status: Status;
   applicant_name: string | null;
+  model: string | null;
   flag_count: number;
   created_at: string;
   updated_at: string;
   profile: Record<string, unknown> | null;
+}
+
+export interface ModelInfo {
+  id: string;
+  label: string;
+  provider: string;
+  free: boolean;
+  available: boolean;
+  default: boolean;
+}
+
+/** One row per model on the Model stats tab. Fields the backend has not computed yet are null. */
+export interface ModelStats {
+  model: string;
+  runs: number;
+  avg_latency_s: number;
+  avg_cost_usd: number;
+  avg_tokens: number;
+  p50_latency_s: number | null;
+  p95_latency_s: number | null;
+  extraction_success_rate: number | null;
+  reviewed: number | null;
+  edits_per_review: number | null;
+  flag_dismissal_rate: number | null;
+  approval_rate: number | null;
 }
 
 export interface AppDetail extends AppSummary {
@@ -95,9 +121,12 @@ export const api = {
   list: (status?: string) => req<AppSummary[]>(status ? `/applications?status=${status}` : "/applications"),
   get: (id: string) => req<AppDetail>(`/applications/${id}`),
   audit: (id: string) => req<AuditEvent[]>(`/applications/${id}/audit`),
-  upload: (files: File[]) => {
+  models: () => req<ModelInfo[]>("/models"),
+  stats: () => req<{ models: ModelStats[] }>("/stats"),
+  upload: (files: File[], model?: string) => {
     const form = new FormData();
     files.forEach((f) => form.append("files", f));
+    if (model) form.append("model", model);
     return req<{ id: string; status: Status }>("/applications", { method: "POST", body: form });
   },
   review: (id: string, body: ReviewBody) =>

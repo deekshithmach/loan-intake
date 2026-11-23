@@ -10,6 +10,7 @@ has no side effects before `interrupt()`. Writes happen in other nodes / the API
 """
 
 import logging
+from collections.abc import Callable
 from pathlib import Path
 from typing import Any, Literal, Protocol, TypedDict
 
@@ -33,6 +34,8 @@ class ExtractorLike(Protocol):
 class State(TypedDict, total=False):
     application_id: str
     files: list[str]
+    model: str  # which LLM this run uses (optional; default model otherwise)
+    stats: dict  # per-run numbers for the model-comparison page
     extractions: dict[str, dict]  # doc_type -> ExtractionResult.to_dict()
     flags: list[dict]
     review: dict
@@ -74,11 +77,26 @@ def apply_edits(extractions: dict[str, dict], edits: dict[str, dict]) -> tuple[d
     return out, changes
 
 
-def build_graph(extractor: ExtractorLike, repo: Repo, checkpointer):
+def run_stats(model: str, extractions: dict[str, dict]) -> dict:
+    usage = [e["usage"] for e in extractions.values()]
+    return {"model": model, "docs_total": len(extractions), "docs_ok": sum(bool(e["ok"]) for e in extractions.values()),
+            "attempts": sum(e["attempts"] for e in extractions.values()),
+            "llm_calls": sum(u["calls"] for u in usage), "input_tokens": sum(u["input_tokens"] for u in usage),
+            "output_tokens": sum(u["output_tokens"] for u in usage),
+            "latency_ms": round(sum(u["latency_ms"] for u in usage), 1),
+            "cost_usd": round(sum(u["cost_usd"] for u in usage), 6)}
+
+
+def build_graph(extractor: ExtractorLike, repo: Repo, checkpointer, extractor_for: Callable[[str], ExtractorLike] | None = None,
+                default_model: str = "unknown"):
+    """`extractor_for(model_id)` lets one deployment run different LLMs per application; without it every run uses `extractor`."""
+
     def extract(state: State) -> State:
         app_id, extractions, flags = state["application_id"], {}, []
+        model = state.get("model") or default_model
+        ex = extractor_for(model) if extractor_for and state.get("model") else extractor
         for f in state["files"]:
-            r = extractor.run(f)
+            r = ex.run(f)
             key = r.doc_type.value
             if key in extractions:
                 flags.append(Flag(code="duplicate_document", severity=Severity.LOW,
@@ -97,8 +115,11 @@ def build_graph(extractor: ExtractorLike, repo: Repo, checkpointer):
         repo.audit(app_id, "system", "extracted", {
             "docs": {k: {"ok": e["ok"], "scanned": e["scanned"], "attempts": e["attempts"]}
                      for k, e in extractions.items()},
-            "llm_calls": sum(u["calls"] for u in usage), "cost_usd": round(sum(u["cost_usd"] for u in usage), 5)})
-        return {"extractions": extractions, "flags": [f.model_dump() for f in flags]}
+            "llm_calls": sum(u["calls"] for u in usage), "cost_usd": round(sum(u["cost_usd"] for u in usage), 5),
+            "model": model})
+        stats = run_stats(model, extractions)
+        repo.update(app_id, model=model, stats=stats)
+        return {"extractions": extractions, "flags": [f.model_dump() for f in flags], "stats": stats}
 
     def validate(state: State) -> State:
         flags = run_rules(Docs.from_data(ok_data(state["extractions"])), "validate")
@@ -111,9 +132,10 @@ def build_graph(extractor: ExtractorLike, repo: Repo, checkpointer):
         data = ok_data(state["extractions"])
         name = next((d[k] for d, k in ((data.get("w2"), "employee"), (data.get("paystub"), "employee"),
                                        (data.get("statement"), "account_holder")) if d), None)
-        repo.update(app_id, status="in_review", applicant_name=name, flag_count=len(all_flags))
+        stats = {**state.get("stats", {}), "flags": len(all_flags)}
+        repo.update(app_id, status="in_review", applicant_name=name, flag_count=len(all_flags), stats=stats)
         repo.audit(app_id, "system", "flags_raised", {"codes": [f["code"] for f in all_flags]})
-        return {"flags": all_flags, "status": "in_review"}
+        return {"flags": all_flags, "status": "in_review", "stats": stats}
 
     def review(state: State) -> State:
         answer = interrupt({"application_id": state["application_id"], "flags": state["flags"]})
@@ -128,10 +150,14 @@ def build_graph(extractor: ExtractorLike, repo: Repo, checkpointer):
         flags = [{**f, "decision": rv.flag_decisions.get(f["code"], "accept")} for f in state["flags"]]
         status = "approved" if rv.decision == "approve" else "rejected"
         profile = build_profile(app_id, extractions, flags, rv, status)
-        repo.update(app_id, status=status, profile=profile)
+        # What the human did is the live quality signal per model: fields corrected, flags dismissed as false alarms.
+        stats = {**state.get("stats", {}), "decision": status, "edits": len(changes),
+                 "flags_dismissed": sum(f["decision"] == "dismiss" for f in flags),
+                 "flags_accepted": sum(f["decision"] == "accept" for f in flags)}
+        repo.update(app_id, status=status, profile=profile, stats=stats)
         repo.audit(app_id, rv.reviewer, status, {"notes": rv.notes, "flag_decisions": rv.flag_decisions})
         log.info("application %s %s by reviewer", app_id, status)
-        return {"extractions": extractions, "flags": flags, "status": status, "profile": profile}
+        return {"extractions": extractions, "flags": flags, "status": status, "profile": profile, "stats": stats}
 
     g = StateGraph(State)
     for name, fn in [("extract", extract), ("validate", validate), ("cross_check", cross_check),

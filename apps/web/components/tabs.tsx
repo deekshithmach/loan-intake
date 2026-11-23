@@ -7,6 +7,7 @@ const TABS = [
   { href: "/in-review", label: "In review" },
   { href: "/approved", label: "Approved" },
   { href: "/rejected", label: "Rejected" },
+  { href: "/models", label: "Model stats" },
 ];
 
 export function Tabs() {

@@ -51,3 +51,6 @@ UI http://localhost:3000 · API http://localhost:8000/docs. Only the UI is neede
 
 Order: database -> API (get its URL) -> UI with that URL -> set `CORS_ORIGINS` on the API to the UI URL.
 Demo data: `uv run python scripts/seed_live.py --api https://<your-api>` uploads 4 synthetic applicants.
+
+## Model picker and live stats
+The Create application tab has a **Model** dropdown (Gemini, Groq Qwen, OpenRouter free vision models, Claude Haiku); a model is selectable once its API key is set (`GEMINI_API_KEY`, `GROQ_API_KEY`, `OPENROUTER_API_KEY`, `ANTHROPIC_API_KEY`). Each application records which model processed it, and the **Model stats** tab shows per-model latency, cost, tokens, extraction success and what underwriters did (fields corrected, flags dismissed). Live uploads have no answer key, so benchmark accuracy stays in the eval report. `scripts/check_models.py` smoke-tests a candidate model on one scanned document before you add it.
