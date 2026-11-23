@@ -33,8 +33,10 @@ CREATE TABLE IF NOT EXISTS audit_log (
     detail         JSONB NOT NULL DEFAULT '{}'
 );
 CREATE INDEX IF NOT EXISTS audit_log_app ON audit_log(application_id, id);
+ALTER TABLE applications ADD COLUMN IF NOT EXISTS model TEXT;
+ALTER TABLE applications ADD COLUMN IF NOT EXISTS stats JSONB;
 """
-FIELDS = ("status", "applicant_name", "flag_count", "profile")
+FIELDS = ("status", "applicant_name", "flag_count", "profile", "model", "stats")
 
 
 class Repo(ABC):
@@ -69,7 +71,7 @@ class InMemoryRepo(Repo):
     def create(self, app_id):
         now = dt.datetime.now(dt.UTC)
         self.apps[app_id] = {"id": app_id, "status": "processing", "applicant_name": None,
-                             "flag_count": 0, "profile": None, "created_at": now, "updated_at": now}
+                             "flag_count": 0, "profile": None, "model": None, "stats": None, "created_at": now, "updated_at": now}
 
     def update(self, app_id, **fields):
         assert set(fields) <= set(FIELDS), fields
@@ -108,7 +110,7 @@ class PostgresRepo(Repo):
     def update(self, app_id, **fields):
         assert fields and set(fields) <= set(FIELDS), fields  # column names are whitelisted, values are params
         cols = ", ".join(f"{k} = %s" for k in fields)
-        vals = tuple(Jsonb(v) if k == "profile" else v for k, v in fields.items())
+        vals = tuple(Jsonb(v) if k in ("profile", "stats") else v for k, v in fields.items())
         self._q(f"UPDATE applications SET {cols}, updated_at = now() WHERE id = %s", (*vals, app_id))
 
     def get(self, app_id):

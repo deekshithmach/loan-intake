@@ -1,9 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Card, ErrorBox, Spinner } from "@/components/ui";
-import { api } from "@/lib/api";
+import { api, type ModelInfo } from "@/lib/api";
 
 export default function Home() {
   return (
@@ -19,6 +19,15 @@ function UploadForm() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [dragging, setDragging] = useState(false);
+  const [models, setModels] = useState<ModelInfo[]>([]);
+  const [model, setModel] = useState("");
+
+  useEffect(() => {
+    api.models().then((m) => {
+      setModels(m);
+      setModel((cur) => cur || m.find((x) => x.default && x.available)?.id || m.find((x) => x.available)?.id || "");
+    }).catch(() => {}); // the dropdown is optional: without it the server's default model is used
+  }, []);
 
   const add = (list: FileList | null) => {
     const pdfs = Array.from(list ?? []).filter((f) => f.name.toLowerCase().endsWith(".pdf"));
@@ -31,7 +40,7 @@ function UploadForm() {
     setBusy(true);
     setError(null);
     try {
-      const { id } = await api.upload(files);
+      const { id } = await api.upload(files, model || undefined);
       router.push(`/applications/${id}`);
     } catch (e) {
       setError((e as Error).message);
@@ -41,6 +50,23 @@ function UploadForm() {
 
   return (
     <Card title="Create application">
+      {models.length > 0 && (
+        <label className="mb-4 block text-sm">
+          <span className="mb-1 block font-medium">Model</span>
+          <select
+            value={model}
+            onChange={(e) => setModel(e.target.value)}
+            className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm"
+          >
+            {models.map((m) => (
+              <option key={m.id} value={m.id} disabled={!m.available}>
+                {m.label}{m.free ? " · free" : ""}{m.available ? "" : " · no API key"}
+              </option>
+            ))}
+          </select>
+          <span className="mt-1 block text-xs text-zinc-500">Each model gets its own numbers on the Model stats tab.</span>
+        </label>
+      )}
       <label
         onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
         onDragLeave={() => setDragging(false)}

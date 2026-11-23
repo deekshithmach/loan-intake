@@ -6,16 +6,18 @@ import uuid
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Annotated, Any
 
-from fastapi import BackgroundTasks, FastAPI, HTTPException, UploadFile
+from fastapi import BackgroundTasks, FastAPI, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from langgraph.types import Command
 
 from .config import ROOT, Settings
+from .llm.registry import listing
 from .pii import setup_logging
 from .repo import Repo
+from .stats import summarize
 from .workflow import Review, apply_edits, build_graph
 
 log = logging.getLogger(__name__)
@@ -32,6 +34,8 @@ class Deps:
 
 
 def _postgres_deps() -> tuple[Deps, Any]:
+    from functools import lru_cache
+
     from langgraph.checkpoint.postgres import PostgresSaver
     from psycopg.rows import dict_row
     from psycopg_pool import ConnectionPool
@@ -47,7 +51,14 @@ def _postgres_deps() -> tuple[Deps, Any]:
     saver.setup()
     repo = PostgresRepo(pool)
     uploads = Path(s.uploads_dir) if s.uploads_dir else UPLOADS
-    return Deps(repo, build_graph(Extractor(get_provider()), repo, saver), uploads), pool
+    default = get_provider()
+
+    @lru_cache(maxsize=16)  # one Extractor (and HTTP client) per model, created on first use
+    def extractor_for(model: str) -> Extractor:
+        return Extractor(get_provider(model=model))
+
+    graph = build_graph(Extractor(default), repo, saver, extractor_for, default.model)
+    return Deps(repo, graph, uploads), pool
 
 
 def create_app(deps: Deps | None = None) -> FastAPI:
@@ -80,9 +91,10 @@ def create_app(deps: Deps | None = None) -> FastAPI:
             raise HTTPException(404, "application not found")
         return row
 
-    def run_until_review(app_id: str, paths: list[str]) -> None:
+    def run_until_review(app_id: str, paths: list[str], model: str | None = None) -> None:
         try:
-            d().graph.invoke({"application_id": app_id, "files": paths}, cfg(app_id))
+            state = {"application_id": app_id, "files": paths, **({"model": model} if model else {})}
+            d().graph.invoke(state, cfg(app_id))
         except Exception as e:
             log.exception("application %s failed", app_id)
             d().repo.update(app_id, status="failed")
@@ -92,10 +104,25 @@ def create_app(deps: Deps | None = None) -> FastAPI:
     def health():
         return {"ok": True}
 
+    @app.get("/models")
+    def models():
+        return listing()
+
+    @app.get("/stats")
+    def stats():
+        """Per-model numbers over every application that has been run (see apps/api/stats.py)."""
+        return {"models": summarize(d().repo.recent(1000))}
+
     @app.post("/applications", status_code=202)
-    async def create(files: list[UploadFile], background: BackgroundTasks):
+    async def create(files: list[UploadFile], background: BackgroundTasks, model: Annotated[str | None, Form()] = None):
         if not 1 <= len(files) <= 10:
             raise HTTPException(422, "upload 1-10 PDFs")
+        if model:
+            match = next((m for m in listing() if m["id"] == model), None)
+            if not match:
+                raise HTTPException(422, f"unknown model '{model}'")
+            if not match["available"]:
+                raise HTTPException(422, f"model '{model}' is not available (no API key configured)")
         app_id = f"APP-{uuid.uuid4().hex[:8].upper()}"
         folder = d().uploads / app_id
         folder.mkdir(parents=True, exist_ok=True)
@@ -108,8 +135,10 @@ def create_app(deps: Deps | None = None) -> FastAPI:
             p.write_bytes(body)
             paths.append(str(p))
         d().repo.create(app_id)
-        d().repo.audit(app_id, "applicant", "uploaded", {"files": [Path(p).name for p in paths]})
-        background.add_task(run_until_review, app_id, paths)
+        if model:
+            d().repo.update(app_id, model=model)
+        d().repo.audit(app_id, "applicant", "uploaded", {"files": [Path(p).name for p in paths], "model": model})
+        background.add_task(run_until_review, app_id, paths, model)
         return {"id": app_id, "status": "processing"}
 
     @app.get("/applications")

@@ -6,6 +6,10 @@ DEFAULT_MODELS = {"gemini": "gemini-3.5-flash-lite", "anthropic": "claude-haiku-
 
 
 def provider_for(model: str, default: str) -> str:
+    from .registry import BY_ID
+
+    if model in BY_ID:
+        return BY_ID[model].provider
     return "anthropic" if model.startswith("claude-") else "gemini" if model.startswith("gemini-") else default
 
 
@@ -25,4 +29,12 @@ def get_provider(settings: Settings | None = None, model: str | None = None) -> 
         from .anthropic import AnthropicProvider
 
         return AnthropicProvider(s.anthropic_api_key.get_secret_value(), model)
+    if name in ("groq", "openrouter"):
+        from .openai_compat import OpenAICompatProvider
+        from .registry import BASE_URLS, api_key
+
+        key = api_key(name, s)
+        if not key:
+            raise RuntimeError(f"{name.upper()}_API_KEY is not set")
+        return OpenAICompatProvider(name, BASE_URLS[name], key.get_secret_value(), model)
     raise ValueError(f"provider not implemented yet: {name}")
