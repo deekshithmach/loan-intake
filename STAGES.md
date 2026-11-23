@@ -22,6 +22,7 @@ Model key (Claude Code, switch via `/model`): **S** = Sonnet, **O** = Opus. App 
 **3** [x] pytest pass+fail per rule [x] API run pauses at review, resumes, persists [x] planted anomalies flagged w/ correct evidence (102/102 truths exact) [x] restart mid-review loses nothing (pytest + live uvicorn restart) [x] PII masked in logs
 **4** [x] browser flow upload→review→approve (Playwright e2e, live) [x] edits persist + audited [x] loading/error states [x] non-technical demo test (user) · stretch: [x] per-run tokens/cost/latency [ ] model picker
 **5** [x] report w/ real numbers ≥30 applicants (evals/report.md) [x] targets (clean ≥95%, noisy ≥85%, flag recall ≥90% met; noisy flag precision 68–75% < 85% — explained in report) [x] CI green + fails on regression (gate proven locally; green on PR #5) [x] spend < $10 (~$1.9 Anthropic API)
+**6** [ ] live URL works on phone (API on Fly, UI on Vercel, DB on Aiven: deployed, seeded, CORS verified; phone check pending) [ ] fresh clone + README → `docker compose up` works (compose written, not yet run) [ ] user explains architecture/tradeoffs/failure < 3 min · stretch: [ ] Tigris object storage (volume for now) [ ] demo video
 
 ## Progress
 - [x] Stage 0 · [x] 1 · [x] 2 · [x] 3 · [x] 4 · [x] 5 · [ ] 6 · [ ] 7
